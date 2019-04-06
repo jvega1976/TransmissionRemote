@@ -57,9 +57,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,readonly) NSImage *flagImage;
 
-@property (nonatomic) NSString *countryName;
+@property (nonatomic,readonly) NSString *countryName;
 
-@property (nonatomic) NSString *flagCode;
+@property (nonatomic,readonly) NSString *flagCode;
 
 @end
 
