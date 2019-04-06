@@ -1,0 +1,4 @@
+framework module FilesProvider {
+  header "FilesProvider-Swift.h"
+  requires objc
+}

@@ -1,0 +1,4 @@
+/* Display name and description for this extension. */
+"CFBundleDisplayName" = "Transmission Remote";
+"com.apple.notificationcenter.widget.description" = "Transmission RPC Client";
+
