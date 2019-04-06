@@ -798,14 +798,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="435"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView alphaValue="0.90000000000000002" autohidesScrollers="YES" horizontalLineScroll="30" horizontalPageScroll="10" verticalLineScroll="30" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHQ-eC-mgn">
+                            <scrollView alphaValue="0.90000000000000002" borderType="none" autohidesScrollers="YES" horizontalLineScroll="30" horizontalPageScroll="10" verticalLineScroll="30" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHQ-eC-mgn">
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="435"/>
                                 <clipView key="contentView" drawsBackground="NO" id="eIp-np-m8y">
-                                    <rect key="frame" x="1" y="0.0" width="810" height="434"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="812" height="435"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="28" headerView="SpJ-Ji-qF2" viewBased="YES" id="u5F-W5-sXF" userLabel="Torrent Peers View">
-                                            <rect key="frame" x="0.0" y="0.0" width="810" height="409"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="812" height="410"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1175,7 +1175,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="SpJ-Ji-qF2">
-                                    <rect key="frame" x="0.0" y="0.0" width="810" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="812" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -2465,6 +2465,9 @@
                                         <binding destination="EFP-Ka-x6R" name="value" keyPath="selection.rpcVersion" id="QbP-xd-8Ep"/>
                                     </connections>
                                 </textFieldCell>
+                                <connections>
+                                    <binding destination="X0f-b0-vw8" name="hidden" keyPath="errorExists" id="ycA-W1-DbG"/>
+                                </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g7A-sB-qhe">
                                 <rect key="frame" x="834" y="8" width="57" height="14"/>
@@ -2474,19 +2477,27 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
+                                    <binding destination="X0f-b0-vw8" name="hidden" keyPath="errorExists" id="QcW-sC-iPR"/>
                                     <binding destination="EFP-Ka-x6R" name="value" keyPath="selection.transmissionVersion" id="ZLR-ez-oiF"/>
                                 </connections>
                             </textField>
                             <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SpO-2y-igt">
-                                <rect key="frame" x="80" y="5" width="734" height="20"/>
+                                <rect key="frame" x="78" y="5" width="738" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="734" id="2d2-KX-RDo"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Error Message" drawsBackground="YES" id="tK5-Am-hSO">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" alignment="left" title="Error Message" id="tK5-Am-hSO">
                                     <font key="font" metaFont="systemBold" size="14"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <binding destination="X0f-b0-vw8" name="hidden" keyPath="errorExists" id="x4h-Rq-ERu">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5kZ-Fi-yH3">
                                 <rect key="frame" x="78" y="8" width="70" height="14"/>
@@ -2496,6 +2507,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
+                                    <binding destination="X0f-b0-vw8" name="hidden" keyPath="errorExists" id="jeb-Q1-Ruv"/>
                                     <binding destination="X0f-b0-vw8" name="value" keyPath="uploadedBytes" id="AQE-qD-tfJ"/>
                                 </connections>
                             </textField>
@@ -2508,6 +2520,7 @@
                                 </textFieldCell>
                                 <connections>
                                     <binding destination="X0f-b0-vw8" name="value" keyPath="downloadedBytes" id="lft-y4-3uc"/>
+                                    <binding destination="X0f-b0-vw8" name="hidden" keyPath="errorExists" id="mxp-80-YxL"/>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-Xq-jFg">
@@ -2518,6 +2531,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
+                                    <binding destination="X0f-b0-vw8" name="hidden" keyPath="errorExists" id="Gw3-aq-OBC"/>
                                     <binding destination="X0f-b0-vw8" name="value" keyPath="secondsActive" id="QT1-Sw-bkZ"/>
                                 </connections>
                             </textField>
@@ -2529,6 +2543,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
+                                    <binding destination="X0f-b0-vw8" name="hidden" keyPath="errorExists" id="xQG-ab-YXH"/>
                                     <binding destination="X0f-b0-vw8" name="value" keyPath="filesAdded" id="iHY-Zn-RYd"/>
                                 </connections>
                             </textField>
@@ -2576,6 +2591,7 @@
                         <outlet property="categoryView" destination="sdw-dc-puv" id="F6U-W7-QWA"/>
                         <outlet property="dockView" destination="AON-mD-1yj" id="3JO-eX-Oxu"/>
                         <outlet property="downloadRate" destination="6Mb-eC-Yjx" id="VTh-wn-fJn"/>
+                        <outlet property="errorMessage" destination="SpO-2y-igt" id="Gye-51-ukS"/>
                         <outlet property="filterEditorView" destination="SgM-j6-I3b" id="rPZ-M4-XGG"/>
                         <outlet property="labelsArrayController" destination="nZh-Q0-hSO" id="4m0-Zz-zwl"/>
                         <outlet property="search" destination="aEP-Dv-dBL" id="tgS-ib-KTw"/>
@@ -5593,15 +5609,15 @@ Gw
                         <rect key="frame" x="0.0" y="0.0" width="855" height="388"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" alphaValue="0.90000000000000002" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="po4-cN-EWk">
+                            <scrollView fixedFrame="YES" alphaValue="0.90000000000000002" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="po4-cN-EWk">
                                 <rect key="frame" x="0.0" y="0.0" width="855" height="388"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="eNd-cO-bxK">
-                                    <rect key="frame" x="1" y="0.0" width="853" height="387"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="855" height="388"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="xgy-xk-NK7" viewBased="YES" id="a4N-jk-PlT">
-                                            <rect key="frame" x="0.0" y="0.0" width="853" height="362"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="855" height="363"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -5878,7 +5894,7 @@ Gw
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="xgy-xk-NK7">
-                                    <rect key="frame" x="0.0" y="0.0" width="853" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="855" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>

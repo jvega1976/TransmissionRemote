@@ -104,11 +104,11 @@
     else
     {
         if (ratio < 10.0)
-            return [NSString localizedStringWithFormat: @"%.2d", tr_truncd(ratio, 2)];
+            return [NSString localizedStringWithFormat: @"%.2f", tr_truncd(ratio, 2)];
         else if (ratio < 100.0)
-            return [NSString localizedStringWithFormat: @"%.1d", tr_truncd(ratio, 1)];
+            return [NSString localizedStringWithFormat: @"%.1f", tr_truncd(ratio, 1)];
         else
-            return [NSString localizedStringWithFormat: @"%.0d", tr_truncd(ratio, 0)];
+            return [NSString localizedStringWithFormat: @"%.0f", tr_truncd(ratio, 0)];
     }
 }
 
@@ -117,9 +117,9 @@
     if (progress >= 1.0)
         return [NSString localizedStringWithFormat: @"%d%%", 100];
     else if (longDecimals)
-        return [NSString localizedStringWithFormat: @"%.2d%%", tr_truncd(progress * 100.0, 2)];
+        return [NSString localizedStringWithFormat: @"%.2f%%", tr_truncd(progress * 100.0, 2)];
     else
-        return [NSString localizedStringWithFormat: @"%.1d%%", tr_truncd(progress * 100.0, 1)];
+        return [NSString localizedStringWithFormat: @"%.1f%%", tr_truncd(progress * 100.0, 1)];
 }
 
 + (NSString *) timeString: (uint64_t) seconds includesTimeRemainingPhrase: (BOOL) includesTimeRemainingPhrase showSeconds: (BOOL) showSeconds

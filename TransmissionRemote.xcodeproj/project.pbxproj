@@ -307,7 +307,6 @@
 		B89AD3D4225477BE00AE0DFD /* TorrentInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89AD27C225477BE00AE0DFD /* TorrentInfoController.m */; };
 		B89AD3D5225477BE00AE0DFD /* PreferencesBandwithController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89AD27E225477BE00AE0DFD /* PreferencesBandwithController.m */; };
 		B89AD3D6225477BE00AE0DFD /* MoveTorrentToController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89AD27F225477BE00AE0DFD /* MoveTorrentToController.m */; };
-		B89AD3D7225477BE00AE0DFD /* ServerConfigObjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89AD280225477BE00AE0DFD /* ServerConfigObjectController.m */; };
 		B89AD3D8225477BE00AE0DFD /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89AD281225477BE00AE0DFD /* PreferencesController.m */; };
 		B89AD3D9225477BE00AE0DFD /* PredicateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89AD284225477BE00AE0DFD /* PredicateViewController.m */; };
 		B89AD3DA225477BE00AE0DFD /* PreferencesQueueController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89AD285225477BE00AE0DFD /* PreferencesQueueController.m */; };
@@ -738,7 +737,6 @@
 		B89AD27D225477BE00AE0DFD /* TorrentTrackersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentTrackersController.h; sourceTree = "<group>"; };
 		B89AD27E225477BE00AE0DFD /* PreferencesBandwithController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesBandwithController.m; sourceTree = "<group>"; };
 		B89AD27F225477BE00AE0DFD /* MoveTorrentToController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveTorrentToController.m; sourceTree = "<group>"; };
-		B89AD280225477BE00AE0DFD /* ServerConfigObjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerConfigObjectController.m; sourceTree = "<group>"; };
 		B89AD281225477BE00AE0DFD /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		B89AD282225477BE00AE0DFD /* StatisticsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsController.h; sourceTree = "<group>"; };
 		B89AD283225477BE00AE0DFD /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
@@ -755,7 +753,6 @@
 		B89AD28E225477BE00AE0DFD /* AddTorrentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTorrentController.m; sourceTree = "<group>"; };
 		B89AD28F225477BE00AE0DFD /* ServerConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerConfigController.h; sourceTree = "<group>"; };
 		B89AD290225477BE00AE0DFD /* TorrentPeersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentPeersController.h; sourceTree = "<group>"; };
-		B89AD291225477BE00AE0DFD /* ServerConfigObjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerConfigObjectController.h; sourceTree = "<group>"; };
 		B89AD292225477BE00AE0DFD /* MoveTorrentToController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveTorrentToController.h; sourceTree = "<group>"; };
 		B89AD293225477BE00AE0DFD /* PreferencesBandwithController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesBandwithController.h; sourceTree = "<group>"; };
 		B89AD294225477BE00AE0DFD /* TorrentTrackersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentTrackersController.m; sourceTree = "<group>"; };
@@ -1239,8 +1236,6 @@
 				B89AD285225477BE00AE0DFD /* PreferencesQueueController.m */,
 				B89AD28F225477BE00AE0DFD /* ServerConfigController.h */,
 				B89AD278225477BE00AE0DFD /* ServerConfigController.m */,
-				B89AD291225477BE00AE0DFD /* ServerConfigObjectController.h */,
-				B89AD280225477BE00AE0DFD /* ServerConfigObjectController.m */,
 				B89AD282225477BE00AE0DFD /* StatisticsController.h */,
 				B89AD29B225477BE00AE0DFD /* StatisticsController.m */,
 				B89AD286225477BE00AE0DFD /* TorrentActivityController.h */,
@@ -1744,7 +1739,6 @@
 				B89AD3C3225477BE00AE0DFD /* Model.xcdatamodeld in Sources */,
 				B89AD3D6225477BE00AE0DFD /* MoveTorrentToController.m in Sources */,
 				B89AD3DE225477BE00AE0DFD /* AddTorrentController.m in Sources */,
-				B89AD3D7225477BE00AE0DFD /* ServerConfigObjectController.m in Sources */,
 				B89AD3E1225477BE00AE0DFD /* WindowController.m in Sources */,
 				B89AD2AB225477BE00AE0DFD /* SegueMoveTo.m in Sources */,
 				B85A6E4C2255BB5B0017C009 /* URLConfig.m in Sources */,

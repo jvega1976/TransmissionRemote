@@ -51,7 +51,7 @@ static char selectedFlag;
     else if(self.isFinished)
         return [NSString stringWithFormat:@"Completed"];
     else if(self.isWaiting)
-        return [NSString stringWithFormat:@"Queued"];
+        return self.statusString;
     return [NSString stringWithFormat:@"Unknown"];
 }
 

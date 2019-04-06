@@ -17,11 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
- //   _serverConfigController = [ServerConfigController alloc];
- //   _serverConfigController = instantiateController(@"ServerConfigController");
- //   _PreferencesDownloadController = [PreferencesDownloadController alloc];
- //   _PreferencesDownloadController = instantiateController(@"PreferencesDownloadController");
 }
 
 
@@ -45,7 +40,7 @@
         [toolbarItem.view performSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOn];
     else
         [toolbarItem.view performSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOff];
-    [self.view.window performClose:self];
+//    [self.view.window performClose:self];
 }
 
 

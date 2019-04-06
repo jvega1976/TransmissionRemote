@@ -41,8 +41,8 @@
         actualConfig = DEFAULT_URL;
     NSInteger requestTime = [defaults integerForKey:TR_URL_CONFIG_REQUEST];
      NSInteger refreshTime = [defaults integerForKey:TR_URL_CONFIG_REFRESH];
-    [[RPCConnector sharedConnector] setURL:actualConfig requestTimeout:(int)requestTime andDelegate:self];
-    _connector = [RPCConnector sharedConnector];
+    [[RPCConnector sharedConnector] initWithURL:actualConfig requestTimeout:(int)requestTime andDelegate:self];
+    _connector = RPCConnector.sharedConnector;
     [self updateData];
     _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:refreshTime  target:self selector:@selector(updateData) userInfo:nil repeats:YES];
 }

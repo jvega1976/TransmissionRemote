@@ -72,7 +72,8 @@
     NSURL *url = ((MainViewController*)((PreferencesController*)self.parentViewController).mainViewController).urlConfig;
 [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
 [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithURL:url refreshTime:(int)_refreshTimeOut andRequestTime:(int)_requestTimeOut];
-    [self dismissViewController:self.parentViewController];
+    if(sender != self)
+        [self dismissViewController:self.parentViewController];
 }
 
 

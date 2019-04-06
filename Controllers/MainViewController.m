@@ -65,6 +65,8 @@ BOOL isEditable = NO;
 @property (nonatomic) BOOL isActiveDown;
 @property (strong) IBOutlet NSSplitView *splitView;
 @property (weak) IBOutlet NSVisualEffectView *categoryView;
+@property (nonatomic) IBOutlet NSTextField *errorMessage;
+@property (nonatomic) BOOL errorExists;
 
 @property (strong) IBOutlet NSTextField *uploadRate;
 @property (strong) IBOutlet NSTextField *downloadRate;
@@ -104,6 +106,7 @@ BOOL isEditable = NO;
 - (void)viewDidLoad {
     [super viewDidLoad];
     mainViewController = self;
+    [self setErrorExists:NO];
     dockTile = [NSDockTile alloc];
     dockTile = [[NSApplication sharedApplication] dockTile];
     [_dockView awakeFromNib];
@@ -159,8 +162,8 @@ BOOL isEditable = NO;
     int refreshTimeOut = (int)[store longLongForKey:TR_URL_CONFIG_REFRESH];
     if(!refreshTimeOut)
         refreshTimeOut = (int)[defaults integerForKey:TR_URL_CONFIG_REFRESH];
-    [[RPCConnector sharedConnector] setURL:_urlConfig requestTimeout:(requestTimeOut ? requestTimeOut : 10) andDelegate:self];
-    _connector = [RPCConnector sharedConnector];
+    [RPCConnector.sharedConnector initWithURL:_urlConfig requestTimeout:(requestTimeOut ? requestTimeOut : 10) andDelegate:self];
+    _connector = RPCConnector.sharedConnector;
     [self setSessionURL:[NSString stringWithFormat:@"%@://%@:%@%@", _urlConfig.scheme,_urlConfig.host,_urlConfig.port,_urlConfig.path]];
     [self setUserSession:[NSString stringWithFormat:@"%@ at",_urlConfig.user]];
     _connector.delegate =self;
@@ -175,14 +178,14 @@ BOOL isEditable = NO;
 
 - (void)startRefreshingWithURL:(NSURL*)url refreshTime:(int)refreshTime andRequestTime:(int)requestTime {
     _urlConfig = url;
-    [[RPCConnector sharedConnector] setURL:_urlConfig requestTimeout:(requestTime ? requestTime : 10) andDelegate:self];
-    _connector = [RPCConnector sharedConnector];
+    [RPCConnector.sharedConnector initWithURL:_urlConfig requestTimeout:(requestTime ? requestTime : 10) andDelegate:self];
+    _connector = RPCConnector.sharedConnector;
     [self setSessionURL:[NSString stringWithFormat:@"%@://%@:%@%@", _urlConfig.scheme,_urlConfig.host,_urlConfig.port,_urlConfig.path]];
     [self setUserSession:[NSString stringWithFormat:@"%@ at",_urlConfig.user]];
     _connector.delegate =self;
-    [_connector getAllTorrents];
     [_connector getSessionInfo];
     [_connector getSessionStats];
+    [_connector getAllTorrents];
     _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:(refreshTime ? refreshTime : 10) target:self selector:@selector(autorefreshTimerUpdateHandler) userInfo:nil repeats:YES];
     NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
     [defaults setURL:_urlConfig forKey:TR_URL_ACTUAL_KEY];
@@ -820,6 +823,7 @@ BOOL isEditable = NO;
 
 - (void)gotAllTorrents:(TRInfos *)torrents {
     if(!stopRefresh) {
+        [self setErrorExists:NO];
         [_uploadRate setStringValue:torrents.totalUploadRateString];
         [_downloadRate setStringValue: torrents.totalDownloadRateString];
         NSIndexSet *indexes = [[_torrentArrayController selectionIndexes] copy];
@@ -887,6 +891,7 @@ BOOL isEditable = NO;
 
 
 -(void)gotSessionWithInfo:(TRSessionInfo *)info {
+    [self setErrorExists:NO];
     [self setTrSessionInfo:info];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"label == 'Alt Speed'"];
     NSToolbarItem *toolbarItem = [[self.view.window.toolbar.items filteredArrayUsingPredicate:predicate] firstObject];
@@ -906,7 +911,7 @@ BOOL isEditable = NO;
 
 
 -(void)gotSessionWithStats:(TRSessionStats *)stats {
-    
+    [self setErrorExists:NO];
     [self setTrSessionStats:stats];
     [self setUploadedBytes:[NSString stringWithFormat:@"↑UL: %@",formatByteCount(stats.currentUploadedBytes)]];
     [self setDownloadedBytes:[NSString stringWithFormat:@"↓DL: %@",formatByteCount(stats.currentdownloadedBytes)]];
@@ -977,8 +982,11 @@ BOOL isEditable = NO;
 }
 
 
--(void)connector:(RPCConnector *)cn complitedRequestName:(NSString *)requestName withError:(NSString *)errorMessage {
-    NSLog(@"Transmission Remote: %@ : %@",requestName,errorMessage);
+-(void)connector:(RPCConnector *)cn complitedRequestName:(NSString *)requestName fromURL:(NSURL*)url withError:(NSString *)errorMessage {
+    [self.errorMessage setStringValue:[NSString stringWithFormat:@"%@: %@",url.host,errorMessage]];
+    [self setErrorExists:YES];
+    [_torrents setItems:[NSArray array]];
+    NSLog(@"Transmission Remote: %@: %@ - %@",url,requestName,errorMessage);
 }
 
 
