@@ -24,6 +24,7 @@
 #import "AppDelegate.h"
 #import "CategorizationKitExtensions.h"
 #import "TransmissionRPCExtensions.h"
+#import "ServerConfigController.h"
 
 
 #define MyDataType @"MyDataType"
@@ -151,29 +152,40 @@ BOOL isEditable = NO;
     [_refreshTimer invalidate];
 }
 
+-(void)startInitialWizard{
+    ServerConfigController *serverConfigController = instantiateController(@"ServerConfigController");
+    serverConfigController.wizardMode = YES;
+    serverConfigController.mainViewController = self;
+    [self presentViewControllerAsModalWindow:serverConfigController];
+}
+
 
 - (void)startRefreshingWithURL:(NSURL*)url {
-    _urlConfig = url;
-    NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
-    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
-    int requestTimeOut = (int)[store longLongForKey:TR_URL_CONFIG_REQUEST];
-    if(!requestTimeOut)
-        requestTimeOut = (int)[defaults integerForKey:TR_URL_CONFIG_REQUEST] ;
-    int refreshTimeOut = (int)[store longLongForKey:TR_URL_CONFIG_REFRESH];
-    if(!refreshTimeOut)
-        refreshTimeOut = (int)[defaults integerForKey:TR_URL_CONFIG_REFRESH];
-    [RPCConnector.sharedConnector initWithURL:_urlConfig requestTimeout:(requestTimeOut ? requestTimeOut : 10) andDelegate:self];
-    _connector = RPCConnector.sharedConnector;
-    [self setSessionURL:[NSString stringWithFormat:@"%@://%@:%@%@", _urlConfig.scheme,_urlConfig.host,_urlConfig.port,_urlConfig.path]];
-    [self setUserSession:[NSString stringWithFormat:@"%@ at",_urlConfig.user]];
-    _connector.delegate =self;
-    [_connector getAllTorrents];
-    [_connector getSessionInfo];
-    [_connector getSessionStats];
-    _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:(refreshTimeOut ? refreshTimeOut : 10) target:self selector:@selector(autorefreshTimerUpdateHandler) userInfo:nil repeats:YES];
-   
-    [defaults setURL:_urlConfig forKey:TR_URL_ACTUAL_KEY];
-    [defaults synchronize];
+    if(!url)
+        [self startInitialWizard];
+    else {
+        _urlConfig = url;
+        NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
+        NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
+        int requestTimeOut = (int)[store longLongForKey:TR_URL_CONFIG_REQUEST];
+        if(!requestTimeOut)
+            requestTimeOut = (int)[defaults integerForKey:TR_URL_CONFIG_REQUEST] ;
+        int refreshTimeOut = (int)[store longLongForKey:TR_URL_CONFIG_REFRESH];
+        if(!refreshTimeOut)
+            refreshTimeOut = (int)[defaults integerForKey:TR_URL_CONFIG_REFRESH];
+        [RPCConnector.sharedConnector initWithURL:_urlConfig requestTimeout:(requestTimeOut ? requestTimeOut : 10) andDelegate:self];
+        _connector = RPCConnector.sharedConnector;
+        [self setSessionURL:[NSString stringWithFormat:@"%@://%@:%@%@", _urlConfig.scheme,_urlConfig.host,_urlConfig.port,_urlConfig.path]];
+        [self setUserSession:[NSString stringWithFormat:@"%@ at",_urlConfig.user]];
+        _connector.delegate =self;
+        [_connector getAllTorrents];
+        [_connector getSessionInfo];
+        [_connector getSessionStats];
+        _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:(refreshTimeOut ? refreshTimeOut : 10) target:self selector:@selector(autorefreshTimerUpdateHandler) userInfo:nil repeats:YES];
+        
+        [defaults setURL:_urlConfig forKey:TR_URL_ACTUAL_KEY];
+        [defaults synchronize];
+    }
 }
 
 - (void)startRefreshingWithURL:(NSURL*)url refreshTime:(int)refreshTime andRequestTime:(int)requestTime {

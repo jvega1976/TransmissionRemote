@@ -7,18 +7,19 @@
 //
 
 #import "ServerConfigController.h"
-#import "MainViewController.h"
 #import "PreferencesController.h"
 #import <CloudKit/CloudKit.h>
 #import <objc/runtime.h>
 
-@interface ServerConfigController () <RPCConnectorDelegate>
+@interface ServerConfigController () <RPCConnectorDelegate,
+                                      NSTextFieldDelegate>
 
 @property (nonatomic) NSUserDefaults *defaults;
 @property (nonatomic) NSUbiquitousKeyValueStore *store;
 @property (nonatomic) NSMutableString *errorMessage;
 @property (nonatomic) NSInteger refreshTimeOut;
 @property (nonatomic) NSInteger requestTimeOut;
+@property (strong) IBOutlet NSButton *saveButton;
 
 @end
 
@@ -56,6 +57,14 @@
     [super viewWillAppear];
     
     [self.view.window setContentSize:NSMakeSize(700, 400)];
+    if(self.wizardMode) {
+        self.view.window.title = @"Please enter a Server Configuration";
+        _saveButton.title = @"Connect";
+        _saveButton.target = self;
+        _saveButton.action = @selector(reloadConnection:);
+    }
+    else
+        _saveButton.title = @"Save";
 }
 
 
@@ -68,12 +77,14 @@
     [_defaults setInteger:_refreshTimeOut forKey:TR_URL_CONFIG_REFRESH];
     [_defaults setInteger:_requestTimeOut forKey:TR_URL_CONFIG_REQUEST];
     [_defaults synchronize];
-
-    NSURL *url = ((MainViewController*)((PreferencesController*)self.parentViewController).mainViewController).urlConfig;
-[(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
-[(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithURL:url refreshTime:(int)_refreshTimeOut andRequestTime:(int)_requestTimeOut];
-    if(sender != self)
-        [self dismissViewController:self.parentViewController];
+    
+    if(!_wizardMode){
+        NSURL *url = ((MainViewController*)((PreferencesController*)self.parentViewController).mainViewController).urlConfig;
+    [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
+    [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithURL:url refreshTime:(int)_refreshTimeOut andRequestTime:(int)_requestTimeOut];
+        if(sender != self)
+            [self dismissViewController:self.parentViewController];
+    }
 }
 
 
@@ -106,11 +117,31 @@
     //stop connecting to actual Server
 
     [self saveConfig:self];
-    [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
+   if(!_wizardMode) [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
     NSMutableDictionary *config = [_urlConfigList objectAtIndex:[_serverConfigArrayController selectionIndex]];
     NSURL* url = urlFromConfig(config);
-    [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithURL:url refreshTime:(int)_refreshTimeOut andRequestTime:(int)_requestTimeOut];
-    [self dismissViewController:self.parentViewController];
+    if(_wizardMode)
+       [_mainViewController startRefreshingWithURL:url refreshTime:(int)_refreshTimeOut andRequestTime:(int)_requestTimeOut];
+      else
+       [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithURL:url refreshTime:(int)_refreshTimeOut andRequestTime:(int)_requestTimeOut];
+    if(_wizardMode)
+        [self dismissViewController:self];
+    else
+        [self dismissViewController:self.parentViewController];
 }
 
+#pragma mark - NSControlTextEditingDelegate
+
+- (BOOL)control:(NSControl *)control isValidObject:(id)obj {
+
+    if([control.identifier isEqualToString: @"host"]) {
+        if([(NSString*)obj isEqualToString:@""])
+                return NO;
+    }
+    else if([control.identifier isEqualToString: @"rpcPath"]) {
+        if([(NSString*)obj isEqualToString:@""])
+            return NO;
+    }
+    return YES;
+}
 @end

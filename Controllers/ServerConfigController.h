@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <TransmissionRPC/TransmissionRPC.h>
+#import "MainViewController.h"
 #import "URLConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -19,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) IBOutlet NSTableView *serverConfigView;
 @property (nonatomic) IBOutlet NSArrayController *serverConfigArrayController;
 @property (strong) IBOutlet NSUserDefaultsController *userDefaultsController;
+@property (strong) MainViewController *mainViewController;
+@property (nonatomic) BOOL wizardMode;
+
 
 -(IBAction)saveConfig:(id)sender;
 

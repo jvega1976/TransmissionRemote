@@ -18,5 +18,19 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "-[ServerConfigController reloadConnection:]:ServerConfigController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.parentViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController startInitialWizard]:MainViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ServerConfigController viewWillAppear]:ServerConfigController.m">
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

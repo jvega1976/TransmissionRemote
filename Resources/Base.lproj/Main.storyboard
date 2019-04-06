@@ -3456,27 +3456,35 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField identifier="host" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3Fg-8o-Yn2" userLabel="host">
+                            <textField identifier="host" toolTip="Hostname" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3Fg-8o-Yn2" userLabel="host">
                                 <rect key="frame" x="351" y="354" width="291" height="24"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="server.example.com" drawsBackground="YES" id="WR0-N8-Q6X">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="server.example.com" placeholderString="Enter the server hostname" drawsBackground="YES" id="WR0-N8-Q6X">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <attributedString key="userComments">
+                                    <fragment content="Enter the server hostname"/>
+                                </attributedString>
+                                <accessibility description="Server hostname" help="Enter the server hostname"/>
                                 <connections>
                                     <binding destination="vwc-kc-ddL" name="value" keyPath="selection.host" id="rr2-Zf-Cb5"/>
+                                    <outlet property="delegate" destination="kiC-lL-f0R" id="kzB-0X-18x"/>
                                 </connections>
                             </textField>
                             <textField identifier="port" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-Wi-tS7" userLabel="port">
                                 <rect key="frame" x="351" y="320" width="129" height="24"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="9091" drawsBackground="YES" id="Dh6-Pj-63N">
-                                    <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="yIu-vb-nnf"/>
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="9uI-Wi-jht">
+                                        <real key="minimum" value="1"/>
+                                    </numberFormatter>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
                                     <binding destination="vwc-kc-ddL" name="value" keyPath="selection.port" id="xyE-Un-crc"/>
+                                    <outlet property="delegate" destination="kiC-lL-f0R" id="GPU-zA-70P"/>
                                 </connections>
                             </textField>
                             <button identifier="remove" toolTip="Remove Server" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZK3-hD-T22" userLabel="remove">
@@ -3496,7 +3504,7 @@ CA
                                     <binding destination="vwc-kc-ddL" name="enabled" keyPath="canRemove" id="23u-o3-WgC"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fec-7U-h9q">
+                            <textField identifier="rpcPath" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fec-7U-h9q">
                                 <rect key="frame" x="351" y="286" width="291" height="24"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="transmissiom/RPC" drawsBackground="YES" id="fHS-bt-zUU">
                                     <font key="font" metaFont="system"/>
@@ -3505,6 +3513,7 @@ CA
                                 </textFieldCell>
                                 <connections>
                                     <binding destination="vwc-kc-ddL" name="value" keyPath="selection.rpcPath" id="hQZ-Es-GFv"/>
+                                    <outlet property="delegate" destination="kiC-lL-f0R" id="Aig-J5-SCA"/>
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IRP-GQ-edG">
@@ -3627,6 +3636,7 @@ CA
                                 </buttonCell>
                                 <connections>
                                     <action selector="reloadConnection:" target="kiC-lL-f0R" id="V1Q-yf-Y3O"/>
+                                    <binding destination="kiC-lL-f0R" name="hidden" keyPath="wizardMode" id="tei-AI-noJ"/>
                                 </connections>
                             </button>
                             <button identifier="save" toolTip="Save Setup" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="92C-Xt-vCb" userLabel="save">
@@ -3664,32 +3674,46 @@ Gw
                                     <rect key="frame" x="1" y="1" width="356" height="95"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hsv-9C-QL7">
+                                        <textField identifier="refreshTime" toolTip="Refresh Time Out" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hsv-9C-QL7">
                                             <rect key="frame" x="251" y="57" width="80" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="n2N-TW-zIX"/>
                                             </constraints>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Refresh" drawsBackground="YES" id="9lW-ew-qrk">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Refresh" placeholderString="Enter the system refreh time out" drawsBackground="YES" id="9lW-ew-qrk">
+                                                <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" allowsFloats="NO" usesGroupingSeparator="NO" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="CRQ-LA-w3U">
+                                                    <integer key="roundingIncrement" value="1"/>
+                                                    <real key="minimum" value="1"/>
+                                                </numberFormatter>
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <attributedString key="userComments">
+                                                <fragment content="Enter the system refresh time out"/>
+                                            </attributedString>
+                                            <accessibility help="Enter the system refresh time out"/>
                                             <connections>
                                                 <binding destination="kiC-lL-f0R" name="value" keyPath="refreshTimeOut" id="zNb-6V-ngg"/>
+                                                <outlet property="delegate" destination="kiC-lL-f0R" id="sFP-94-m8z"/>
                                             </connections>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aiX-oW-q74">
+                                        <textField identifier="requestTime" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aiX-oW-q74">
                                             <rect key="frame" x="251" y="17" width="80" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="2xI-ti-nb1"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Timeout" drawsBackground="YES" id="7XB-vU-VSe">
+                                                <numberFormatter key="formatter" formatterBehavior="custom10_4" allowsFloats="NO" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="4vg-i8-Qvu">
+                                                    <integer key="roundingIncrement" value="1"/>
+                                                    <real key="minimum" value="1"/>
+                                                </numberFormatter>
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
                                                 <binding destination="kiC-lL-f0R" name="value" keyPath="requestTimeOut" id="j8T-Zu-OZq"/>
+                                                <outlet property="delegate" destination="kiC-lL-f0R" id="69S-EW-SFw"/>
                                             </connections>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u5f-hM-Am7">
@@ -3708,6 +3732,22 @@ Gw
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5F-hg-6yP">
+                                            <rect key="frame" x="329" y="56" width="19" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="Iqv-hw-cy8"/>
+                                            <connections>
+                                                <binding destination="kiC-lL-f0R" name="value" keyPath="refreshTimeOut" id="Mng-zD-7c9"/>
+                                            </connections>
+                                        </stepper>
+                                        <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmX-9R-Hxy">
+                                            <rect key="frame" x="329" y="16" width="19" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="gvS-GI-8TK"/>
+                                            <connections>
+                                                <binding destination="kiC-lL-f0R" name="value" keyPath="requestTimeOut" id="2zJ-u0-JUz"/>
+                                            </connections>
+                                        </stepper>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Hsv-9C-QL7" firstAttribute="baseline" secondItem="u5f-hM-Am7" secondAttribute="firstBaseline" id="6ta-EI-39l"/>
@@ -3836,6 +3876,7 @@ Gw
                         </backgroundFilters>
                     </customView>
                     <connections>
+                        <outlet property="saveButton" destination="92C-Xt-vCb" id="Xos-kx-V9Y"/>
                         <outlet property="serverConfigArrayController" destination="vwc-kc-ddL" id="mRp-Eg-tFO"/>
                         <outlet property="serverConfigView" destination="Koa-bM-CwV" id="UYo-Fg-9Sm"/>
                     </connections>
@@ -7581,7 +7622,7 @@ Gw
                     </connections>
                 </arrayController>
             </objects>
-            <point key="canvasLocation" x="3943" y="296"/>
+            <point key="canvasLocation" x="3412" y="365"/>
         </scene>
     </scenes>
     <resources>
@@ -7620,11 +7661,11 @@ Gw
         <image name="Upload Badget" width="128" height="30"/>
         <image name="VerifyTemplate" width="19" height="19"/>
         <image name="downloadIcon" width="60" height="60"/>
-        <image name="filesIcon" width="32" height="32"/>
+        <image name="filesIcon" width="37" height="37"/>
         <image name="icon file" width="512" height="512"/>
         <image name="iconAnnounceTower" width="36" height="36"/>
         <image name="iconComputer" width="37" height="37"/>
-        <image name="iconFile" width="32" height="32"/>
+        <image name="iconFile" width="36" height="36"/>
         <image name="iconGlobeTemplate" width="19" height="19"/>
         <image name="iconHalfCloudDownload" width="37" height="37"/>
         <image name="iconHalfCloudDownload20x20" width="21" height="20"/>
