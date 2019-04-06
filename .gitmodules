@@ -1,0 +1,6 @@
+[submodule "TransmissionRPC"]
+	path = TransmissionRPC
+	url = https://jvega1976@github.com/jvega1976/TransmissionRPC.git
+[submodule "CategorizationKit"]
+	path = CategorizationKit
+	url = https://jvega1976@github.com/jvega1976/CategorizationKit.git
