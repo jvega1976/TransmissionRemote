@@ -21,6 +21,11 @@
     // Do view setup here.
 }
 
+-(void)viewWillAppear {
+    [self.view setWantsLayer:YES];
+    self.view.layer.backgroundColor =  [NSColor unemphasizedSelectedContentBackgroundColor].CGColor;
+}
+
 
 - (IBAction)addTorrent:(id)sender {
     if (_torrentFile.fileList)

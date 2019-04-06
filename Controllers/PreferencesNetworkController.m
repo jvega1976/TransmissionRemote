@@ -39,6 +39,8 @@
         [_encryption selectItemWithTitle:_trSessionInfo.encryption.capitalizedString];
         [_encryption synchronizeTitleAndSelectedItem];
     }
+    [self.view setWantsLayer:YES];
+    self.view.layer.backgroundColor =  [NSColor windowBackgroundColor].CGColor;
     //  [self.view.window setContentSize:NSMakeSize(700, 400)];
 }
 

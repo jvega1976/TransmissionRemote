@@ -131,7 +131,10 @@
     [self setOpenFilesWithDoubleClick: [defaults boolForKey:@"openFilesWithDoubleClick"]];
 }
     
-
+-(void)viewWillAppear {
+    [self.view setWantsLayer:YES];
+    self.view.layer.backgroundColor =  [NSColor windowBackgroundColor].CGColor;
+}
 
 -(IBAction)savePreferences:(id)sender {
     NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"TransmissionRemote"];

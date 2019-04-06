@@ -204,6 +204,8 @@
 - (void)viewWillAppear
 {
     [super viewWillAppear];
+    [self.view setWantsLayer:YES];
+    self.view.layer.backgroundColor =  [NSColor unemphasizedSelectedContentBackgroundColor].CGColor;
      _legendView = [[LegendView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.contentSize.width, self.scrollView.contentSize.height) ];
     if( _legendView.bits )
         _legendView.prevbits = _legendView.bits;
@@ -230,7 +232,6 @@
     _legendView.count = _piecesCount;
     _legendView.pw = pw;
     _legendView.ph = ph;
-    
     [self.scrollView addSubview:_legendView];
 }
 

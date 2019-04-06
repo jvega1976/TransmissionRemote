@@ -21,6 +21,8 @@
 }
 
 -(void)viewWillAppear {
+    [self.view setWantsLayer:YES];
+    self.view.layer.backgroundColor =  [NSColor unemphasizedSelectedContentBackgroundColor].CGColor;
     if (!_connector)
         [self setConnector:[RPCConnector sharedConnector]];
     if (!_trInfo) {

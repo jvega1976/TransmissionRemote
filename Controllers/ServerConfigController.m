@@ -61,6 +61,8 @@
     [super viewWillAppear];
     
     [self.view.window setContentSize:NSMakeSize(700, 400)];
+    [self.view setWantsLayer:YES];
+    self.view.layer.backgroundColor =  [NSColor windowBackgroundColor].CGColor;
     if(self.wizardMode) {
         self.view.window.title = @"Please enter a Server Configuration";
         _saveButton.title = @"Connect";

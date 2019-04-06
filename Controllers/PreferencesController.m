@@ -25,6 +25,8 @@
     [self setTabStyle:NSTabViewControllerTabStyleToolbar];
     [self setConnector:[RPCConnector sharedConnector]];
     [_connector getSessionInfo];
+    [self.view setWantsLayer:YES];
+    self.view.layer.backgroundColor =  [NSColor windowBackgroundColor].CGColor;
 }
 
 
