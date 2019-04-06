@@ -2535,7 +2535,7 @@
                                     <binding destination="X0f-b0-vw8" name="value" keyPath="secondsActive" id="QT1-Sw-bkZ"/>
                                 </connections>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wAK-67-gZc">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wAK-67-gZc" userLabel="files_freeSpace">
                                 <rect key="frame" x="440" y="8" width="91" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Files Added: 100" id="LTT-7s-awE">
                                     <font key="font" metaFont="smallSystem"/>
@@ -3622,7 +3622,7 @@ CA
                                 </buttonCell>
                                 <color key="contentTintColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
-                                    <binding destination="vwc-kc-ddL" name="value" keyPath="selection.showFreeSpace" id="OWK-57-8uA"/>
+                                    <binding destination="kiC-lL-f0R" name="value" keyPath="displayFreeSpace" id="N3p-0R-dXK"/>
                                 </connections>
                             </button>
                             <button identifier="connect" toolTip="Connect" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Ln-tO-dPo" userLabel="connect">
@@ -4348,7 +4348,7 @@ Gw
                         <tabViewItem label="Downloads" identifier="Downloads" image="NSFolder" id="hDa-uE-uiO"/>
                         <tabViewItem label="Network" identifier="Network" image="NSNetwork" id="btS-8H-UAy"/>
                         <tabViewItem label="Bandwith" identifier="Bandwith" image="Bandwidth" id="oxT-gf-Cfg"/>
-                        <tabViewItem label="Other" image="NSAdvanced" id="TSP-mf-Bu8"/>
+                        <tabViewItem label="General" image="NSPreferencesGeneral" id="TSP-mf-Bu8"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="kpv-XY-RUf">
                         <rect key="frame" x="0.0" y="0.0" width="700" height="480"/>
@@ -7637,10 +7637,10 @@ Gw
         <image name="GearTemplate" width="16" height="16"/>
         <image name="IconListTemplate" width="19" height="19"/>
         <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSAdvanced" width="32" height="32"/>
         <image name="NSFolder" width="32" height="32"/>
         <image name="NSListViewTemplate" width="14" height="10"/>
         <image name="NSNetwork" width="32" height="32"/>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
         <image name="NSStatusAvailable" width="16" height="16"/>
         <image name="NSStatusPartiallyAvailable" width="16" height="16"/>

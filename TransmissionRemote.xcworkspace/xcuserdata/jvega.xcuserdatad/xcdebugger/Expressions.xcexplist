@@ -3,18 +3,13 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[TRInfo initFromJSON:]:TRInfo.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "NSLocalizedString(@&quot;trWaitingCheck&quot;, @&quot;Waiting for Check&quot;)">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "-[ServerConfigController viewWillAppear]:ServerConfigController.m">
       </ContextState>
       <ContextState
-         contextName = "-[ServerConfigController saveConfig:]:ServerConfigController.m">
+         contextName = "-[MainViewController gotSessionWithStats:]:MainViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.parentViewController">
+               value = "(displayFreeSpace == YES)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -30,7 +25,23 @@
          contextName = "-[MainViewController startInitialWizard]:MainViewController.m">
       </ContextState>
       <ContextState
-         contextName = "-[ServerConfigController viewWillAppear]:ServerConfigController.m">
+         contextName = "-[ServerConfigController control:isValidObject:]:ServerConfigController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ServerConfigController saveConfig:]:ServerConfigController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.parentViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TRInfo initFromJSON:]:TRInfo.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "NSLocalizedString(@&quot;trWaitingCheck&quot;, @&quot;Waiting for Check&quot;)">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

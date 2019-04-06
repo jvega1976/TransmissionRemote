@@ -19,6 +19,7 @@
 @property (nonatomic) NSMutableString *errorMessage;
 @property (nonatomic) NSInteger refreshTimeOut;
 @property (nonatomic) NSInteger requestTimeOut;
+@property (nonatomic) BOOL displayFreeSpace;
 @property (strong) IBOutlet NSButton *saveButton;
 
 @end
@@ -49,6 +50,9 @@
     [self setRequestTimeOut:[_store longLongForKey:TR_URL_CONFIG_REQUEST]];
     if(!_requestTimeOut)
         [self setRequestTimeOut: [_defaults integerForKey:TR_URL_CONFIG_REQUEST]];
+    [self setDisplayFreeSpace:[_store longLongForKey:TR_URL_CONFIG_FREE]];
+    if(!_displayFreeSpace)
+        [self setDisplayFreeSpace:[_defaults integerForKey:TR_URL_CONFIG_FREE]];
     
 }
 
@@ -72,10 +76,12 @@
     [_store setArray:_urlConfigList forKey:TR_URL_CONFIG_KEY];
     [_store setLongLong:_refreshTimeOut forKey:TR_URL_CONFIG_REFRESH];
     [_store setLongLong:_requestTimeOut forKey:TR_URL_CONFIG_REQUEST];
+    [_store setBool:_displayFreeSpace forKey:TR_URL_CONFIG_FREE];
     [_store synchronize];
     [_defaults setObject:_urlConfigList forKey:TR_URL_CONFIG_KEY];
     [_defaults setInteger:_refreshTimeOut forKey:TR_URL_CONFIG_REFRESH];
     [_defaults setInteger:_requestTimeOut forKey:TR_URL_CONFIG_REQUEST];
+    [_defaults setBool:_displayFreeSpace forKey:TR_URL_CONFIG_FREE];
     [_defaults synchronize];
     
     if(!_wizardMode){

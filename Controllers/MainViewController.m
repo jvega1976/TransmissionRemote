@@ -25,6 +25,7 @@
 #import "CategorizationKitExtensions.h"
 #import "TransmissionRPCExtensions.h"
 #import "ServerConfigController.h"
+#import "URLConfig.h"
 
 
 #define MyDataType @"MyDataType"
@@ -55,6 +56,7 @@ BOOL isEditable = NO;
 @end
 
 
+
 @interface MainViewController ()
 
 @property (nonatomic) PreferencesController *preferencesController;
@@ -77,7 +79,6 @@ BOOL isEditable = NO;
 @property (weak) IBOutlet NSButton *sideBarButton;
 
 @end
-
 
 @implementation MainViewController
 {
@@ -102,7 +103,10 @@ BOOL isEditable = NO;
     
     NSString *_torrentActualName;
     BOOL stopRefresh;
+    
+    BOOL _displayFreeSpace;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -173,6 +177,9 @@ BOOL isEditable = NO;
         int refreshTimeOut = (int)[store longLongForKey:TR_URL_CONFIG_REFRESH];
         if(!refreshTimeOut)
             refreshTimeOut = (int)[defaults integerForKey:TR_URL_CONFIG_REFRESH];
+        _displayFreeSpace = [store boolForKey:TR_URL_CONFIG_FREE];
+        if(!_displayFreeSpace)
+            _displayFreeSpace = [defaults boolForKey:TR_URL_CONFIG_FREE];
         [RPCConnector.sharedConnector initWithURL:_urlConfig requestTimeout:(requestTimeOut ? requestTimeOut : 10) andDelegate:self];
         _connector = RPCConnector.sharedConnector;
         [self setSessionURL:[NSString stringWithFormat:@"%@://%@:%@%@", _urlConfig.scheme,_urlConfig.host,_urlConfig.port,_urlConfig.path]];
@@ -268,6 +275,8 @@ BOOL isEditable = NO;
         [self.connector getAllTorrents];
         [self.connector getSessionInfo];
         [self.connector getSessionStats];
+        if(self->_displayFreeSpace)
+            [self.connector getFreeSpaceWithDownloadDir:self.trSessionInfo.downloadDir];
     });
 }
 
@@ -919,6 +928,8 @@ BOOL isEditable = NO;
         //Update Toogle Alt Dock Menu Item state
         [[(AppDelegate*)[[NSApplication sharedApplication] delegate] toggleAltMenuItem] setState:NSControlStateValueOff];
     }
+    if(_displayFreeSpace)
+        [_connector getFreeSpaceWithDownloadDir:info.downloadDir];
 }
 
 
@@ -928,7 +939,9 @@ BOOL isEditable = NO;
     [self setUploadedBytes:[NSString stringWithFormat:@"↑UL: %@",formatByteCount(stats.currentUploadedBytes)]];
     [self setDownloadedBytes:[NSString stringWithFormat:@"↓DL: %@",formatByteCount(stats.currentdownloadedBytes)]];
     [self setSecondsActive:[NSString stringWithFormat:@"Duration: %@",formatHoursMinutes(stats.currentSecondsActive)]];
-    [self setFilesAdded:[NSString stringWithFormat:@"Files Added: %ld",stats.currentFilesAdded]];
+    if(!_displayFreeSpace) {
+        [self setFilesAdded:[NSString stringWithFormat:@"Files Added: %ld",stats.currentFilesAdded]];
+    }
     [self setTorrentsCount:[NSString stringWithFormat:@"Session: %ld",stats.torrentCount]];
     [self setActiveTorrentsCount:[NSString stringWithFormat:@"Active: %d",stats.activeTorrentCount]];
     [self setPausedTorrentsCount:[NSString stringWithFormat:@"Paused: %d",stats.pausedTorrentCount]];
@@ -991,6 +1004,11 @@ BOOL isEditable = NO;
     [_torrentPeersController setTrPeerStat:stat];
     if (!_torrentPeersController.viewAppeared)
         [self presentViewController:_torrentPeersController asPopoverRelativeToRect:_entryRect ofView:_torrentListView preferredEdge:nil behavior:NSPopoverBehaviorTransient];
+}
+
+-(void)gotFreeSpaceString:(NSString *)freeSpace
+{
+    [self setFilesAdded:[NSString stringWithFormat:@"Free Space: %@",freeSpace]];
 }
 
 

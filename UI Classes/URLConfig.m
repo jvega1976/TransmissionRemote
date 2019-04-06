@@ -8,6 +8,7 @@
 
 #import "URLConfig.h"
 
+
 NSURL* urlFromConfig(NSDictionary* config) {
     NSString *url = [NSString stringWithFormat:@"%@://%@:%@@%@:%d%@",
                      [config[TR_URL_CONFIG_SSL] boolValue] ? @"https" : @"http",
@@ -34,6 +35,7 @@ NSURL* defaultURL(void) {
         }];
         if(index != NSNotFound)
             return urlFromConfig([urlConfigList objectAtIndex:index]);
+        
     }
     return nil;
 };

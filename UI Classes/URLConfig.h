@@ -21,9 +21,11 @@
 #define TR_URL_CONFIG_AUTH  @"requireAuth"
 #define TR_URL_CONFIG_SVR   @"defaultServer"
 #define TR_URL_CONFIG_PATH  @"rpcPath"
-
+#define TR_URL_CONFIG_FREE  @"showFreeSpace"
 #define TR_URL_CONFIG_REFRESH   @"refreshTimeOut"
 #define TR_URL_CONFIG_REQUEST   @"requestTimeOut"
+
+
 
 #define DEFAULT_URL defaultURL()
 
@@ -31,3 +33,4 @@
 NSURL* urlFromConfig(NSDictionary* config);
 
 NSURL* defaultURL(void);
+
