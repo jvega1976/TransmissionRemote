@@ -7662,7 +7662,7 @@ Gw
         <image name="filesIcon" width="37" height="37"/>
         <image name="iconAnnounceTower" width="36" height="36"/>
         <image name="iconComputer" width="37" height="37"/>
-        <image name="iconFile" width="36" height="36"/>
+        <image name="iconFile" width="32" height="32"/>
         <image name="iconGlobeTemplate" width="19" height="19"/>
         <image name="iconHalfCloudDownload" width="37" height="37"/>
         <image name="iconHalfCloudDownload20x20" width="21" height="20"/>

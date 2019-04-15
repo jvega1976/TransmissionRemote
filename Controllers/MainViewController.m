@@ -237,9 +237,9 @@ BOOL isEditable = NO;
                     // we have found finished torrent need to
                     UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
                     
-                    content.title = [NSString localizedUserNotificationStringForKey:@"Torrent FInished" arguments:nil];
+                    content.title = [NSString localizedUserNotificationStringForKey:@"Torrent Finished" arguments:nil];
                     
-                    content.body = [NSString localizedUserNotificationStringForKey:@"Torrent %@ finished downloading" arguments: @[st.name]];
+                    content.body = [NSString localizedUserNotificationStringForKey:@"\"%@\" finished downloading" arguments: @[st.name]];
                     
                     content.sound = [UNNotificationSound defaultSound];
                     

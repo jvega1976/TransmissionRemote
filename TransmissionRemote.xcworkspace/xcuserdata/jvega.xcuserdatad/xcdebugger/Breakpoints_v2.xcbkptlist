@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/MainViewController.m"
-            timestampString = "576957183.815138"
+            timestampString = "576975630.017634"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1018"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/MainViewController.m"
-            timestampString = "576957183.815645"
+            timestampString = "576975630.017743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "160"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/MainViewController.m"
-            timestampString = "576957183.816005"
+            timestampString = "576975630.0178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "278"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/MainViewController.m"
-            timestampString = "576957183.816344"
+            timestampString = "576975630.017854"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1011"
@@ -138,44 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransmissionRPCClient/AppDelegate.m"
-            timestampString = "576968230.544759"
+            timestampString = "576978166.759228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "285"
             endingLineNumber = "285"
             landmarkName = "-applicationWillResignActive:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TransmissionRPCClient/AppDelegate.m"
-            timestampString = "576968230.544835"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TransmissionRPCClient/AppDelegate.m"
-            timestampString = "576968230.544907"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
-            landmarkName = "-applicationWillEnterForeground:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -202,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransmissionRPCClient/RPCConnector.m"
-            timestampString = "576968230.5450521"
+            timestampString = "576975266.17252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "122"
@@ -218,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransmissionRPCClient/RPCConnector.m"
-            timestampString = "576968230.545119"
+            timestampString = "576975266.172583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "127"
@@ -230,64 +198,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransmissionRPCClient/AppDelegate.m"
-            timestampString = "576968230.545179"
+            timestampString = "576978166.759848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "500"
-            endingLineNumber = "500"
-            landmarkName = "-application:performFetchWithCompletionHandler:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate application:performFetchWithCompletionHandler:]"
-                  moduleName = "TransmissionRPCClient"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jvega/Documents/TransmissionRemote/TransmissionRPCClient/AppDelegate.m"
-                  timestampString = "576957183.965804"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "502"
-                  endingLineNumber = "502"
-                  offsetFromSymbolStart = "212">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__61-[AppDelegate application:performFetchWithCompletionHandler:]_block_invoke"
-                  moduleName = "TransmissionRPCClient"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jvega/Documents/TransmissionRemote/TransmissionRPCClient/AppDelegate.m"
-                  timestampString = "576957183.968479"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "502"
-                  endingLineNumber = "502"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TransmissionRPCClient/AppDelegate.m"
-            timestampString = "576968230.545243"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "514"
-            endingLineNumber = "514"
-            landmarkName = "-application:performFetchWithCompletionHandler:"
+            startingLineNumber = "356"
+            endingLineNumber = "356"
+            landmarkName = "-gotAllTorrents:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -297,13 +217,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TransmissionRPCClient/AppDelegate.m"
-            timestampString = "576968230.545306"
+            filePath = "TransmissionRPCClient/RPCConnector.m"
+            timestampString = "576975266.173"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "503"
-            endingLineNumber = "503"
-            landmarkName = "-application:performFetchWithCompletionHandler:"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "-returnAllTorrents"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -314,27 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransmissionRPCClient/AppDelegate.m"
-            timestampString = "576968230.5453939"
+            timestampString = "576978166.760386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "488"
-            endingLineNumber = "488"
-            landmarkName = "-application:performFetchWithCompletionHandler:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TransmissionRPCClient/AppDelegate.m"
-            timestampString = "576968230.545452"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "411"
-            endingLineNumber = "411"
+            startingLineNumber = "400"
+            endingLineNumber = "400"
             landmarkName = "-gotAllTorrents:"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,11 +250,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransmissionRPCClient/AppDelegate.m"
-            timestampString = "576968230.545508"
+            timestampString = "576978166.7608809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "406"
-            endingLineNumber = "406"
+            startingLineNumber = "382"
+            endingLineNumber = "382"
+            landmarkName = "-gotAllTorrents:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__30-[AppDelegate gotAllTorrents:]_block_invoke"
+                  moduleName = "TransmissionRPCClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jvega/Documents/TransmissionRemote/TransmissionRPCClient/AppDelegate.m"
+                  timestampString = "576978166.960452"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "382"
+                  endingLineNumber = "382"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__30-[AppDelegate gotAllTorrents:]_block_invoke_2"
+                  moduleName = "TransmissionRPCClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jvega/Documents/TransmissionRemote/TransmissionRPCClient/AppDelegate.m"
+                  timestampString = "576978166.964071"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "383"
+                  endingLineNumber = "383"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransmissionRPCClient/AppDelegate.m"
+            timestampString = "576978166.761361"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "396"
+            endingLineNumber = "396"
+            landmarkName = "-gotAllTorrents:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransmissionRPCClient/AppDelegate.m"
+            timestampString = "576978166.761844"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "367"
+            endingLineNumber = "367"
             landmarkName = "-gotAllTorrents:"
             landmarkType = "7">
          </BreakpointContent>
