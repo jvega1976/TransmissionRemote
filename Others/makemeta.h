@@ -6,7 +6,7 @@
  *
  */
 
-#include <TransmissionRPC/transmission.h>
+#include <NSTransmissionRPC/transmission.h>
 
 #pragma once
 

@@ -7,7 +7,7 @@
 //
 
 #import "StatisticsController.h"
-#import "GlobalConsts.h"
+#import <NSTransmissionRPC/GlobalConsts.h>
 @interface StatisticsController ()
 
 @end

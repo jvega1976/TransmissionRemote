@@ -21,7 +21,7 @@
  *****************************************************************************/
 
 #import <Cocoa/Cocoa.h>
-#import <TransmissionRPC/transmission.h>
+#import <NSTransmissionRPC/transmission.h>
 #import "utils.h"
 
 @interface NSString (NSStringAdditions)

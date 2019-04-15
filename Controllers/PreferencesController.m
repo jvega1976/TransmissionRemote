@@ -7,7 +7,6 @@
 //
 
 #import "PreferencesController.h"
-#import <TransmissionRPC/TransmissionRPC.h>
 
 @interface PreferencesController ()
  

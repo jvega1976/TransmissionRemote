@@ -1,0 +1,1572 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Priority"; ObjectID = "00t-0U-SmX"; */
+"00t-0U-SmX.headerCell.title" = "Priority";
+
+/* Class = "NSTextFieldCell"; title = "999"; ObjectID = "084-gh-iLJ"; */
+"084-gh-iLJ.title" = "999";
+
+/* Class = "NSTextFieldCell"; title = "KB/s"; ObjectID = "0HL-GU-bE5"; */
+"0HL-GU-bE5.title" = "KB/s";
+
+/* Class = "NSMenuItem"; title = "Name"; ObjectID = "0Iw-J1-BCo"; */
+"0Iw-J1-BCo.title" = "Name";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Connect"; ObjectID = "0Ln-tO-dPo"; */
+"0Ln-tO-dPo.ibShadowedToolTip" = "Connect";
+
+/* Class = "NSMenu"; title = "Transmission Remote"; ObjectID = "0g3-Qd-eqi"; */
+"0g3-Qd-eqi.title" = "Transmission Remote";
+
+/* Class = "NSTextFieldCell"; title = "UL: 2345 Kb"; ObjectID = "0kU-i9-vpX"; */
+"0kU-i9-vpX.title" = "UL: 2345 Kb";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "0r4-32-i7J"; */
+"0r4-32-i7J.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Priority"; ObjectID = "1A1-UB-Lzq"; */
+"1A1-UB-Lzq.headerCell.title" = "Priority";
+
+/* Class = "NSMenuItem"; title = "Customize Toolbar…"; ObjectID = "1UK-8n-QPP"; */
+"1UK-8n-QPP.title" = "Customize Toolbar…";
+
+/* Class = "NSMenuItem"; title = "ends with"; ObjectID = "1VA-bh-kxl"; */
+"1VA-bh-kxl.title" = "ends with";
+
+/* Class = "NSMenuItem"; title = "Transmission Remote"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Transmission Remote";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1ga-0D-HeP"; */
+"1ga-0D-HeP.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Unavailable"; ObjectID = "1hv-1Y-SGU"; */
+"1hv-1Y-SGU.title" = "Unavailable";
+
+/* Class = "NSTextFieldCell"; title = "Date Completed"; ObjectID = "1n2-wS-aTG"; */
+"1n2-wS-aTG.title" = "Date Completed";
+
+/* Class = "NSTableColumn"; headerCell.title = "Seeds"; ObjectID = "20c-hK-TLy"; */
+"20c-hK-TLy.headerCell.title" = "Seeds";
+
+/* Class = "NSTextFieldCell"; title = "Name\nTest"; ObjectID = "24a-Pk-ubY"; */
+"24a-Pk-ubY.title" = "Name\nTest";
+
+/* Class = "NSTextFieldCell"; title = "Active Time"; ObjectID = "2Az-Y3-Lyy"; */
+"2Az-Y3-Lyy.title" = "Active Time";
+
+/* Class = "NSTableColumn"; headerCell.title = "Next Announce"; ObjectID = "2Ef-fP-Em4"; */
+"2Ef-fP-Em4.headerCell.title" = "Next Announce";
+
+/* Class = "NSTabViewItem"; label = "Server Accounts"; ObjectID = "2HP-M9-OGF"; */
+"2HP-M9-OGF.label" = "Server Accounts";
+
+/* Class = "NSButtonCell"; title = "Add Torrent"; ObjectID = "2JR-lu-x0x"; */
+"2JR-lu-x0x.title" = "Add Torrent";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Peers"; ObjectID = "2Yr-lZ-1yQ"; */
+"2Yr-lZ-1yQ.ibShadowedToolTip" = "Peers";
+
+/* Class = "NSSegmentedCell"; 2cu-8x-dzg.ibShadowedLabels[0] = "Low"; ObjectID = "2cu-8x-dzg"; */
+"2cu-8x-dzg.ibShadowedLabels[0]" = "Low";
+
+/* Class = "NSSegmentedCell"; 2cu-8x-dzg.ibShadowedLabels[1] = "Normal"; ObjectID = "2cu-8x-dzg"; */
+"2cu-8x-dzg.ibShadowedLabels[1]" = "Normal";
+
+/* Class = "NSSegmentedCell"; 2cu-8x-dzg.ibShadowedLabels[2] = "High"; ObjectID = "2cu-8x-dzg"; */
+"2cu-8x-dzg.ibShadowedLabels[2]" = "High";
+
+/* Class = "NSTextFieldCell"; title = "234.0 Kb of 5.6 GB"; ObjectID = "2dM-YX-pfr"; */
+"2dM-YX-pfr.title" = "234.0 Kb of 5.6 GB";
+
+/* Class = "NSTableColumn"; headerCell.title = "Downloading"; ObjectID = "2ln-ub-0MO"; */
+"2ln-ub-0MO.headerCell.title" = "Downloading";
+
+/* Class = "NSMenuItem"; title = "is"; ObjectID = "2np-GD-BbK"; */
+"2np-GD-BbK.title" = "is";
+
+/* Class = "NSTextFieldCell"; title = "Active Time:"; ObjectID = "2yf-Gh-zjG"; */
+"2yf-Gh-zjG.title" = "Active Time:";
+
+/* Class = "NSButtonCell"; title = "infoButton"; ObjectID = "3Ex-T8-nCp"; */
+"3Ex-T8-nCp.title" = "infoButton";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "Server hostname"; ObjectID = "3Fg-8o-Yn2"; Note = "Enter the server hostname"; */
+"3Fg-8o-Yn2.ibExternalAccessibilityDescription" = "Server hostname";
+
+/* Class = "NSTextField"; ibExternalAccessibilityHelp = "Enter the server hostname"; ObjectID = "3Fg-8o-Yn2"; Note = "Enter the server hostname"; */
+"3Fg-8o-Yn2.ibExternalAccessibilityHelp" = "Enter the server hostname";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Hostname"; ObjectID = "3Fg-8o-Yn2"; Note = "Enter the server hostname"; */
+"3Fg-8o-Yn2.ibShadowedToolTip" = "Hostname";
+
+/* Class = "NSTextFieldCell"; title = "9999 bytes/s"; ObjectID = "3H5-gw-fcF"; */
+"3H5-gw-fcF.title" = "9999 bytes/s";
+
+/* Class = "NSToolbarItem"; label = "Reannounce"; ObjectID = "3Rr-fx-Gqp"; */
+"3Rr-fx-Gqp.label" = "Reannounce";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Reannounce"; ObjectID = "3Rr-fx-Gqp"; */
+"3Rr-fx-Gqp.paletteLabel" = "Reannounce";
+
+/* Class = "NSTextFieldCell"; title = "Error Message"; ObjectID = "3wS-S8-CvC"; */
+"3wS-S8-CvC.title" = "Error Message";
+
+/* Class = "NSTableColumn"; headerCell.title = "Leachs"; ObjectID = "4BP-eJ-MWU"; */
+"4BP-eJ-MWU.headerCell.title" = "Leachs";
+
+/* Class = "NSMenuItem"; title = "% Done"; ObjectID = "4CH-Db-EUd"; */
+"4CH-Db-EUd.title" = "% Done";
+
+/* Class = "NSMenuItem"; title = "Move Down"; ObjectID = "4EN-yA-p0u"; */
+"4EN-yA-p0u.title" = "Move Down";
+
+/* Class = "NSMenuItem"; title = "Enter Full Screen"; ObjectID = "4J7-dP-txa"; */
+"4J7-dP-txa.title" = "Enter Full Screen";
+
+/* Class = "NSMenuItem"; title = "Tolerated"; ObjectID = "4U9-Yw-q4P"; */
+"4U9-Yw-q4P.title" = "Tolerated";
+
+/* Class = "NSTextFieldCell"; title = "Pos"; ObjectID = "4VV-xi-OYB"; */
+"4VV-xi-OYB.title" = "Pos";
+
+/* Class = "NSButtonCell"; title = "Save"; ObjectID = "4di-IN-2sd"; */
+"4di-IN-2sd.title" = "Save";
+
+/* Class = "NSMenu"; title = "Change Priority"; ObjectID = "4eh-W8-0kn"; */
+"4eh-W8-0kn.title" = "Change Priority";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "4jv-dS-6G5"; */
+"4jv-dS-6G5.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Status: "; ObjectID = "4rf-Hl-Uzy"; */
+"4rf-Hl-Uzy.title" = "Status: ";
+
+/* Class = "NSButtonCell"; title = "Wed"; ObjectID = "4s0-Yc-m57"; */
+"4s0-Yc-m57.title" = "Wed";
+
+/* Class = "NSMenuItem"; title = "Quit Transmission Remote"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit Transmission Remote";
+
+/* Class = "NSMenuItem"; title = "Actions"; ObjectID = "5QF-Oa-p0T"; */
+"5QF-Oa-p0T.title" = "Actions";
+
+/* Class = "NSMenuItem"; title = "Recent Searches"; ObjectID = "5Xj-6W-oyX"; */
+"5Xj-6W-oyX.title" = "Recent Searches";
+
+/* Class = "NSMenuItem"; title = "About Transmission Remote"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "About Transmission Remote";
+
+/* Class = "NSButtonCell"; title = "Directory for Incomplete Files"; ObjectID = "5t4-fJ-FN5"; */
+"5t4-fJ-FN5.title" = "Directory for Incomplete Files";
+
+/* Class = "NSTextFieldCell"; title = "Name"; ObjectID = "5wY-v5-tDt"; */
+"5wY-v5-tDt.title" = "Name";
+
+/* Class = "NSMenuItem"; title = "Size"; ObjectID = "6GD-pW-tKl"; */
+"6GD-pW-tKl.title" = "Size";
+
+/* Class = "NSMenuItem"; title = "begins with"; ObjectID = "6HH-Di-e3Q"; */
+"6HH-Di-e3Q.title" = "begins with";
+
+/* Class = "NSSegmentedCell"; 6KU-t0-CCw.ibShadowedToolTips[0] = "Low"; ObjectID = "6KU-t0-CCw"; */
+"6KU-t0-CCw.ibShadowedToolTips[0]" = "Low";
+
+/* Class = "NSSegmentedCell"; 6KU-t0-CCw.ibShadowedToolTips[1] = "Normal"; ObjectID = "6KU-t0-CCw"; */
+"6KU-t0-CCw.ibShadowedToolTips[1]" = "Normal";
+
+/* Class = "NSSegmentedCell"; 6KU-t0-CCw.ibShadowedToolTips[2] = "High"; ObjectID = "6KU-t0-CCw"; */
+"6KU-t0-CCw.ibShadowedToolTips[2]" = "High";
+
+/* Class = "NSTextFieldCell"; title = "Default Download folder in remote server:"; ObjectID = "6RW-Xs-5gO"; */
+"6RW-Xs-5gO.title" = "Default Download folder in remote server:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Save Setup"; ObjectID = "6ZE-K3-Zhc"; */
+"6ZE-K3-Zhc.ibShadowedToolTip" = "Save Setup";
+
+/* Class = "NSMenuItem"; title = "Start All"; ObjectID = "6dh-zS-Vam"; */
+"6dh-zS-Vam.title" = "Start All";
+
+/* Class = "NSButtonCell"; title = "peersButton"; ObjectID = "6lx-Ia-KOK"; */
+"6lx-Ia-KOK.title" = "peersButton";
+
+/* Class = "NSTabViewItem"; label = "Queue"; ObjectID = "79a-yp-RvZ"; */
+"79a-yp-RvZ.label" = "Queue";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "7DW-QT-LBl"; */
+"7DW-QT-LBl.title" = "Text Cell";
+
+/* Class = "NSToolbarItem"; label = "Top"; ObjectID = "7FL-JG-LVy"; */
+"7FL-JG-LVy.label" = "Top";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Top"; ObjectID = "7FL-JG-LVy"; */
+"7FL-JG-LVy.paletteLabel" = "Top";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "7Id-uI-Inl"; */
+"7Id-uI-Inl.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Timeout"; ObjectID = "7XB-vU-VSe"; */
+"7XB-vU-VSe.title" = "Timeout";
+
+/* Class = "NSViewController"; title = "Network"; ObjectID = "7fp-EN-88r"; */
+"7fp-EN-88r.title" = "Network";
+
+/* Class = "NSTextFieldCell"; title = "Download Dir"; ObjectID = "7zU-Az-3Ry"; */
+"7zU-Az-3Ry.title" = "Download Dir";
+
+/* Class = "NSMenuItem"; title = "Name"; ObjectID = "84X-f7-Jee"; */
+"84X-f7-Jee.title" = "Name";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "8VW-ck-sDC"; */
+"8VW-ck-sDC.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Upload Rate: "; ObjectID = "8jl-ih-0nc"; */
+"8jl-ih-0nc.title" = "Upload Rate: ";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "8n7-7U-0rJ"; */
+"8n7-7U-0rJ.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Vers: 2.92"; ObjectID = "8oh-oF-Nan"; */
+"8oh-oF-Nan.title" = "Vers: 2.92";
+
+/* Class = "NSToolbarItem"; label = "Down"; ObjectID = "8oz-tD-j0E"; */
+"8oz-tD-j0E.label" = "Down";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Down"; ObjectID = "8oz-tD-j0E"; */
+"8oz-tD-j0E.paletteLabel" = "Down";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Save Setup"; ObjectID = "92C-Xt-vCb"; */
+"92C-Xt-vCb.ibShadowedToolTip" = "Save Setup";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "97A-qF-yec"; */
+"97A-qF-yec.title" = "Cancel";
+
+/* Class = "NSToolbarItem"; label = "Bottom"; ObjectID = "9Bw-bC-Pr8"; */
+"9Bw-bC-Pr8.label" = "Bottom";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Bottom"; ObjectID = "9Bw-bC-Pr8"; */
+"9Bw-bC-Pr8.paletteLabel" = "Bottom";
+
+/* Class = "NSTextFieldCell"; title = "Duration: 1 day 3 hours 2 seconds"; ObjectID = "9Fc-uI-NdR"; */
+"9Fc-uI-NdR.title" = "Duration: 1 day 3 hours 2 seconds";
+
+/* Class = "NSMenuItem"; title = "Move Bottom"; ObjectID = "9ic-FL-obx"; */
+"9ic-FL-obx.title" = "Move Bottom";
+
+/* Class = "NSTextFieldCell"; title = "Username:"; ObjectID = "9l0-eR-JHs"; */
+"9l0-eR-JHs.title" = "Username:";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Enter the system refreh time out"; ObjectID = "9lW-ew-qrk"; Note = "Enter the system refresh time out"; */
+"9lW-ew-qrk.placeholderString" = "Enter the system refreh time out";
+
+/* Class = "NSTextFieldCell"; title = "Refresh"; ObjectID = "9lW-ew-qrk"; Note = "Enter the system refresh time out"; */
+"9lW-ew-qrk.title" = "Refresh";
+
+/* Class = "NSButtonCell"; title = "Download Queue Size:"; ObjectID = "A6O-f6-c7e"; */
+"A6O-f6-c7e.title" = "Download Queue Size:";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "ABT-EJ-1bQ"; */
+"ABT-EJ-1bQ.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "ACq-Wl-Q2b"; */
+"ACq-Wl-Q2b.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "remoteDirectory"; ObjectID = "ALV-Tx-YUD"; */
+"ALV-Tx-YUD.title" = "remoteDirectory";
+
+/* Class = "NSMenuItem"; title = "Low"; ObjectID = "AXN-J5-xec"; */
+"AXN-J5-xec.title" = "Low";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "Peers"; ObjectID = "AeB-4h-iL7"; */
+"AeB-4h-iL7.title" = "Peers";
+
+/* Class = "NSTextFieldCell"; title = "445MB 50%"; ObjectID = "AeC-Ji-VkF"; */
+"AeC-Ji-VkF.title" = "445MB 50%";
+
+/* Class = "NSMenu"; title = "Sort"; ObjectID = "AmS-xB-Kyg"; */
+"AmS-xB-Kyg.title" = "Sort";
+
+/* Class = "NSButtonCell"; title = "Save"; ObjectID = "AoW-ry-2wz"; */
+"AoW-ry-2wz.title" = "Save";
+
+/* Class = "NSTextFieldCell"; title = "The Torrent Name"; ObjectID = "AxZ-vr-5pe"; */
+"AxZ-vr-5pe.title" = "The Torrent Name";
+
+/* Class = "NSMenuItem"; title = "Peers"; ObjectID = "B96-SE-ire"; */
+"B96-SE-ire.title" = "Peers";
+
+/* Class = "NSTextFieldCell"; title = "ETA"; ObjectID = "BB9-MU-tA6"; */
+"BB9-MU-tA6.title" = "ETA";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Preferences…";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "BV5-bs-hbw"; */
+"BV5-bs-hbw.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Bytes Completed"; ObjectID = "BfA-Ns-Brp"; */
+"BfA-Ns-Brp.title" = "Bytes Completed";
+
+/* Class = "NSTextFieldCell"; title = "Peers per Torrent:"; ObjectID = "Bh7-Qp-m3i"; */
+"Bh7-Qp-m3i.title" = "Peers per Torrent:";
+
+/* Class = "NSMenuItem"; title = "Download Rate"; ObjectID = "Bpv-lE-wEE"; */
+"Bpv-lE-wEE.title" = "Download Rate";
+
+/* Class = "NSTextFieldCell"; title = "Sessions"; ObjectID = "C0M-WO-Dxo"; */
+"C0M-WO-Dxo.title" = "Sessions";
+
+/* Class = "NSTextFieldCell"; title = "minutes"; ObjectID = "CLW-6h-puS"; */
+"CLW-6h-puS.title" = "minutes";
+
+/* Class = "NSTableColumn"; headerCell.title = "Tracker"; ObjectID = "CR0-1H-jIx"; */
+"CR0-1H-jIx.headerCell.title" = "Tracker";
+
+/* Class = "NSTextFieldCell"; title = "Have"; ObjectID = "CUF-oR-M1R"; */
+"CUF-oR-M1R.title" = "Have";
+
+/* Class = "NSTableColumn"; headerCell.title = "Upload Rate"; ObjectID = "CVv-Uv-tG4"; */
+"CVv-Uv-tG4.headerCell.title" = "Upload Rate";
+
+/* Class = "NSMenuItem"; title = "Seeds"; ObjectID = "Cds-Yg-zPz"; */
+"Cds-Yg-zPz.title" = "Seeds";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "D7l-y2-6Ug"; */
+"D7l-y2-6Ug.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "DQE-uO-iGR"; */
+"DQE-uO-iGR.title" = "Cancel";
+
+/* Class = "NSMenuItem"; title = "Delete"; ObjectID = "DVo-aG-piG"; */
+"DVo-aG-piG.title" = "Delete";
+
+/* Class = "NSVisualEffectView"; ibExternalAccessibilityDescription = "I"; ObjectID = "DeS-AP-0PZ"; */
+"DeS-AP-0PZ.ibExternalAccessibilityDescription" = "I";
+
+/* Class = "NSVisualEffectView"; ibExternalAccessibilityHelp = "I"; ObjectID = "DeS-AP-0PZ"; */
+"DeS-AP-0PZ.ibExternalAccessibilityHelp" = "I";
+
+/* Class = "NSButtonCell"; title = "Connect"; ObjectID = "DeT-tD-jvV"; */
+"DeT-tD-jvV.title" = "Connect";
+
+/* Class = "NSTextFieldCell"; title = "9091"; ObjectID = "Dh6-Pj-63N"; */
+"Dh6-Pj-63N.title" = "9091";
+
+/* Class = "NSMenuItem"; title = "Move Top"; ObjectID = "Dv1-io-Yv7"; */
+"Dv1-io-Yv7.title" = "Move Top";
+
+/* Class = "NSMenuItem"; title = "Date Completed"; ObjectID = "E2c-wN-nRY"; */
+"E2c-wN-nRY.title" = "Date Completed";
+
+/* Class = "NSButtonCell"; title = "Download Rate: "; ObjectID = "EFw-us-Y8R"; */
+"EFw-us-Y8R.title" = "Download Rate: ";
+
+/* Class = "NSTextFieldCell"; title = "Size: "; ObjectID = "EHx-jO-Tan"; */
+"EHx-jO-Tan.title" = "Size: ";
+
+/* Class = "NSMenuItem"; title = "Upload Rate"; ObjectID = "ENO-aL-Lty"; */
+"ENO-aL-Lty.title" = "Upload Rate";
+
+/* Class = "NSTextFieldCell"; title = "User at"; ObjectID = "ETT-4j-whV"; */
+"ETT-4j-whV.title" = "User at";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Help";
+
+/* Class = "NSTableColumn"; headerCell.title = "Remote Directory"; ObjectID = "F4Q-R1-d4z"; */
+"F4Q-R1-d4z.headerCell.title" = "Remote Directory";
+
+/* Class = "NSTableColumn"; headerToolTip = "Remote Shared Drive (Drive must be shared using SMB or AFP Protocols). Example: /home/user/torrents"; ObjectID = "F4Q-R1-d4z"; */
+"F4Q-R1-d4z.headerToolTip" = "Remote Shared Drive (Drive must be shared using SMB or AFP Protocols). Example: /home/user/torrents";
+
+/* Class = "NSButtonCell"; title = "Open Files with Double-click (Require SMB or AFP driver mapping)"; ObjectID = "F9C-NP-RLk"; */
+"F9C-NP-RLk.title" = "Open Files with Double-click (Require SMB or AFP driver mapping)";
+
+/* Class = "NSMenuItem"; title = "TransmissionRemote Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "TransmissionRemote Help";
+
+/* Class = "NSMenuItem"; title = "Move To..."; ObjectID = "FY3-fN-Vgf"; */
+"FY3-fN-Vgf.title" = "Move To...";
+
+/* Class = "NSMenuItem"; title = "Position"; ObjectID = "Fal-I4-PZk"; */
+"Fal-I4-PZk.title" = "Position";
+
+/* Class = "NSTextFieldCell"; title = "Downloading from 5 of 10 peers ETA: 1:25"; ObjectID = "FvY-9p-JHT"; */
+"FvY-9p-JHT.title" = "Downloading from 5 of 10 peers ETA: 1:25";
+
+/* Class = "NSToolbarItem"; label = "Verify"; ObjectID = "G1n-eC-2sQ"; */
+"G1n-eC-2sQ.label" = "Verify";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Verify"; ObjectID = "G1n-eC-2sQ"; */
+"G1n-eC-2sQ.paletteLabel" = "Verify";
+
+/* Class = "NSToolbarItem"; toolTip = "Verify Torrent"; ObjectID = "G1n-eC-2sQ"; */
+"G1n-eC-2sQ.toolTip" = "Verify Torrent";
+
+/* Class = "NSMenuItem"; title = "Stop All Torrents"; ObjectID = "G54-Yr-PmB"; */
+"G54-Yr-PmB.title" = "Stop All Torrents";
+
+/* Class = "NSTextFieldCell"; title = "Available"; ObjectID = "G8o-2r-eQ9"; */
+"G8o-2r-eQ9.title" = "Available";
+
+/* Class = "NSToolbarItem"; label = "Stop All"; ObjectID = "GDk-gO-ynS"; */
+"GDk-gO-ynS.label" = "Stop All";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Stop All"; ObjectID = "GDk-gO-ynS"; */
+"GDk-gO-ynS.paletteLabel" = "Stop All";
+
+/* Class = "NSMenu"; title = "Sort"; ObjectID = "GEO-Iw-cKr"; */
+"GEO-Iw-cKr.title" = "Sort";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "GGO-XS-8Dg"; */
+"GGO-XS-8Dg.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Allow Peers Exchange in public torrents"; ObjectID = "GKG-I9-N8j"; */
+"GKG-I9-N8j.title" = "Allow Peers Exchange in public torrents";
+
+/* Class = "NSTableColumn"; headerCell.title = "Have"; ObjectID = "GTY-ny-hWS"; */
+"GTY-ny-hWS.headerCell.title" = "Have";
+
+/* Class = "NSMenuItem"; title = "Name"; ObjectID = "Gi5-1S-RQB"; */
+"Gi5-1S-RQB.title" = "Name";
+
+/* Class = "NSMenu"; title = "Video Applications"; ObjectID = "Giu-VR-qfw"; */
+"Giu-VR-qfw.title" = "Video Applications";
+
+/* Class = "NSTextFieldCell"; title = "Progress: "; ObjectID = "H1G-7W-kfE"; */
+"H1G-7W-kfE.title" = "Progress: ";
+
+/* Class = "NSTextFieldCell"; title = "Global Bandwith Limits: "; ObjectID = "H1i-Qc-D3n"; */
+"H1i-Qc-D3n.title" = "Global Bandwith Limits: ";
+
+/* Class = "NSTableColumn"; headerCell.title = "Server Name"; ObjectID = "H2K-jQ-vvW"; */
+"H2K-jQ-vvW.headerCell.title" = "Server Name";
+
+/* Class = "NSMenuItem"; title = "View"; ObjectID = "H8h-7b-M4v"; */
+"H8h-7b-M4v.title" = "View";
+
+/* Class = "NSTextFieldCell"; title = "Torrent Count"; ObjectID = "HKb-fR-iSq"; */
+"HKb-fR-iSq.title" = "Torrent Count";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "HLO-f3-bCw"; */
+"HLO-f3-bCw.title" = "OK";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Move Bottom"; ObjectID = "HX8-Gf-5Fs"; */
+"HX8-Gf-5Fs.ibShadowedToolTip" = "Move Bottom";
+
+/* Class = "NSMenuItem"; title = "Move Bottom"; ObjectID = "HX8-Gf-5Fs"; */
+"HX8-Gf-5Fs.title" = "Move Bottom";
+
+/* Class = "NSTextFieldCell"; title = "890MB"; ObjectID = "HYx-pr-Chl"; */
+"HYx-pr-Chl.title" = "890MB";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Show/Hide SideBar"; ObjectID = "HdV-dv-bhd"; */
+"HdV-dv-bhd.ibShadowedToolTip" = "Show/Hide SideBar";
+
+/* Class = "NSTableColumn"; headerCell.title = "File Name"; ObjectID = "HfH-0k-BTR"; */
+"HfH-0k-BTR.headerCell.title" = "File Name";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "Hfk-y4-bzB"; */
+"Hfk-y4-bzB.title" = "Cancel";
+
+/* Class = "NSTextFieldCell"; title = "Uploaded:"; ObjectID = "Hpz-Z2-eu9"; */
+"Hpz-Z2-eu9.title" = "Uploaded:";
+
+/* Class = "NSTextField"; ibExternalAccessibilityHelp = "Enter the system refresh time out"; ObjectID = "Hsv-9C-QL7"; Note = "Enter the system refresh time out"; */
+"Hsv-9C-QL7.ibExternalAccessibilityHelp" = "Enter the system refresh time out";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Refresh Time Out"; ObjectID = "Hsv-9C-QL7"; Note = "Enter the system refresh time out"; */
+"Hsv-9C-QL7.ibShadowedToolTip" = "Refresh Time Out";
+
+/* Class = "NSButtonCell"; title = "Stop seeding when inactive for:"; ObjectID = "HyT-TR-RDl"; */
+"HyT-TR-RDl.title" = "Stop seeding when inactive for:";
+
+/* Class = "NSMenu"; title = "View"; ObjectID = "HyV-fh-RgO"; */
+"HyV-fh-RgO.title" = "View";
+
+/* Class = "NSMenuItem"; title = "Add File..."; ObjectID = "IAo-SY-fd9"; */
+"IAo-SY-fd9.title" = "Add File...";
+
+/* Class = "NSTextFieldCell"; title = "Download Dir:"; ObjectID = "IE4-F4-RGQ"; */
+"IE4-F4-RGQ.title" = "Download Dir:";
+
+/* Class = "NSButtonCell"; title = "Mon"; ObjectID = "IFD-ZN-WHn"; */
+"IFD-ZN-WHn.title" = "Mon";
+
+/* Class = "NSTextFieldCell"; title = "Directory Mapping:"; ObjectID = "IFJ-op-1ab"; */
+"IFJ-op-1ab.title" = "Directory Mapping:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Settings"; ObjectID = "IOo-Nk-xHf"; */
+"IOo-Nk-xHf.ibShadowedToolTip" = "Settings";
+
+/* Class = "NSWindow"; title = "Transmission Remote"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "Transmission Remote";
+
+/* Class = "NSButtonCell"; title = "Seed Ratio Limit:"; ObjectID = "Iaj-sP-f8Z"; */
+"Iaj-sP-f8Z.title" = "Seed Ratio Limit:";
+
+/* Class = "NSButtonCell"; title = "Enable Speed Limit"; ObjectID = "IiR-WN-sGU"; */
+"IiR-WN-sGU.title" = "Enable Speed Limit";
+
+/* Class = "NSMenuItem"; title = "is less than"; ObjectID = "Iln-CH-od2"; */
+"Iln-CH-od2.title" = "is less than";
+
+/* Class = "NSMenu"; title = "Files"; ObjectID = "JFQ-Rv-RJB"; */
+"JFQ-Rv-RJB.title" = "Files";
+
+/* Class = "NSTextFieldCell"; title = "Sessions:"; ObjectID = "JHD-nE-cx6"; */
+"JHD-nE-cx6.title" = "Sessions:";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "JL2-CT-nrK"; */
+"JL2-CT-nrK.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Upload Rate"; ObjectID = "JNO-MN-7Lg"; */
+"JNO-MN-7Lg.title" = "Upload Rate";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Default Server Setup"; ObjectID = "JSw-m5-0bA"; */
+"JSw-m5-0bA.ibShadowedToolTip" = "Default Server Setup";
+
+/* Class = "NSTextFieldCell"; title = "Downloaded: "; ObjectID = "JZX-PQ-Yfl"; */
+"JZX-PQ-Yfl.title" = "Downloaded: ";
+
+/* Class = "NSMenuItem"; title = "ETA"; ObjectID = "JdS-J7-dU4"; */
+"JdS-J7-dU4.title" = "ETA";
+
+/* Class = "NSTextFieldCell"; title = "Leechers"; ObjectID = "Jed-PC-7zj"; */
+"Jed-PC-7zj.title" = "Leechers";
+
+/* Class = "NSButtonCell"; title = "Default connection"; ObjectID = "Jh2-oB-SFV"; */
+"Jh2-oB-SFV.title" = "Default connection";
+
+/* Class = "NSTextFieldCell"; title = "Speed Limit mode:"; ObjectID = "Jl1-Jt-wpO"; */
+"Jl1-Jt-wpO.title" = "Speed Limit mode:";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "Jux-Pi-Z5K"; */
+"Jux-Pi-Z5K.title" = "Cancel";
+
+/* Class = "NSTextFieldCell"; title = "Next Announce"; ObjectID = "KIo-9x-epf"; */
+"KIo-9x-epf.title" = "Next Announce";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Show All";
+
+/* Class = "NSToolbarItem"; label = "Alt Speed"; ObjectID = "Kf1-yr-YoQ"; */
+"Kf1-yr-YoQ.label" = "Alt Speed";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Alt Speed"; ObjectID = "Kf1-yr-YoQ"; */
+"Kf1-yr-YoQ.paletteLabel" = "Alt Speed";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Start"; ObjectID = "KfM-hy-lOp"; */
+"KfM-hy-lOp.ibShadowedToolTip" = "Start";
+
+/* Class = "NSMenuItem"; title = "Start"; ObjectID = "KfM-hy-lOp"; */
+"KfM-hy-lOp.title" = "Start";
+
+/* Class = "NSScrollView"; ibShadowedToolTip = "The Mapping between remote and local directories.  For example: if files are saved in remote server directory \"/usr/files\" and this remote driver location is locally mapped (using SMB or AFP) to \"/Volumes/TorrentFiles\", then enter both values: Remote Directory=/usr/files and Local Directory=/Volumes/TorrentFiles."; ObjectID = "Kit-h4-mZU"; */
+"Kit-h4-mZU.ibShadowedToolTip" = "The Mapping between remote and local directories.  For example: if files are saved in remote server directory \"/usr/files\" and this remote driver location is locally mapped (using SMB or AFP) to \"/Volumes/TorrentFiles\", then enter both values: Remote Directory=/usr/files and Local Directory=/Volumes/TorrentFiles.";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Reannounca"; ObjectID = "Kiu-jh-ERx"; */
+"Kiu-jh-ERx.ibShadowedToolTip" = "Reannounca";
+
+/* Class = "NSMenuItem"; title = "Reannounce"; ObjectID = "Kiu-jh-ERx"; */
+"Kiu-jh-ERx.title" = "Reannounce";
+
+/* Class = "NSButtonCell"; title = "Thu"; ObjectID = "L25-cA-Azi"; */
+"L25-cA-Azi.title" = "Thu";
+
+/* Class = "NSTextFieldCell"; title = "Data Refresh Interval (Seconds):"; ObjectID = "L4K-hX-gvp"; */
+"L4K-hX-gvp.title" = "Data Refresh Interval (Seconds):";
+
+/* Class = "NSButtonCell"; title = "Test Port"; ObjectID = "L6B-kh-PoL"; */
+"L6B-kh-PoL.title" = "Test Port";
+
+/* Class = "NSToolbarItem"; label = "Start"; ObjectID = "L6e-lz-Bd9"; */
+"L6e-lz-Bd9.label" = "Start";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Start"; ObjectID = "L6e-lz-Bd9"; */
+"L6e-lz-Bd9.paletteLabel" = "Start";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Bring All to Front";
+
+/* Class = "NSTextFieldCell"; title = "Name: "; ObjectID = "LGh-Cl-VJE"; */
+"LGh-Cl-VJE.title" = "Name: ";
+
+/* Class = "NSTextFieldCell"; title = "Files Added: 100"; ObjectID = "LTT-7s-awE"; */
+"LTT-7s-awE.title" = "Files Added: 100";
+
+/* Class = "NSMenuItem"; title = "Sort By"; ObjectID = "Lab-Hw-KiT"; */
+"Lab-Hw-KiT.title" = "Sort By";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Files"; ObjectID = "Lqd-7S-3Yk"; */
+"Lqd-7S-3Yk.ibShadowedToolTip" = "Files";
+
+/* Class = "NSTextFieldCell"; title = "KB/s"; ObjectID = "LzK-u4-N2Z"; */
+"LzK-u4-N2Z.title" = "KB/s";
+
+/* Class = "NSMenuItem"; title = "is greater than"; ObjectID = "M6a-ih-oP9"; */
+"M6a-ih-oP9.title" = "is greater than";
+
+/* Class = "NSTextFieldCell"; title = "Download Speed"; ObjectID = "Maz-kD-Dv8"; */
+"Maz-kD-Dv8.title" = "Download Speed";
+
+/* Class = "NSButtonCell"; title = "Save"; ObjectID = "MdM-xZ-vO4"; */
+"MdM-xZ-vO4.title" = "Save";
+
+/* Class = "NSTextFieldCell"; title = "Rate To Client"; ObjectID = "MeX-l3-U9p"; */
+"MeX-l3-U9p.title" = "Rate To Client";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Add Server"; ObjectID = "Mgg-Xc-uon"; */
+"Mgg-Xc-uon.ibShadowedToolTip" = "Add Server";
+
+/* Class = "NSTextFieldCell"; title = "Incoming Port: "; ObjectID = "MhL-Zz-MOx"; */
+"MhL-Zz-MOx.title" = "Incoming Port: ";
+
+/* Class = "NSViewController"; title = "Download Preferences"; ObjectID = "N3q-A6-RaR"; */
+"N3q-A6-RaR.title" = "Download Preferences";
+
+/* Class = "NSMenuItem"; title = "Required"; ObjectID = "N4Q-Yi-aXs"; */
+"N4Q-Yi-aXs.title" = "Required";
+
+/* Class = "NSMenuItem"; title = "is less than"; ObjectID = "N8I-gj-TYL"; */
+"N8I-gj-TYL.title" = "is less than";
+
+/* Class = "NSMenuItem"; title = "Add Torrent..."; ObjectID = "NAl-bA-emD"; */
+"NAl-bA-emD.title" = "Add Torrent...";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Services";
+
+/* Class = "NSTextFieldCell"; title = "Active Count"; ObjectID = "NR5-Rq-Y9b"; */
+"NR5-Rq-Y9b.title" = "Active Count";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "Nqj-gK-fb0"; */
+"Nqj-gK-fb0.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Uploaded Bytes"; ObjectID = "O2q-gd-d3u"; */
+"O2q-gd-d3u.title" = "Uploaded Bytes";
+
+/* Class = "NSTextFieldCell"; title = "100ks "; ObjectID = "O59-B9-3fs"; */
+"O59-B9-3fs.title" = "100ks ";
+
+/* Class = "NSMenuItem"; title = "name"; ObjectID = "O6L-CU-hAL"; */
+"O6L-CU-hAL.title" = "name";
+
+/* Class = "NSButtonCell"; title = "Fri"; ObjectID = "OJm-6O-sZR"; */
+"OJm-6O-sZR.title" = "Fri";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "OLV-W4-5yK"; */
+"OLV-W4-5yK.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Name"; ObjectID = "OWA-MQ-odI"; */
+"OWA-MQ-odI.title" = "Name";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "Minimize";
+
+/* Class = "NSBox"; title = "Cumulative"; ObjectID = "Ofo-Rk-Vsk"; */
+"Ofo-Rk-Vsk.title" = "Cumulative";
+
+/* Class = "NSMenuItem"; title = "Hide Transmission Remote"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Hide Transmission Remote";
+
+/* Class = "NSTextFieldCell"; title = "Downloading"; ObjectID = "Otn-Q2-Ogu"; */
+"Otn-Q2-Ogu.title" = "Downloading";
+
+/* Class = "NSToolbarItem"; label = "Create"; ObjectID = "OwW-Hl-i93"; */
+"OwW-Hl-i93.label" = "Create";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Create"; ObjectID = "OwW-Hl-i93"; */
+"OwW-Hl-i93.paletteLabel" = "Create";
+
+/* Class = "NSButtonCell"; title = "Save"; ObjectID = "P5B-qc-Yol"; */
+"P5B-qc-Yol.title" = "Save";
+
+/* Class = "NSTextFieldCell"; title = "100%"; ObjectID = "PNI-Yw-lEK"; */
+"PNI-Yw-lEK.title" = "100%";
+
+/* Class = "NSMenuItem"; title = "Alt Speed"; ObjectID = "PeW-Is-TFT"; */
+"PeW-Is-TFT.title" = "Alt Speed";
+
+/* Class = "NSMenuItem"; title = "is greater than or equal to"; ObjectID = "PsT-oI-hTy"; */
+"PsT-oI-hTy.title" = "is greater than or equal to";
+
+/* Class = "NSMenuItem"; title = "Date Completed"; ObjectID = "PwE-TI-9Zm"; */
+"PwE-TI-9Zm.title" = "Date Completed";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "PxG-55-UzU"; */
+"PxG-55-UzU.title" = "OK";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Cancel"; ObjectID = "QMT-qu-fb2"; */
+"QMT-qu-fb2.ibShadowedToolTip" = "Cancel";
+
+/* Class = "NSToolbarItem"; label = "Stop"; ObjectID = "Qhr-6W-40L"; */
+"Qhr-6W-40L.label" = "Stop";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Stop"; ObjectID = "Qhr-6W-40L"; */
+"Qhr-6W-40L.paletteLabel" = "Stop";
+
+/* Class = "NSMenuItem"; title = "Position"; ObjectID = "QnP-5S-dfk"; */
+"QnP-5S-dfk.title" = "Position";
+
+/* Class = "NSTextFieldCell"; title = "KB/s"; ObjectID = "Qsp-ZO-PVv"; */
+"Qsp-ZO-PVv.title" = "KB/s";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
+"R4o-n2-Eq4.title" = "Zoom";
+
+/* Class = "NSMenuItem"; title = "Size"; ObjectID = "RFL-Yd-aA6"; */
+"RFL-Yd-aA6.title" = "Size";
+
+/* Class = "NSTextFieldCell"; title = "Have:  "; ObjectID = "RVx-Fg-GNm"; */
+"RVx-Fg-GNm.title" = "Have:  ";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Move Top"; ObjectID = "Rb9-wB-NkU"; */
+"Rb9-wB-NkU.ibShadowedToolTip" = "Move Top";
+
+/* Class = "NSMenuItem"; title = "Move Top"; ObjectID = "Rb9-wB-NkU"; */
+"Rb9-wB-NkU.title" = "Move Top";
+
+/* Class = "NSButtonCell"; title = "Save"; ObjectID = "RbF-00-AdE"; */
+"RbF-00-AdE.title" = "Save";
+
+/* Class = "NSTextFieldCell"; title = "Position:"; ObjectID = "Re6-4m-WSR"; */
+"Re6-4m-WSR.title" = "Position:";
+
+/* Class = "NSMenuItem"; title = "Position"; ObjectID = "RkM-cY-awZ"; */
+"RkM-cY-awZ.title" = "Position";
+
+/* Class = "NSButtonCell"; title = "Stop seeding when inactive for:"; ObjectID = "Rka-Rl-1C3"; */
+"Rka-Rl-1C3.title" = "Stop seeding when inactive for:";
+
+/* Class = "NSMenuItem"; title = "Move Up"; ObjectID = "Ruw-6m-B2m"; */
+"Ruw-6m-B2m.title" = "Move Up";
+
+/* Class = "NSTextFieldCell"; title = "Bytes Uploaded:"; ObjectID = "S2B-me-3cm"; */
+"S2B-me-3cm.title" = "Bytes Uploaded:";
+
+/* Class = "NSTextFieldCell"; title = "Host:"; ObjectID = "S7U-hA-JbN"; */
+"S7U-hA-JbN.title" = "Host:";
+
+/* Class = "NSSecureTextFieldCell"; title = "Password"; ObjectID = "SEF-9h-MrE"; */
+"SEF-9h-MrE.title" = "Password";
+
+/* Class = "NSTextFieldCell"; title = "Sessions"; ObjectID = "Spy-4O-5NX"; */
+"Spy-4O-5NX.title" = "Sessions";
+
+/* Class = "NSTableColumn"; headerCell.title = "Encrypted"; ObjectID = "Ss1-lP-iWN"; */
+"Ss1-lP-iWN.headerCell.title" = "Encrypted";
+
+/* Class = "NSTextFieldCell"; title = "Port:"; ObjectID = "T0r-aW-H4i"; */
+"T0r-aW-H4i.title" = "Port:";
+
+/* Class = "NSTextFieldCell"; title = "Date Completed:"; ObjectID = "T5A-D2-7Jg"; */
+"T5A-D2-7Jg.title" = "Date Completed:";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "TJa-Yz-1EW"; */
+"TJa-Yz-1EW.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "KB/s"; ObjectID = "TLN-eJ-vgf"; */
+"TLN-eJ-vgf.title" = "KB/s";
+
+/* Class = "NSTabViewItem"; label = "Integration"; ObjectID = "TSP-mf-Bu8"; */
+"TSP-mf-Bu8.label" = "Integration";
+
+/* Class = "NSTextFieldCell"; title = "Added Files:"; ObjectID = "TSs-Wi-mzc"; */
+"TSs-Wi-mzc.title" = "Added Files:";
+
+/* Class = "NSToolbarItem"; label = "Magnet"; ObjectID = "TZu-JB-vyP"; */
+"TZu-JB-vyP.label" = "Magnet";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Magnet"; ObjectID = "TZu-JB-vyP"; */
+"TZu-JB-vyP.paletteLabel" = "Magnet";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "Window";
+
+/* Class = "NSMenuItem"; title = "Date Added"; ObjectID = "Td9-vf-Mtq"; */
+"Td9-vf-Mtq.title" = "Date Added";
+
+/* Class = "NSButtonCell"; title = "Enable port Forwading: "; ObjectID = "Tdr-Ky-zuI"; */
+"Tdr-Ky-zuI.title" = "Enable port Forwading: ";
+
+/* Class = "NSMenuItem"; title = "Seeds"; ObjectID = "Tkj-5j-sfn"; */
+"Tkj-5j-sfn.title" = "Seeds";
+
+/* Class = "NSViewController"; title = "Search Filter"; ObjectID = "TvI-hm-hwp"; */
+"TvI-hm-hwp.title" = "Search Filter";
+
+/* Class = "NSButtonCell"; title = "Execute script after Torrent is downloaded"; ObjectID = "UDY-na-7HX"; */
+"UDY-na-7HX.title" = "Execute script after Torrent is downloaded";
+
+/* Class = "NSTextFieldCell"; title = "UL: 3 Mb/s"; ObjectID = "Udv-9L-NjH"; */
+"Udv-9L-NjH.title" = "UL: 3 Mb/s";
+
+/* Class = "NSTextFieldCell"; title = "Leechers:"; ObjectID = "V8G-T0-Z1s"; */
+"V8G-T0-Z1s.title" = "Leechers:";
+
+/* Class = "NSTableColumn"; headerCell.title = "Download"; ObjectID = "VAV-k2-1Ue"; */
+"VAV-k2-1Ue.headerCell.title" = "Download";
+
+/* Class = "NSTextFieldCell"; title = "445MB 50%"; ObjectID = "VGb-qj-z7y"; */
+"VGb-qj-z7y.title" = "445MB 50%";
+
+/* Class = "NSTextFieldCell"; title = "Last Activity"; ObjectID = "VHg-F1-9d1"; */
+"VHg-F1-9d1.title" = "Last Activity";
+
+/* Class = "NSTextFieldCell"; title = "DL: 1024 Kb/s"; ObjectID = "VHr-pn-e1V"; */
+"VHr-pn-e1V.title" = "DL: 1024 Kb/s";
+
+/* Class = "NSTextFieldCell"; title = "Active Torrents:"; ObjectID = "VT8-j1-QON"; */
+"VT8-j1-QON.title" = "Active Torrents:";
+
+/* Class = "NSTextFieldCell"; title = "KB/s"; ObjectID = "VTV-Bb-hiN"; */
+"VTV-Bb-hiN.title" = "KB/s";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Hide Others";
+
+/* Class = "NSTableColumn"; headerCell.title = "%"; ObjectID = "Vjc-S0-H2n"; */
+"Vjc-S0-H2n.headerCell.title" = "%";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "Vpi-gR-mid"; */
+"Vpi-gR-mid.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Downloading"; ObjectID = "Vxm-IK-Eg1"; */
+"Vxm-IK-Eg1.title" = "Downloading";
+
+/* Class = "NSMenu"; title = "Actions"; ObjectID = "W48-6f-4Dl"; */
+"W48-6f-4Dl.title" = "Actions";
+
+/* Class = "NSMenuItem"; title = "ETA"; ObjectID = "WJR-I4-5Hj"; */
+"WJR-I4-5Hj.title" = "ETA";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Enter the server hostname"; ObjectID = "WR0-N8-Q6X"; Note = "Enter the server hostname"; */
+"WR0-N8-Q6X.placeholderString" = "Enter the server hostname";
+
+/* Class = "NSTextFieldCell"; title = "server.example.com"; ObjectID = "WR0-N8-Q6X"; Note = "Enter the server hostname"; */
+"WR0-N8-Q6X.title" = "server.example.com";
+
+/* Class = "NSMenuItem"; title = "Create Torrent..."; ObjectID = "Was-JA-tGl"; */
+"Was-JA-tGl.title" = "Create Torrent...";
+
+/* Class = "NSMenuItem"; title = "Verify"; ObjectID = "WeT-3V-zwk"; */
+"WeT-3V-zwk.title" = "Verify";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Trackers"; ObjectID = "Wrw-e2-khq"; */
+"Wrw-e2-khq.ibShadowedToolTip" = "Trackers";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "X4u-Q2-o4s"; */
+"X4u-Q2-o4s.title" = "Cancel";
+
+/* Class = "NSTextFieldCell"; title = "Uploaded Bytes"; ObjectID = "XBm-0y-cgT"; */
+"XBm-0y-cgT.title" = "Uploaded Bytes";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "XCc-qf-WTj"; */
+"XCc-qf-WTj.title" = "Cancel";
+
+/* Class = "NSMenuItem"; title = "Upload Rate"; ObjectID = "XEg-ej-anF"; */
+"XEg-ej-anF.title" = "Upload Rate";
+
+/* Class = "NSTextFieldCell"; title = "Torrents Counts:"; ObjectID = "XIN-DM-ThA"; */
+"XIN-DM-ThA.title" = "Torrents Counts:";
+
+/* Class = "NSTextFieldCell"; title = "Country"; ObjectID = "XUJ-ug-Vw2"; */
+"XUJ-ug-Vw2.title" = "Country";
+
+/* Class = "NSTextFieldCell"; title = "Bytes Download:"; ObjectID = "Xav-3z-ffh"; */
+"Xav-3z-ffh.title" = "Bytes Download:";
+
+/* Class = "NSMenuItem"; title = "Position"; ObjectID = "Xbo-b2-fOv"; */
+"Xbo-b2-fOv.title" = "Position";
+
+/* Class = "NSTextFieldCell"; title = "Password:"; ObjectID = "Xen-C4-d0E"; */
+"Xen-C4-d0E.title" = "Password:";
+
+/* Class = "NSMenuItem"; title = "contains"; ObjectID = "Y47-Q0-I3M"; */
+"Y47-Q0-I3M.title" = "contains";
+
+/* Class = "NSButtonCell"; title = "Upload Speed Limit:"; ObjectID = "YAG-wf-NqW"; */
+"YAG-wf-NqW.title" = "Upload Speed Limit:";
+
+/* Class = "NSMenuItem"; title = "is less than or equal to"; ObjectID = "YWY-ch-0dc"; */
+"YWY-ch-0dc.title" = "is less than or equal to";
+
+/* Class = "NSMenuItem"; title = "% Done"; ObjectID = "Z30-JF-urL"; */
+"Z30-JF-urL.title" = "% Done";
+
+/* Class = "NSToolbarItem"; label = "Start All"; ObjectID = "ZE9-hp-A5W"; */
+"ZE9-hp-A5W.label" = "Start All";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Start All"; ObjectID = "ZE9-hp-A5W"; */
+"ZE9-hp-A5W.paletteLabel" = "Start All";
+
+/* Class = "NSTextFieldCell"; title = "RPCVers"; ObjectID = "ZG8-SP-hdM"; */
+"ZG8-SP-hdM.title" = "RPCVers";
+
+/* Class = "NSMenuItem"; title = "is"; ObjectID = "ZJK-SR-b5C"; */
+"ZJK-SR-b5C.title" = "is";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Remove Server"; ObjectID = "ZK3-hD-T22"; */
+"ZK3-hD-T22.ibShadowedToolTip" = "Remove Server";
+
+/* Class = "NSTableColumn"; headerCell.title = "Status"; ObjectID = "ZVC-SE-hie"; */
+"ZVC-SE-hie.headerCell.title" = "Status";
+
+/* Class = "NSTextFieldCell"; title = "Downloading Time"; ObjectID = "Zuo-ko-MlQ"; */
+"Zuo-ko-MlQ.title" = "Downloading Time";
+
+/* Class = "NSTableColumn"; headerCell.title = "Client"; ObjectID = "a1O-7W-HBE"; */
+"a1O-7W-HBE.headerCell.title" = "Client";
+
+/* Class = "NSButtonCell"; title = "Schedule Alt Speed Limit:"; ObjectID = "aPu-PV-3DQ"; */
+"aPu-PV-3DQ.title" = "Schedule Alt Speed Limit:";
+
+/* Class = "NSMenuItem"; title = "Start All Torrents"; ObjectID = "aSk-P9-G7o"; */
+"aSk-P9-G7o.title" = "Start All Torrents";
+
+/* Class = "NSMenuItem"; title = "Rename"; ObjectID = "aTl-1u-JFS"; */
+"aTl-1u-JFS.title" = "Rename";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "Window";
+
+/* Class = "NSMenuItem"; title = "Download Rate"; ObjectID = "aVL-0H-5iE"; */
+"aVL-0H-5iE.title" = "Download Rate";
+
+/* Class = "NSMenuItem"; title = "Peers"; ObjectID = "aZ6-Zv-CIw"; */
+"aZ6-Zv-CIw.title" = "Peers";
+
+/* Class = "NSMenuItem"; title = "is greater than or equal to"; ObjectID = "aeY-9x-Y1j"; */
+"aeY-9x-Y1j.title" = "is greater than or equal to";
+
+/* Class = "NSViewController"; title = "Bandwith"; ObjectID = "ar3-qM-hMo"; */
+"ar3-qM-hMo.title" = "Bandwith";
+
+/* Class = "NSButtonCell"; title = "Allow Local Peer Discovery in public torrents"; ObjectID = "b2P-wH-d40"; */
+"b2P-wH-d40.title" = "Allow Local Peer Discovery in public torrents";
+
+/* Class = "NSTextFieldCell"; title = "Filename"; ObjectID = "bDs-Xd-Q84"; */
+"bDs-Xd-Q84.title" = "Filename";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "bRd-kZ-Ud1"; */
+"bRd-kZ-Ud1.title" = "Cancel";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Force Start"; ObjectID = "bX0-kQ-Lpg"; */
+"bX0-kQ-Lpg.ibShadowedToolTip" = "Force Start";
+
+/* Class = "NSMenuItem"; title = "Start Now"; ObjectID = "bX0-kQ-Lpg"; */
+"bX0-kQ-Lpg.title" = "Start Now";
+
+/* Class = "NSTextFieldCell"; title = "minutes:"; ObjectID = "bXm-dl-sxR"; */
+"bXm-dl-sxR.title" = "minutes:";
+
+/* Class = "NSMenuItem"; title = "Start Now"; ObjectID = "bZQ-cN-1e7"; */
+"bZQ-cN-1e7.title" = "Start Now";
+
+/* Class = "NSTextFieldCell"; title = "Name"; ObjectID = "baH-SV-kKr"; */
+"baH-SV-kKr.title" = "Name";
+
+/* Class = "NSTextFieldCell"; title = "Have"; ObjectID = "bdb-Qu-RXb"; */
+"bdb-Qu-RXb.title" = "Have";
+
+/* Class = "NSMenu"; title = "Torrent"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "Torrent";
+
+/* Class = "NSButtonCell"; title = "Add .part extension to incomplete files"; ObjectID = "bk0-eH-iFl"; */
+"bk0-eH-iFl.title" = "Add .part extension to incomplete files";
+
+/* Class = "NSTabViewItem"; label = "Network"; ObjectID = "btS-8H-UAy"; */
+"btS-8H-UAy.label" = "Network";
+
+/* Class = "NSTextFieldCell"; title = "Enter new Torrent  files Location:"; ObjectID = "bxt-MA-hf1"; */
+"bxt-MA-hf1.title" = "Enter new Torrent  files Location:";
+
+/* Class = "NSMenuItem"; title = "High"; ObjectID = "c6g-Ws-olS"; */
+"c6g-Ws-olS.title" = "High";
+
+/* Class = "NSTextFieldCell"; title = "Upload Speed"; ObjectID = "c6k-xY-nqi"; */
+"c6k-xY-nqi.title" = "Upload Speed";
+
+/* Class = "NSTextFieldCell"; title = "Status"; ObjectID = "cAR-Ta-M4o"; */
+"cAR-Ta-M4o.title" = "Status";
+
+/* Class = "NSTabViewController"; title = "Preferences"; ObjectID = "cES-bh-ZJy"; */
+"cES-bh-ZJy.title" = "Preferences";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "cLr-u4-k4x"; */
+"cLr-u4-k4x.title" = "Text Cell";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "cOq-pX-TD3"; */
+"cOq-pX-TD3.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Seedig Time"; ObjectID = "cXw-Zl-6oR"; */
+"cXw-Zl-6oR.title" = "Seedig Time";
+
+/* Class = "NSButtonCell"; title = "Seed Ratio Limit:"; ObjectID = "cYU-Dg-RB1"; */
+"cYU-Dg-RB1.title" = "Seed Ratio Limit:";
+
+/* Class = "NSTextFieldCell"; title = "Leeching"; ObjectID = "cZn-WS-e6K"; */
+"cZn-WS-e6K.title" = "Leeching";
+
+/* Class = "NSTextFieldCell"; title = "Open Files with:"; ObjectID = "cpA-0J-0v0"; */
+"cpA-0J-0v0.title" = "Open Files with:";
+
+/* Class = "NSTextFieldCell"; title = "Seeding Time: "; ObjectID = "cs8-H9-Tvl"; */
+"cs8-H9-Tvl.title" = "Seeding Time: ";
+
+/* Class = "NSToolbarItem"; label = "Statistics"; ObjectID = "d0O-4G-Ed3"; */
+"d0O-4G-Ed3.label" = "Statistics";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Statistics"; ObjectID = "d0O-4G-Ed3"; */
+"d0O-4G-Ed3.paletteLabel" = "Statistics";
+
+/* Class = "NSTextFieldCell"; title = "Count"; ObjectID = "dCA-Ci-NLU"; */
+"dCA-Ci-NLU.title" = "Count";
+
+/* Class = "NSButtonCell"; title = "Require Authentication"; ObjectID = "dEC-iD-mYY"; */
+"dEC-iD-mYY.title" = "Require Authentication";
+
+/* Class = "NSTableHeaderView"; ibShadowedToolTip = "The Mapping between the remore directory and local directory.  For example: if files are saved in remote server directory \"/usr/files\" and this remote driver location is locally mapped (using SMB or AFP) to \"/Volumes/TorrentFiles\", then enter both values: Remote Directory=/usr/files and Local Directory=/Volumes/TorrentFiles."; ObjectID = "dEe-RH-Qw0"; */
+"dEe-RH-Qw0.ibShadowedToolTip" = "The Mapping between the remore directory and local directory.  For example: if files are saved in remote server directory \"/usr/files\" and this remote driver location is locally mapped (using SMB or AFP) to \"/Volumes/TorrentFiles\", then enter both values: Remote Directory=/usr/files and Local Directory=/Volumes/TorrentFiles.";
+
+/* Class = "NSToolbarItem"; label = "Server Setup"; ObjectID = "dGa-Wy-nh8"; */
+"dGa-Wy-nh8.label" = "Server Setup";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Server Setup"; ObjectID = "dGa-Wy-nh8"; */
+"dGa-Wy-nh8.paletteLabel" = "Server Setup";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "dK2-VV-NRI"; */
+"dK2-VV-NRI.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Any"; ObjectID = "dM0-me-iCO"; */
+"dM0-me-iCO.title" = "Any";
+
+/* Class = "NSMenuItem"; title = "Torrent"; ObjectID = "dMs-cI-mzQ"; */
+"dMs-cI-mzQ.title" = "Torrent";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "dNv-Iz-Zlj"; */
+"dNv-Iz-Zlj.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Start"; ObjectID = "dRJ-4n-Yzg"; */
+"dRJ-4n-Yzg.title" = "Start";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "dYy-B9-jEf"; */
+"dYy-B9-jEf.title" = "Cancel";
+
+/* Class = "NSTableColumn"; headerCell.title = "Size"; ObjectID = "dc2-Jl-ge8"; */
+"dc2-Jl-ge8.headerCell.title" = "Size";
+
+/* Class = "NSMenuItem"; title = "Download"; ObjectID = "dcU-mr-hJt"; */
+"dcU-mr-hJt.title" = "Download";
+
+/* Class = "NSMenuItem"; title = "All"; ObjectID = "dci-r5-Cuh"; */
+"dci-r5-Cuh.title" = "All";
+
+/* Class = "NSTextFieldCell"; title = "Seeders"; ObjectID = "drR-NN-Y4k"; */
+"drR-NN-Y4k.title" = "Seeders";
+
+/* Class = "NSTextFieldCell"; title = "Rate to Peer"; ObjectID = "ds1-QY-hv2"; */
+"ds1-QY-hv2.title" = "Rate to Peer";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "dxy-yK-iSJ"; */
+"dxy-yK-iSJ.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "3.2 Mbs"; ObjectID = "e0G-wb-pin"; */
+"e0G-wb-pin.title" = "3.2 Mbs";
+
+/* Class = "NSTextFieldCell"; title = "Paused Count"; ObjectID = "eGe-vH-Iut"; */
+"eGe-vH-Iut.title" = "Paused Count";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Detail"; ObjectID = "ebx-0Z-aff"; */
+"ebx-0Z-aff.ibShadowedToolTip" = "Detail";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "ev9-YT-Y4o"; */
+"ev9-YT-Y4o.title" = "Text Cell";
+
+/* Class = "NSToolbarItem"; label = "Up"; ObjectID = "f4m-rE-e1A"; */
+"f4m-rE-e1A.label" = "Up";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Up"; ObjectID = "f4m-rE-e1A"; */
+"f4m-rE-e1A.paletteLabel" = "Up";
+
+/* Class = "NSTextFieldCell"; title = "transmissiom/RPC"; ObjectID = "fHS-bt-zUU"; */
+"fHS-bt-zUU.title" = "transmissiom/RPC";
+
+/* Class = "NSTextFieldCell"; title = "Host"; ObjectID = "fPf-w6-b51"; */
+"fPf-w6-b51.title" = "Host";
+
+/* Class = "NSTextFieldCell"; title = "Estimated Time: "; ObjectID = "fWS-TJ-9ZE"; */
+"fWS-TJ-9ZE.title" = "Estimated Time: ";
+
+/* Class = "NSTextFieldCell"; title = "Date Added:"; ObjectID = "g8F-3h-nfw"; */
+"g8F-3h-nfw.title" = "Date Added:";
+
+/* Class = "NSTextFieldCell"; title = "Port is Open"; ObjectID = "gMC-h3-GPk"; */
+"gMC-h3-GPk.title" = "Port is Open";
+
+/* Class = "NSMenuItem"; title = "Reannounce"; ObjectID = "gVA-U4-sdL"; */
+"gVA-U4-sdL.title" = "Reannounce";
+
+/* Class = "NSMenuItem"; title = "Size"; ObjectID = "gdg-mz-MCY"; */
+"gdg-mz-MCY.title" = "Size";
+
+/* Class = "NSMenuItem"; title = "Date Added"; ObjectID = "h73-gb-Gz7"; */
+"h73-gb-Gz7.title" = "Date Added";
+
+/* Class = "NSTabViewItem"; label = "Downloads"; ObjectID = "hDa-uE-uiO"; */
+"hDa-uE-uiO.label" = "Downloads";
+
+/* Class = "NSTextFieldCell"; title = "Server Name:"; ObjectID = "hKr-KV-aRx"; */
+"hKr-KV-aRx.title" = "Server Name:";
+
+/* Class = "NSButtonCell"; title = "Save"; ObjectID = "hah-Gt-kkY"; */
+"hah-Gt-kkY.title" = "Save";
+
+/* Class = "NSMenuItem"; title = "Change Priority"; ObjectID = "hct-KD-qAx"; */
+"hct-KD-qAx.title" = "Change Priority";
+
+/* Class = "NSTextFieldCell"; title = "Size"; ObjectID = "heU-jN-yRI"; */
+"heU-jN-yRI.title" = "Size";
+
+/* Class = "NSTextFieldCell"; title = "9999 bytes/s"; ObjectID = "hr9-VQ-1iQ"; */
+"hr9-VQ-1iQ.title" = "9999 bytes/s";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "hz7-Pr-uRm"; */
+"hz7-Pr-uRm.title" = "Text Cell";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "Services";
+
+/* Class = "NSTableColumn"; headerCell.title = "Down. Rate"; ObjectID = "i5q-0A-UCQ"; */
+"i5q-0A-UCQ.headerCell.title" = "Down. Rate";
+
+/* Class = "NSTextFieldCell"; title = "Last Activity Date: "; ObjectID = "iKi-2n-R60"; */
+"iKi-2n-R60.title" = "Last Activity Date: ";
+
+/* Class = "NSTextFieldCell"; title = "Download Bytes"; ObjectID = "iKz-2p-OzQ"; */
+"iKz-2p-OzQ.title" = "Download Bytes";
+
+/* Class = "NSTextFieldCell"; title = "RPC Path:"; ObjectID = "iNl-Zw-fw8"; */
+"iNl-Zw-fw8.title" = "RPC Path:";
+
+/* Class = "NSButtonCell"; title = "Save"; ObjectID = "igh-48-HUH"; */
+"igh-48-HUH.title" = "Save";
+
+/* Class = "NSMenu"; title = "Encryption"; ObjectID = "ikl-Rr-oaB"; */
+"ikl-Rr-oaB.title" = "Encryption";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "irS-kl-epU"; */
+"irS-kl-epU.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Normal"; ObjectID = "iuU-lK-zz4"; */
+"iuU-lK-zz4.title" = "Normal";
+
+/* Class = "NSTableColumn"; headerCell.title = "Last Status"; ObjectID = "ix6-6h-8oK"; */
+"ix6-6h-8oK.headerCell.title" = "Last Status";
+
+/* Class = "NSTextFieldCell"; title = "Size"; ObjectID = "j4h-3k-ZaF"; */
+"j4h-3k-ZaF.title" = "Size";
+
+/* Class = "NSTableColumn"; headerCell.title = "Done"; ObjectID = "j5p-jZ-hyY"; */
+"j5p-jZ-hyY.headerCell.title" = "Done";
+
+/* Class = "NSButtonCell"; title = "Reset"; ObjectID = "jCh-HS-9uE"; */
+"jCh-HS-9uE.title" = "Reset";
+
+/* Class = "NSTextFieldCell"; title = "From: "; ObjectID = "jDt-pS-z90"; */
+"jDt-pS-z90.title" = "From: ";
+
+/* Class = "NSTextFieldCell"; title = "Added Files"; ObjectID = "jSt-7f-wGX"; */
+"jSt-7f-wGX.title" = "Added Files";
+
+/* Class = "NSTextFieldCell"; title = "Active Time"; ObjectID = "jWY-PT-VQM"; */
+"jWY-PT-VQM.title" = "Active Time";
+
+/* Class = "NSToolbarItem"; label = "Sort"; ObjectID = "jdz-6r-yyJ"; */
+"jdz-6r-yyJ.label" = "Sort";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Sort"; ObjectID = "jdz-6r-yyJ"; */
+"jdz-6r-yyJ.paletteLabel" = "Sort";
+
+/* Class = "NSToolbarItem"; toolTip = "Sort List"; ObjectID = "jdz-6r-yyJ"; */
+"jdz-6r-yyJ.toolTip" = "Sort List";
+
+/* Class = "NSMenuItem"; title = "Rename"; ObjectID = "jt5-oa-m7E"; */
+"jt5-oa-m7E.title" = "Rename";
+
+/* Class = "NSMenuItem"; title = "Sort"; ObjectID = "jxT-CU-nIS"; */
+"jxT-CU-nIS.title" = "Sort";
+
+/* Class = "NSTextFieldCell"; title = "Ratio: "; ObjectID = "k2A-9Z-7Qi"; */
+"k2A-9Z-7Qi.title" = "Ratio: ";
+
+/* Class = "NSTextFieldCell"; title = "Global number of peers: "; ObjectID = "kEp-pL-lrk"; */
+"kEp-pL-lrk.title" = "Global number of peers: ";
+
+/* Class = "NSMenuItem"; title = "Hide Sidebar"; ObjectID = "kIP-vf-haE"; */
+"kIP-vf-haE.title" = "Hide Sidebar";
+
+/* Class = "NSToolbarItem"; label = "Remove"; ObjectID = "kK5-ma-Aee"; */
+"kK5-ma-Aee.label" = "Remove";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Remove"; ObjectID = "kK5-ma-Aee"; */
+"kK5-ma-Aee.paletteLabel" = "Remove";
+
+/* Class = "NSToolbarItem"; toolTip = "Remove Torrent"; ObjectID = "kK5-ma-Aee"; */
+"kK5-ma-Aee.toolTip" = "Remove Torrent";
+
+/* Class = "NSTextFieldCell"; title = "50Ks"; ObjectID = "kVk-g7-e5k"; */
+"kVk-g7-e5k.title" = "50Ks";
+
+/* Class = "NSTextFieldCell"; title = "Peer Limit: "; ObjectID = "kfO-Fi-FWG"; */
+"kfO-Fi-FWG.title" = "Peer Limit: ";
+
+/* Class = "NSViewController"; title = "Server Accounts"; ObjectID = "kiC-lL-f0R"; */
+"kiC-lL-f0R.title" = "Server Accounts";
+
+/* Class = "NSTextFieldCell"; title = "Position:"; ObjectID = "kj3-Jq-w8Y"; */
+"kj3-Jq-w8Y.title" = "Position:";
+
+/* Class = "NSMenuItem"; title = "Advanced..."; ObjectID = "kkN-8C-J1n"; */
+"kkN-8C-J1n.title" = "Advanced...";
+
+/* Class = "NSMenuItem"; title = "is less than or equal to"; ObjectID = "ksJ-Jk-HUE"; */
+"ksJ-Jk-HUE.title" = "is less than or equal to";
+
+/* Class = "NSTextFieldCell"; title = "IPAddress"; ObjectID = "l92-tF-9uX"; */
+"l92-tF-9uX.title" = "IPAddress";
+
+/* Class = "NSMenuItem"; title = "Download Rate"; ObjectID = "lbl-Wa-g5l"; */
+"lbl-Wa-g5l.title" = "Download Rate";
+
+/* Class = "NSToolbarItem"; label = "Start Now"; ObjectID = "lys-YL-7uX"; */
+"lys-YL-7uX.label" = "Start Now";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Start Now"; ObjectID = "lys-YL-7uX"; */
+"lys-YL-7uX.paletteLabel" = "Start Now";
+
+/* Class = "NSMenuItem"; title = "is like"; ObjectID = "m1v-Ji-cy2"; */
+"m1v-Ji-cy2.title" = "is like";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Remove with Data"; ObjectID = "m7z-xv-st9"; */
+"m7z-xv-st9.ibShadowedToolTip" = "Remove with Data";
+
+/* Class = "NSTextFieldCell"; title = "Name"; ObjectID = "m8t-dS-QjO"; */
+"m8t-dS-QjO.title" = "Name";
+
+/* Class = "NSTextFieldCell"; title = "Download Dir"; ObjectID = "mXF-nW-3BK"; */
+"mXF-nW-3BK.title" = "Download Dir";
+
+/* Class = "NSMenuItem"; title = "is greater than"; ObjectID = "mog-A6-J34"; */
+"mog-A6-J34.title" = "is greater than";
+
+/* Class = "NSMenuItem"; title = "dateDone"; ObjectID = "mpL-vj-j3I"; */
+"mpL-vj-j3I.title" = "dateDone";
+
+/* Class = "NSMenuItem"; title = "dateAdded"; ObjectID = "msx-ai-Ovq"; */
+"msx-ai-Ovq.title" = "dateAdded";
+
+/* Class = "NSButtonCell"; title = "  Display Free Space"; ObjectID = "mtC-5a-yaB"; */
+"mtC-5a-yaB.title" = "  Display Free Space";
+
+/* Class = "NSToolbarItem"; label = "Add"; ObjectID = "n1p-La-Q7K"; */
+"n1p-La-Q7K.label" = "Add";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Add"; ObjectID = "n1p-La-Q7K"; */
+"n1p-La-Q7K.paletteLabel" = "Add";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Move Up"; ObjectID = "nME-lc-rWP"; */
+"nME-lc-rWP.ibShadowedToolTip" = "Move Up";
+
+/* Class = "NSMenuItem"; title = "Move Up"; ObjectID = "nME-lc-rWP"; */
+"nME-lc-rWP.title" = "Move Up";
+
+/* Class = "NSMenuItem"; title = "Recents"; ObjectID = "niG-Bd-Vk5"; */
+"niG-Bd-Vk5.title" = "Recents";
+
+/* Class = "NSTextFieldCell"; title = "Torrent Name"; ObjectID = "o8z-RG-oAv"; */
+"o8z-RG-oAv.title" = "Torrent Name";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "oG6-J4-9S7"; */
+"oG6-J4-9S7.title" = "Cancel";
+
+/* Class = "NSMenuItem"; title = "of the following are true"; ObjectID = "oWq-Nc-Umw"; */
+"oWq-Nc-Umw.title" = "of the following are true";
+
+/* Class = "NSMenuItem"; title = "Name"; ObjectID = "ojm-Yt-n19"; */
+"ojm-Yt-n19.title" = "Name";
+
+/* Class = "NSMenuItem"; title = "Seeds"; ObjectID = "owC-1G-gwj"; */
+"owC-1G-gwj.title" = "Seeds";
+
+/* Class = "NSTabViewItem"; label = "Bandwith"; ObjectID = "oxT-gf-Cfg"; */
+"oxT-gf-Cfg.label" = "Bandwith";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Verify"; ObjectID = "pJ8-1i-TqP"; */
+"pJ8-1i-TqP.ibShadowedToolTip" = "Verify";
+
+/* Class = "NSMenuItem"; title = "Verify"; ObjectID = "pJ8-1i-TqP"; */
+"pJ8-1i-TqP.title" = "Verify";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Default Server Setup"; ObjectID = "pKq-Hv-Jx7"; */
+"pKq-Hv-Jx7.ibShadowedToolTip" = "Default Server Setup";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "pZx-it-Vyu"; */
+"pZx-it-Vyu.title" = "Cancel";
+
+/* Class = "NSTextFieldCell"; title = "0.623"; ObjectID = "pbZ-d9-Us6"; */
+"pbZ-d9-Us6.title" = "0.623";
+
+/* Class = "NSTableColumn"; headerCell.title = "Country"; ObjectID = "pgO-yI-UH1"; */
+"pgO-yI-UH1.headerCell.title" = "Country";
+
+/* Class = "NSTextFieldCell"; title = "Encryption: "; ObjectID = "pio-10-cF3"; */
+"pio-10-cF3.title" = "Encryption: ";
+
+/* Class = "NSTextFieldCell"; title = "Added Files"; ObjectID = "plz-tf-ghL"; */
+"plz-tf-ghL.title" = "Added Files";
+
+/* Class = "NSMenuItem"; title = "Rename"; ObjectID = "pn1-Fc-cBD"; */
+"pn1-Fc-cBD.title" = "Rename";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "pxm-rg-b46"; */
+"pxm-rg-b46.title" = "Cancel";
+
+/* Class = "NSButtonCell"; title = "Tue"; ObjectID = "q7q-8e-AOE"; */
+"q7q-8e-AOE.title" = "Tue";
+
+/* Class = "NSMenuItem"; title = "Delete With Data"; ObjectID = "qIS-W8-SiK"; */
+"qIS-W8-SiK.title" = "Delete With Data";
+
+/* Class = "NSTextFieldCell"; title = "Bandwidth Priority"; ObjectID = "qaQ-QV-ntp"; */
+"qaQ-QV-ntp.title" = "Bandwidth Priority";
+
+/* Class = "NSTextFieldCell"; title = "john.doe"; ObjectID = "qhR-cX-LIW"; */
+"qhR-cX-LIW.title" = "john.doe";
+
+/* Class = "NSToolbarItem"; label = "Cleanup"; ObjectID = "qkA-rd-CFk"; */
+"qkA-rd-CFk.label" = "Cleanup";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Cleanup"; ObjectID = "qkA-rd-CFk"; */
+"qkA-rd-CFk.paletteLabel" = "Cleanup";
+
+/* Class = "NSToolbarItem"; toolTip = "Remove with Data"; ObjectID = "qkA-rd-CFk"; */
+"qkA-rd-CFk.toolTip" = "Remove with Data";
+
+/* Class = "NSTextFieldCell"; title = "Seeders:"; ObjectID = "qqo-U9-0oK"; */
+"qqo-U9-0oK.title" = "Seeders:";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "qsn-Vi-R6c"; */
+"qsn-Vi-R6c.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Download Rate: "; ObjectID = "quT-72-ZZL"; */
+"quT-72-ZZL.title" = "Download Rate: ";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "r6Z-I3-CTR"; */
+"r6Z-I3-CTR.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "filesButton"; ObjectID = "r9I-8L-55f"; */
+"r9I-8L-55f.title" = "filesButton";
+
+/* Class = "NSTextFieldCell"; title = "Error:"; ObjectID = "rV7-bF-d6c"; */
+"rV7-bF-d6c.title" = "Error:";
+
+/* Class = "NSTextFieldCell"; title = "100%"; ObjectID = "rWP-ER-Zgp"; */
+"rWP-ER-Zgp.title" = "100%";
+
+/* Class = "NSTextFieldCell"; title = "820MB 30%"; ObjectID = "s9p-dF-plD"; */
+"s9p-dF-plD.title" = "820MB 30%";
+
+/* Class = "NSMenuItem"; title = "Preferred"; ObjectID = "sQV-ZY-o2P"; */
+"sQV-ZY-o2P.title" = "Preferred";
+
+/* Class = "NSMenuItem"; title = "Show Toolbar"; ObjectID = "snW-S8-Cw5"; */
+"snW-S8-Cw5.title" = "Show Toolbar";
+
+/* Class = "NSMenuItem"; title = " Delete with Data"; ObjectID = "tA3-tq-ajs"; */
+"tA3-tq-ajs.title" = " Delete with Data";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "tHo-FH-aM0"; */
+"tHo-FH-aM0.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Error Message"; ObjectID = "tK5-Am-hSO"; */
+"tK5-Am-hSO.title" = "Error Message";
+
+/* Class = "NSButtonCell"; title = "Upload Rate: "; ObjectID = "tNU-rJ-rfY"; */
+"tNU-rJ-rfY.title" = "Upload Rate: ";
+
+/* Class = "NSTableColumn"; headerCell.title = "Local Directory"; ObjectID = "tPV-3S-MGi"; */
+"tPV-3S-MGi.headerCell.title" = "Local Directory";
+
+/* Class = "NSTableColumn"; headerToolTip = "Local Drive mapped to the Remote Shared Drive (must be mapped using SMB or AFP protocols). Example: /Volumes/torrents"; ObjectID = "tPV-3S-MGi"; */
+"tPV-3S-MGi.headerToolTip" = "Local Drive mapped to the Remote Shared Drive (must be mapped using SMB or AFP protocols). Example: /Volumes/torrents";
+
+/* Class = "NSButtonCell"; title = "Select random port at Launch: "; ObjectID = "tPX-ZR-NMY"; */
+"tPX-ZR-NMY.title" = "Select random port at Launch: ";
+
+/* Class = "NSButtonCell"; title = " Download Speed Limit:"; ObjectID = "tTR-si-xCL"; */
+"tTR-si-xCL.title" = " Download Speed Limit:";
+
+/* Class = "NSMenuItem"; title = "Add Magnet..."; ObjectID = "tXI-mr-wws"; */
+"tXI-mr-wws.title" = "Add Magnet...";
+
+/* Class = "NSMenuItem"; title = "Name"; ObjectID = "tfG-Dj-JNr"; */
+"tfG-Dj-JNr.title" = "Name";
+
+/* Class = "NSTextFieldCell"; title = "localDirectory"; ObjectID = "tvi-iy-3GD"; */
+"tvi-iy-3GD.title" = "localDirectory";
+
+/* Class = "NSTextFieldCell"; title = "Data Request Timeout (Seconds):"; ObjectID = "tvs-v1-Fbm"; */
+"tvs-v1-Fbm.title" = "Data Request Timeout (Seconds):";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Server use SSL connection"; ObjectID = "u2D-gx-yNx"; */
+"u2D-gx-yNx.ibShadowedToolTip" = "Server use SSL connection";
+
+/* Class = "NSTextFieldCell"; title = "http://www.example.com:9091/transmission/rpc"; ObjectID = "u2h-7H-vgP"; */
+"u2h-7H-vgP.title" = "http://www.example.com:9091/transmission/rpc";
+
+/* Class = "NSMenu"; title = "Search"; ObjectID = "u5w-u3-IDk"; */
+"u5w-u3-IDk.title" = "Search";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "u9R-yg-fpN"; */
+"u9R-yg-fpN.title" = "Text Cell";
+
+/* Class = "NSMenu"; title = "Transmission Remote"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Transmission Remote";
+
+/* Class = "NSTextFieldCell"; title = "Seeding"; ObjectID = "uRY-u1-9hQ"; */
+"uRY-u1-9hQ.title" = "Seeding";
+
+/* Class = "NSMenuItem"; title = "Stop"; ObjectID = "uRl-iY-unG"; */
+"uRl-iY-unG.title" = "Stop";
+
+/* Class = "NSButtonCell"; title = "Use SSL"; ObjectID = "uWY-3H-4Je"; */
+"uWY-3H-4Je.title" = "Use SSL";
+
+/* Class = "NSTableView"; ibShadowedToolTip = "The Mapping between remote and local directories.  For example: if files are saved in remote server directory \"/usr/files\" and this remote driver location is locally mapped (using SMB or AFP) to \"/Volumes/TorrentFiles\", then enter both values: Remote Directory=/usr/files and Local Directory=/Volumes/TorrentFiles."; ObjectID = "uxZ-te-g8q"; */
+"uxZ-te-g8q.ibShadowedToolTip" = "The Mapping between remote and local directories.  For example: if files are saved in remote server directory \"/usr/files\" and this remote driver location is locally mapped (using SMB or AFP) to \"/Volumes/TorrentFiles\", then enter both values: Remote Directory=/usr/files and Local Directory=/Volumes/TorrentFiles.";
+
+/* Class = "NSButtonCell"; title = "Enable Blocklist: "; ObjectID = "uyA-xG-rey"; */
+"uyA-xG-rey.title" = "Enable Blocklist: ";
+
+/* Class = "NSTextFieldCell"; title = "Active Torrents:"; ObjectID = "vA4-fP-6pm"; */
+"vA4-fP-6pm.title" = "Active Torrents:";
+
+/* Class = "NSButtonCell"; title = "Allow µTP"; ObjectID = "vLx-tr-4uW"; */
+"vLx-tr-4uW.title" = "Allow µTP";
+
+/* Class = "NSViewController"; title = "Queue Preferences"; ObjectID = "vZf-B1-fdu"; */
+"vZf-B1-fdu.title" = "Queue Preferences";
+
+/* Class = "NSMenuItem"; title = "Clear Searches"; ObjectID = "vmY-3C-Suk"; */
+"vmY-3C-Suk.title" = "Clear Searches";
+
+/* Class = "NSTextFieldCell"; title = "KB/s"; ObjectID = "vtj-lm-jId"; */
+"vtj-lm-jId.title" = "KB/s";
+
+/* Class = "NSButtonCell"; title = "Save"; ObjectID = "w5a-RE-hbe"; */
+"w5a-RE-hbe.title" = "Save";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Stop"; ObjectID = "w8c-uR-Vu4"; */
+"w8c-uR-Vu4.ibShadowedToolTip" = "Stop";
+
+/* Class = "NSMenuItem"; title = "Stop"; ObjectID = "w8c-uR-Vu4"; */
+"w8c-uR-Vu4.title" = "Stop";
+
+/* Class = "NSViewController"; title = "Files"; ObjectID = "wbS-TX-vrU"; */
+"wbS-TX-vrU.title" = "Files";
+
+/* Class = "NSTextFieldCell"; title = "Client Name"; ObjectID = "wcM-Ea-YoY"; */
+"wcM-Ea-YoY.title" = "Client Name";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Pieces"; ObjectID = "wfS-Y4-foq"; */
+"wfS-Y4-foq.ibShadowedToolTip" = "Pieces";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Help";
+
+/* Class = "NSTextFieldCell"; title = "999 Kbs"; ObjectID = "ww5-8z-wr6"; */
+"ww5-8z-wr6.title" = "999 Kbs";
+
+/* Class = "NSMenuItem"; title = "Stop All"; ObjectID = "x3v-GG-iWU"; */
+"x3v-GG-iWU.title" = "Stop All";
+
+/* Class = "NSTextFieldCell"; title = "To: "; ObjectID = "x9y-He-wdA"; */
+"x9y-He-wdA.title" = "To: ";
+
+/* Class = "NSBox"; title = "Current"; ObjectID = "xGq-u9-rpe"; */
+"xGq-u9-rpe.title" = "Current";
+
+/* Class = "NSMenuItem"; title = "totalSize"; ObjectID = "xI0-WF-mRu"; */
+"xI0-WF-mRu.title" = "totalSize";
+
+/* Class = "NSTableColumn"; headerCell.title = "Filename"; ObjectID = "xQQ-Bh-gjN"; */
+"xQQ-Bh-gjN.headerCell.title" = "Filename";
+
+/* Class = "NSButtonCell"; title = "Sun"; ObjectID = "xTY-go-ruz"; */
+"xTY-go-ruz.title" = "Sun";
+
+/* Class = "NSTableColumn"; headerCell.title = "IP Address"; ObjectID = "xZl-ZK-LI8"; */
+"xZl-ZK-LI8.headerCell.title" = "IP Address";
+
+/* Class = "NSButtonCell"; title = "Alow DHT in public torrents"; ObjectID = "xta-gx-mk6"; */
+"xta-gx-mk6.title" = "Alow DHT in public torrents";
+
+/* Class = "NSButtonCell"; title = "Consider Active Torrents as stalled  when idle for:"; ObjectID = "y8O-no-QRz"; */
+"y8O-no-QRz.title" = "Consider Active Torrents as stalled  when idle for:";
+
+/* Class = "NSTextFieldCell"; title = "Downloaded Bytes"; ObjectID = "yAf-Hf-T0d"; */
+"yAf-Hf-T0d.title" = "Downloaded Bytes";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Cancel"; ObjectID = "yGM-Oa-lle"; */
+"yGM-Oa-lle.ibShadowedToolTip" = "Cancel";
+
+/* Class = "NSButtonCell"; title = "Upload Queue Size:"; ObjectID = "yMf-gq-kkP"; */
+"yMf-gq-kkP.title" = "Upload Queue Size:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Remove Torrent"; ObjectID = "yi6-tK-wyh"; */
+"yi6-tK-wyh.ibShadowedToolTip" = "Remove Torrent";
+
+/* Class = "NSViewController"; title = "Pieces Legend View Controller"; ObjectID = "ywi-sf-JXY"; */
+"ywi-sf-JXY.title" = "Pieces Legend View Controller";
+
+/* Class = "NSTextFieldCell"; title = "Date Added"; ObjectID = "yza-W7-VYr"; */
+"yza-W7-VYr.title" = "Date Added";
+
+/* Class = "NSMenuItem"; title = "ETA"; ObjectID = "zBh-cu-j8R"; */
+"zBh-cu-j8R.title" = "ETA";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "zJ8-lC-WRW"; */
+"zJ8-lC-WRW.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Sat"; ObjectID = "zW4-oK-RGS"; */
+"zW4-oK-RGS.title" = "Sat";
+
+/* Class = "NSTextFieldCell"; title = "Last  Status"; ObjectID = "zX0-9j-5bM"; */
+"zX0-9j-5bM.title" = "Last  Status";
+
+/* Class = "NSTextFieldCell"; title = "Downloading Time: "; ObjectID = "zYW-Dk-sad"; */
+"zYW-Dk-sad.title" = "Downloading Time: ";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Move Down"; ObjectID = "zZa-Hm-mJN"; */
+"zZa-Hm-mJN.ibShadowedToolTip" = "Move Down";
+
+/* Class = "NSMenuItem"; title = "Move Down"; ObjectID = "zZa-Hm-mJN"; */
+"zZa-Hm-mJN.title" = "Move Down";
+
+/* Class = "NSMenu"; title = "Sort By"; ObjectID = "zau-MN-C09"; */
+"zau-MN-C09.title" = "Sort By";
+
+/* Class = "NSTextFieldCell"; title = "Up/Down speed: "; ObjectID = "ze8-0J-uWy"; */
+"ze8-0J-uWy.title" = "Up/Down speed: ";
+
+/* Class = "NSMenuItem"; title = "Delete"; ObjectID = "zhl-Ve-3fC"; */
+"zhl-Ve-3fC.title" = "Delete";
+
+/* Class = "NSMenuItem"; title = "% Done"; ObjectID = "zjP-7R-6km"; */
+"zjP-7R-6km.title" = "% Done";
+
+/* Class = "NSTextFieldCell"; title = "UL: 2345 Kb"; ObjectID = "zo4-tb-eYi"; */
+"zo4-tb-eYi.title" = "UL: 2345 Kb";

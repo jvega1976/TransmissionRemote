@@ -8,7 +8,7 @@
 
 #import "MoveTorrentToController.h"
 #import "MainViewController.h"
-#import <TransmissionRPC/TransmissionRPC.h>
+#import <NSTransmissionRPC/NSTransmissionRPC.h>
 
 @interface MoveTorrentToController ()
 @property (weak) IBOutlet NSTextField *position;

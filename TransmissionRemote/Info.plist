@@ -12,19 +12,17 @@
 				<string>torrent</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>icon file</string>
+			<string>DocumentTypeIcon.icns</string>
 			<key>CFBundleTypeName</key>
-			<string>Torrent file</string>
+			<string>BitTorrent Document</string>
 			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
+			<string>Viewer</string>
 			<key>LSHandlerRank</key>
 			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>johnnyvega.TransmissionRPCClient.torrent</string>
+				<string>org.bittorrent.torrent</string>
 			</array>
-			<key>NSDocumentClass</key>
-			<string></string>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
@@ -51,9 +49,9 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLIconFile</key>
-			<string>icon file</string>
+			<string>DocumentTypeIcon</string>
 			<key>CFBundleURLName</key>
-			<string>johnnyvega.TransmissionRPCClient.magnet</string>
+			<string>BitTorrent Magnet URL</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>magnet</string>
@@ -75,77 +73,45 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSPortName</key>
+			<string>Transmission</string>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+				<string>NSURLPboardType</string>
+			</array>
+		</dict>
+	</array>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
 			<key>UTTypeConformsTo</key>
 			<array>
-				<string>public.text</string>
+				<string>public.data</string>
+				<string>public.item</string>
+				<string>com.bittorrent.torrent</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>Torrent file</string>
-			<key>UTTypeIdentifier</key>
-			<string>johnnyvega.TransmissionRPCClient.torrent</string>
-			<key>UTTypeTagSpecification</key>
-			<dict/>
-		</dict>
-		<dict>
-			<key>UTTypeConformsTo</key>
-			<array>
-				<string>public.text</string>
-			</array>
-			<key>UTTypeDescription</key>
-			<string>Torrent Magnet</string>
+			<string>BitTorrent Document</string>
 			<key>UTTypeIconFile</key>
-			<string>icon file</string>
+			<string>DocumentTypeIcon</string>
 			<key>UTTypeIdentifier</key>
-			<string>johnnyvega.TransmissionRPCClient.magnet</string>
-			<key>UTTypeTagSpecification</key>
-			<dict>
-				<key>com.apple.nspboard-type</key>
-				<array>
-					<string>URL</string>
-				</array>
-			</dict>
-		</dict>
-	</array>
-	<key>UTImportedTypeDeclarations</key>
-	<array>
-		<dict>
-			<key>UTTypeConformsTo</key>
-			<array>
-				<string>public.text</string>
-			</array>
-			<key>UTTypeDescription</key>
-			<string>Torrent file</string>
-			<key>UTTypeIconFile</key>
-			<string>icon file</string>
-			<key>UTTypeIdentifier</key>
-			<string>johnnyvega.TransmissionRPCClient.torrent</string>
-			<key>UTTypeTagSpecification</key>
-			<dict/>
-		</dict>
-		<dict>
-			<key>UTTypeConformsTo</key>
-			<array>
-				<string>public.text</string>
-			</array>
-			<key>UTTypeDescription</key>
-			<string>Torrent Magnet</string>
-			<key>UTTypeIconFile</key>
-			<string>icon file</string>
-			<key>UTTypeIdentifier</key>
-			<string>johnnyvega.TransmissionRPCClient.magnet</string>
+			<string>org.bittorrent.torrent</string>
 			<key>UTTypeReferenceURL</key>
-			<string></string>
+			<string>http://www.bittorrent.org/beps/bep_0000.html</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
-				<key>com.apple.nspboard-type</key>
-				<array>
-					<string>URL</string>
-				</array>
 				<key>com.apple.ostype</key>
-				<array/>
+				<string>TORR</string>
+				<key>public.filename-extension</key>
+				<array>
+					<string>torrent</string>
+				</array>
+				<key>public.mime-type</key>
+				<string>application/x-bittorrent</string>
 			</dict>
 		</dict>
 	</array>

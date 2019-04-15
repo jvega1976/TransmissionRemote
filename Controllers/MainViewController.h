@@ -7,8 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <TransmissionRPC/TransmissionRPC.h>
-#import <CategorizationKit/CategorizationKit.h>
+#import <NSTransmissionRPC/NSTransmissionRPC.h>
+#import <NSCategorization/NSCategorization.h>
 #import "CategorizationKitExtensions.h"
 #import "TransmissionRPCExtensions.h"
 #import "NSApplicationAdditions.h"

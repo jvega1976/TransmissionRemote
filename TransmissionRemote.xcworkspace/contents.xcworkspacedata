@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../Downloads/transshift/TransmissionRPCClient.xcodeproj">
+      location = "group:TransmissionRPCClient.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:TransmissionRemote.xcodeproj">
+      location = "absolute:/Users/jvega/Documents/TransmissionRemote/TransmissionRemote.xcodeproj">
    </FileRef>
 </Workspace>

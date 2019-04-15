@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <TransmissionRPC/TransmissionRPC.h>
+#import <NSTransmissionRPC/NSTransmissionRPC.h>
 #import "MainViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN

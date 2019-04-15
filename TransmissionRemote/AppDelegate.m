@@ -7,16 +7,23 @@
 //
 
 #import "AppDelegate.h"
-#import <TransmissionRPC/TransmissionRPC.h>
+#import <NSTransmissionRPC/NSTransmissionRPC.h>
 #import "WindowController.h"
+#import "AddTorrentController.h"
+#import "NSApplicationAdditions.h"
 #import <UserNotifications/UserNotifications.h>
 #import "URLConfig.h"
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    
     WindowController *_windowController;
+    AddTorrentController  *addTorrentController;
+    NSMutableArray<TorrentFile*>* torrentFiles;
+    BOOL haveFilesToOpen;
+}
 
-- (void) awakeFromNib {
-
+-(void)applicationWillFinishLaunching:(NSNotification *)notification {
+    torrentFiles = [NSMutableArray array];
 }
 
 
@@ -49,7 +56,17 @@
     // get changes that might have happened while this
     // instance of your app wasn't running
     [[NSUbiquitousKeyValueStore defaultStore] synchronize];
-    
+    if(torrentFiles.count > 0) {
+        NSLog(@"Running Application DidFinishLaunching");
+        addTorrentController = instantiateController(@"AddTorrentController");
+        NSLog(@"Add Controller: %@",addTorrentController.identifier);
+        NSLog(@"Number of files to open: %lu",torrentFiles.count);
+        for(TorrentFile *file in torrentFiles) {
+            NSLog(@"Opening File: %@",file.name);
+            addTorrentController.torrentFile = file;
+            [NSApplication.sharedApplication.mainWindow.contentViewController presentViewControllerAsSheet:addTorrentController];
+        }
+    }
 }
 
 - (void)storeChanged:(NSNotification*)notification {
@@ -93,6 +110,23 @@
     if (![NSApp keyWindow])
         [_windowController showWindow:self];
     return YES;
+}
+
+- (void)application:(NSApplication *)sender openFiles:(NSArray<NSString *> *)filenames {
+    addTorrentController = instantiateController(@"AddTorrentController");
+    NSLog(@"Is running Open File method.");
+    for (NSString *filename in filenames){
+        NSURL *url = [NSURL fileURLWithPath:filename];
+        NSLog(@"URL for filename %@: %@",filename,url.absoluteString);
+        TorrentFile *file = [TorrentFile torrentFileWithURL:url];
+        if(sender.isActive) {
+            addTorrentController.torrentFile = file;
+            [NSApplication.sharedApplication.mainWindow.contentViewController presentViewControllerAsSheet:addTorrentController];
+        }
+        else
+            [torrentFiles addObject:file];
+    }
+    [sender replyToOpenOrPrint:NSApplicationDelegateReplySuccess];
 }
 
 

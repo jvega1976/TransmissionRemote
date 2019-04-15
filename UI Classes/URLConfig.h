@@ -13,6 +13,7 @@
 #define TR_URL_CONFIG_KEY   @"URLConfigList"
 #define TR_URL_ACTUAL_KEY   @"ActualURL"
 
+#define TR_URL_CONFIG_NAME  @"name"
 #define TR_URL_CONFIG_HOST  @"host"
 #define TR_URL_CONFIG_PORT  @"port"
 #define TR_URL_CONFIG_USER  @"userName"

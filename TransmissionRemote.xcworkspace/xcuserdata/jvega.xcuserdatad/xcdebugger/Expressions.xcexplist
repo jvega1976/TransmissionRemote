@@ -3,15 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[ServerConfigController viewWillAppear]:ServerConfigController.m">
+         contextName = "-[AppDelegate applicationWillResignActive:]:AppDelegate.m">
       </ContextState>
       <ContextState
-         contextName = "-[MainViewController gotSessionWithStats:]:MainViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "(displayFreeSpace == YES)">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "__33-[RPCConnector returnAllTorrents]_block_invoke_2:RPCConnector.m">
       </ContextState>
       <ContextState
          contextName = "-[ServerConfigController reloadConnection:]:ServerConfigController.m">
@@ -22,10 +17,35 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[ServerConfigController control:isValidObject:]:ServerConfigController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[MainViewController startInitialWizard]:MainViewController.m">
       </ContextState>
       <ContextState
-         contextName = "-[ServerConfigController control:isValidObject:]:ServerConfigController.m">
+         contextName = "-[ServerConfigController viewWillAppear]:ServerConfigController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[TRInfo initFromJSON:]:TRInfo.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "NSLocalizedString(@&quot;trWaitingCheck&quot;, @&quot;Waiting for Check&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate gotAllTorrents:]:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "info.trId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__61-[AppDelegate application:performFetchWithCompletionHandler:]_block_invoke:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RPCConnector returnAllTorrents]:RPCConnector.m">
       </ContextState>
       <ContextState
          contextName = "-[ServerConfigController saveConfig:]:ServerConfigController.m">
@@ -36,10 +56,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[TRInfo initFromJSON:]:TRInfo.m">
+         contextName = "-[MainViewController gotSessionWithStats:]:MainViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "NSLocalizedString(@&quot;trWaitingCheck&quot;, @&quot;Waiting for Check&quot;)">
+               value = "(displayFreeSpace == YES)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <CategorizationKit/CategorizationKit.h>
+#import <NSCategorization/NSCategorization.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

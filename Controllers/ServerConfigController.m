@@ -33,8 +33,8 @@
     _defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
     _errorMessage = [NSMutableString alloc];
     _urlConfigList = [NSMutableArray array];
-    NSDictionary *appDefaults = @{TR_URL_CONFIG_REFRESH:@(10),TR_URL_CONFIG_REQUEST:@(10)};
-    _userDefaultsController = [[NSUserDefaultsController alloc] initWithDefaults:_defaults initialValues:appDefaults];
+//    NSDictionary *appDefaults = @{TR_URL_CONFIG_REFRESH:@(10),TR_URL_CONFIG_REQUEST:@(10)};
+//    _userDefaultsController = [[NSUserDefaultsController alloc] initWithDefaults:_defaults initialValues:appDefaults];
     
      [self setUrlConfigList:[NSMutableArray arrayWithArray:[_store arrayForKey:TR_URL_CONFIG_KEY]]];
     if(!_urlConfigList)
@@ -44,7 +44,7 @@
         NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:obj];
         [self.urlConfigList setObject:dict atIndexedSubscript:idx];
     }];
-    [self setRefreshTimeOut:[_store longLongForKey:TR_URL_CONFIG_REFRESH]];
+/*    [self setRefreshTimeOut:[_store longLongForKey:TR_URL_CONFIG_REFRESH]];
     if(!_refreshTimeOut)
         [self setRefreshTimeOut: [_defaults integerForKey:TR_URL_CONFIG_REFRESH]];
     [self setRequestTimeOut:[_store longLongForKey:TR_URL_CONFIG_REQUEST]];
@@ -52,7 +52,7 @@
         [self setRequestTimeOut: [_defaults integerForKey:TR_URL_CONFIG_REQUEST]];
     [self setDisplayFreeSpace:[_store longLongForKey:TR_URL_CONFIG_FREE]];
     if(!_displayFreeSpace)
-        [self setDisplayFreeSpace:[_defaults integerForKey:TR_URL_CONFIG_FREE]];
+        [self setDisplayFreeSpace:[_defaults integerForKey:TR_URL_CONFIG_FREE]];*/
     
 }
 
@@ -76,20 +76,21 @@
 
 -(IBAction)saveConfig:(id)sender {
     [_store setArray:_urlConfigList forKey:TR_URL_CONFIG_KEY];
-    [_store setLongLong:_refreshTimeOut forKey:TR_URL_CONFIG_REFRESH];
-    [_store setLongLong:_requestTimeOut forKey:TR_URL_CONFIG_REQUEST];
-    [_store setBool:_displayFreeSpace forKey:TR_URL_CONFIG_FREE];
+//    [_store setLongLong:_refreshTimeOut forKey:TR_URL_CONFIG_REFRESH];
+//    [_store setLongLong:_requestTimeOut forKey:TR_URL_CONFIG_REQUEST];
+//    [_store setBool:_displayFreeSpace forKey:TR_URL_CONFIG_FREE];
     [_store synchronize];
     [_defaults setObject:_urlConfigList forKey:TR_URL_CONFIG_KEY];
-    [_defaults setInteger:_refreshTimeOut forKey:TR_URL_CONFIG_REFRESH];
-    [_defaults setInteger:_requestTimeOut forKey:TR_URL_CONFIG_REQUEST];
-    [_defaults setBool:_displayFreeSpace forKey:TR_URL_CONFIG_FREE];
+//    [_defaults setInteger:_refreshTimeOut forKey:TR_URL_CONFIG_REFRESH];
+//    [_defaults setInteger:_requestTimeOut forKey:TR_URL_CONFIG_REQUEST];
+//    [_defaults setBool:_displayFreeSpace forKey:TR_URL_CONFIG_FREE];
     [_defaults synchronize];
     
     if(!_wizardMode){
         NSURL *url = ((MainViewController*)((PreferencesController*)self.parentViewController).mainViewController).urlConfig;
-    [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
-    [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithURL:url refreshTime:(int)_refreshTimeOut andRequestTime:(int)_requestTimeOut];
+       [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
+        NSDictionary *config = [[_serverConfigArrayController selectedObjects] firstObject];
+       [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithURL:url refreshTime:[config[TR_URL_CONFIG_REFRESH] intValue] andRequestTime:[config[TR_URL_CONFIG_REQUEST] intValue]];
         if(sender != self)
             [self dismissViewController:self.parentViewController];
     }
@@ -129,9 +130,9 @@
     NSMutableDictionary *config = [_urlConfigList objectAtIndex:[_serverConfigArrayController selectionIndex]];
     NSURL* url = urlFromConfig(config);
     if(_wizardMode)
-       [_mainViewController startRefreshingWithURL:url refreshTime:(int)_refreshTimeOut andRequestTime:(int)_requestTimeOut];
+       [_mainViewController startRefreshingWithURL:url refreshTime:[config[TR_URL_CONFIG_REFRESH] intValue] andRequestTime:[config[TR_URL_CONFIG_REQUEST] intValue]];
       else
-       [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithURL:url refreshTime:(int)_refreshTimeOut andRequestTime:(int)_requestTimeOut];
+       [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithURL:url refreshTime:[config[TR_URL_CONFIG_REFRESH] intValue] andRequestTime:[config[TR_URL_CONFIG_REQUEST] intValue]];
     if(_wizardMode)
         [self dismissViewController:self];
     else

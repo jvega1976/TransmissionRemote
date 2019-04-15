@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <TransmissionRPC/TransmissionRPC.h>
+#import <NSTransmissionRPC/NSTransmissionRPC.h>
 
 #define TR_STATUS_IMAGE_DOWNLOAD    @"StatusDownload"
 #define TR_STATUS_IMAGE_ALL         @"StatusAll"

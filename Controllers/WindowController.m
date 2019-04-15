@@ -7,7 +7,7 @@
 //
 
 #import "WindowController.h"
-#import <TransmissionRPC/TransmissionRPC.h>
+#import <NSTransmissionRPC/NSTransmissionRPC.h>
 
 @interface WindowController () <NSToolbarDelegate>
 

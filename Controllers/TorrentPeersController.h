@@ -7,8 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <TransmissionRPC/TRPeerInfo.h>
-#import <TransmissionRPC/RPCConnector.h>
+#import <NSTransmissionRPC/TRPeerInfo.h>
+#import <NSTransmissionRPC/RPCConnector.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

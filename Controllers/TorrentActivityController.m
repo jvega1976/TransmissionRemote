@@ -7,7 +7,7 @@
 //
 
 #import "TorrentActivityController.h"
-#import "GlobalConsts.h"
+#import <NSTransmissionRPC/NSTransmissionRPC.h>
 
 @interface LegendView : NSView
 
@@ -153,14 +153,15 @@
 @end
 
 
-@interface TorrentActivityController ()
+@interface TorrentActivityController () <RPCConnectorDelegate>
 
 @property (weak, nonatomic) IBOutlet NSTextField *labelPiecesCount;
 @property (weak, nonatomic) IBOutlet NSTextField *labelPieceSize;
 @property (weak, nonatomic) IBOutlet NSTextField *labelRowsCount;
 @property (weak, nonatomic) IBOutlet NSTextField *labelColumnsCount;
 @property (nonatomic) IBOutlet NSScrollView *scrollView;
-
+@property (nonatomic) NSTimer *refreshTimer;
+@property (nonatomic) RPCConnector *connector;
 
 
 @end
@@ -178,6 +179,7 @@
 {
     [super viewDidLoad];
     _legendView = [[LegendView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.contentSize.width, self.scrollView.contentSize.height) ];
+    _connector = RPCConnector.sharedConnector;
 }
 
 
@@ -189,6 +191,7 @@
 
 -(void)viewDidDisappear {
     _viewAppeared = NO;
+    [_refreshTimer invalidate];
 }
 
 - (void)setPiecesBitmap:(NSData *)piecesBitmap
@@ -233,6 +236,16 @@
     _legendView.pw = pw;
     _legendView.ph = ph;
     [self.scrollView addSubview:_legendView];
+    _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(autorefreshTimerUpdateHandler) userInfo:nil repeats:YES];
 }
 
+-(void)autorefreshTimerUpdateHandler{
+    _connector.delegate = self;
+    [_connector getPiecesBitMapForTorrent:_torrentId];
+}
+
+
+-(void)gotPiecesBitmap:(NSData *)piecesBitmap forTorrentWithId:(int)torrentId {
+    [self setPiecesBitmap:piecesBitmap];
+}
 @end
