@@ -28,10 +28,10 @@
 
 
 
-#define DEFAULT_URL defaultURL()
+#define DEFAULT_CONFIG defaultConfig()
 
 
 NSURL* urlFromConfig(NSDictionary* config);
 
-NSURL* defaultURL(void);
+NSURL* defaultConfig(void);
 

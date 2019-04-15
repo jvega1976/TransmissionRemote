@@ -9,17 +9,16 @@
 #import <Cocoa/Cocoa.h>
 #import <NSTransmissionRPC/NSTransmissionRPC.h>
 #import "MainViewController.h"
-#import "URLConfig.h"
+#import "RPCServerConfigDB.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 
 @interface ServerConfigController : NSViewController
 
-@property (nonatomic) NSMutableArray *urlConfigList;
+@property (nonatomic) NSMutableArray<RPCServerConfig*>* serverConfigList;
 @property (nonatomic) IBOutlet NSTableView *serverConfigView;
 @property (nonatomic) IBOutlet NSArrayController *serverConfigArrayController;
-@property (strong) IBOutlet NSUserDefaultsController *userDefaultsController;
 @property (strong) MainViewController *mainViewController;
 @property (nonatomic) BOOL wizardMode;
 

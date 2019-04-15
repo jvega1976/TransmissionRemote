@@ -9,6 +9,7 @@
 #import "TodayViewController.h"
 #import "ListRowViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
+#import "RPCServerConfigDB.h"
 
 @interface TodayViewController () <NCWidgetProviding, NCWidgetListViewDelegate, NCWidgetSearchViewDelegate, RPCConnectorDelegate>
 
@@ -34,17 +35,18 @@
 
     // Set up the widget list view controller.
     // The contents property should contain an object for each row in the list.
-
+    [RPCServerConfigDB.sharedDB loadDB];
     NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_CONFIG_KEY];
-    NSURL *actualConfig = [defaults  URLForKey:TR_URL_ACTUAL_KEY];
+    NSDictionary *actualConfig = [defaults  objectForKey:TR_URL_ACTUAL_KEY];
+    RPCServerConfig *config;
+    if(actualConfig)
+        config = [RPCServerConfig initFromPList:[defaults  objectForKey:TR_URL_ACTUAL_KEY]];
     if (!actualConfig)
-        actualConfig = DEFAULT_URL;
-    NSInteger requestTime = [defaults integerForKey:TR_URL_CONFIG_REQUEST];
-     NSInteger refreshTime = [defaults integerForKey:TR_URL_CONFIG_REFRESH];
-    [[RPCConnector sharedConnector] initWithURL:actualConfig requestTimeout:(int)requestTime andDelegate:self];
+        config = [RPCServerConfigDB.sharedDB defaultConfig];
+    [RPCConnector.sharedConnector initWithURL:config.configURL requestTimeout:config.requestTimeout andDelegate:self];
     _connector = RPCConnector.sharedConnector;
     [self updateData];
-    _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:refreshTime  target:self selector:@selector(updateData) userInfo:nil repeats:YES];
+    _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:config.refreshTimeout  target:self selector:@selector(updateData) userInfo:nil repeats:YES];
 }
 
 

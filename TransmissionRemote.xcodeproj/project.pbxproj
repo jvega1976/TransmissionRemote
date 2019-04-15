@@ -14,6 +14,10 @@
 		B85A6E652257C13A0017C009 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89AD25B225477BE00AE0DFD /* Images.xcassets */; };
 		B85A6EFE22583DCB0017C009 /* NSCategorization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85A6EB5225831110017C009 /* NSCategorization.framework */; };
 		B85A6EFF22583DCB0017C009 /* NSTransmissionRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85A6EA8225830CB0017C009 /* NSTransmissionRPC.framework */; };
+		B86F63F722644EB30055F814 /* RPCServerConfigDB.m in Sources */ = {isa = PBXBuildFile; fileRef = B86F63F422644EB20055F814 /* RPCServerConfigDB.m */; };
+		B86F63F822644EB30055F814 /* RPCServerConfigDB.m in Sources */ = {isa = PBXBuildFile; fileRef = B86F63F422644EB20055F814 /* RPCServerConfigDB.m */; };
+		B86F63F922644EB30055F814 /* RPCServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B86F63F522644EB20055F814 /* RPCServerConfig.m */; };
+		B86F63FA22644EB30055F814 /* RPCServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B86F63F522644EB20055F814 /* RPCServerConfig.m */; };
 		B89A06042263C14B007A5AB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89AD259225477BE00AE0DFD /* Main.storyboard */; };
 		B89A06052263C2A6007A5AB3 /* NSCategorization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85A6EB5225831110017C009 /* NSCategorization.framework */; };
 		B89A06062263C2A6007A5AB3 /* NSCategorization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85A6EB5225831110017C009 /* NSCategorization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -435,6 +439,10 @@
 		B85A6E4B2255BB5B0017C009 /* URLConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLConfig.m; sourceTree = "<group>"; };
 		B85A6EA1225830CB0017C009 /* TransmissionRPC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TransmissionRPC.xcodeproj; path = TransmissionRPC/TransmissionRPC.xcodeproj; sourceTree = "<group>"; };
 		B85A6EAE225831110017C009 /* CategorizationKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CategorizationKit.xcodeproj; path = CategorizationKit/CategorizationKit.xcodeproj; sourceTree = "<group>"; };
+		B86F63F022644EB20055F814 /* RPCServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPCServerConfig.h; sourceTree = "<group>"; };
+		B86F63F422644EB20055F814 /* RPCServerConfigDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPCServerConfigDB.m; sourceTree = "<group>"; };
+		B86F63F522644EB20055F814 /* RPCServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPCServerConfig.m; sourceTree = "<group>"; };
+		B86F63F622644EB30055F814 /* RPCServerConfigDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPCServerConfigDB.h; sourceTree = "<group>"; };
 		B89AD10C225476F800AE0DFD /* Transmission Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transmission Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89AD13D225477BD00AE0DFD /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
 		B89AD13E225477BD00AE0DFD /* NSApplicationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSApplicationAdditions.h; sourceTree = "<group>"; };
@@ -867,6 +875,10 @@
 		B89AD13B225477BD00AE0DFD /* UI Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B86F63F022644EB20055F814 /* RPCServerConfig.h */,
+				B86F63F522644EB20055F814 /* RPCServerConfig.m */,
+				B86F63F622644EB30055F814 /* RPCServerConfigDB.h */,
+				B86F63F422644EB20055F814 /* RPCServerConfigDB.m */,
 				B85A6E4B2255BB5B0017C009 /* URLConfig.m */,
 				B85A6E4A2255BAE80017C009 /* URLConfig.h */,
 				B89AD144225477BD00AE0DFD /* CategorizationKitExtensions.h */,
@@ -1739,6 +1751,8 @@
 				B85A6E4C2255BB5B0017C009 /* URLConfig.m in Sources */,
 				B89AD3CF225477BE00AE0DFD /* PreferencesNetworkController.m in Sources */,
 				B89AD3DB225477BE00AE0DFD /* MainViewController.m in Sources */,
+				B86F63F722644EB30055F814 /* RPCServerConfigDB.m in Sources */,
+				B86F63F922644EB30055F814 /* RPCServerConfig.m in Sources */,
 				B89AD2A8225477BE00AE0DFD /* NSStringAdditions.m in Sources */,
 				B89A06132263D61B007A5AB3 /* AppDelegate.m in Sources */,
 				B8B11BF72262FA8F00A58B92 /* StatisticsController.m in Sources */,
@@ -1763,6 +1777,8 @@
 				B89AD4C122547AFA00AE0DFD /* TodayViewController.m in Sources */,
 				B85A6E5F2257AA760017C009 /* TransmissionRPCExtensions.m in Sources */,
 				B89AD4C422547AFA00AE0DFD /* ListRowViewController.m in Sources */,
+				B86F63FA22644EB30055F814 /* RPCServerConfig.m in Sources */,
+				B86F63F822644EB30055F814 /* RPCServerConfigDB.m in Sources */,
 				B85A6E4D2255BB5B0017C009 /* URLConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

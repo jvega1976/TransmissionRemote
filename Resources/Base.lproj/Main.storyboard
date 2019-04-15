@@ -3686,7 +3686,7 @@ Gw
                                             </attributedString>
                                             <accessibility help="Enter the system refresh time out"/>
                                             <connections>
-                                                <binding destination="vwc-kc-ddL" name="value" keyPath="selection.refreshTimeOut" id="9ob-z1-T1E"/>
+                                                <binding destination="vwc-kc-ddL" name="value" keyPath="selection.refreshTimeout" id="Sie-AS-7yJ"/>
                                                 <outlet property="delegate" destination="kiC-lL-f0R" id="sFP-94-m8z"/>
                                             </connections>
                                         </textField>
@@ -3702,7 +3702,7 @@ Gw
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="vwc-kc-ddL" name="value" keyPath="selection.requestTimeOut" id="Tad-RF-7yD"/>
+                                                <binding destination="vwc-kc-ddL" name="value" keyPath="selection.requestTimeout" id="qwV-AU-dU0"/>
                                                 <outlet property="delegate" destination="kiC-lL-f0R" id="69S-EW-SFw"/>
                                             </connections>
                                         </textField>
@@ -3732,14 +3732,14 @@ Gw
                                             <rect key="frame" x="324" y="71" width="19" height="28"/>
                                             <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="Iqv-hw-cy8"/>
                                             <connections>
-                                                <binding destination="kiC-lL-f0R" name="value" keyPath="refreshTimeOut" id="Mng-zD-7c9"/>
+                                                <binding destination="vwc-kc-ddL" name="value" keyPath="selection.refreshTimeout" id="42H-d4-1XU"/>
                                             </connections>
                                         </stepper>
                                         <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vmX-9R-Hxy">
                                             <rect key="frame" x="324" y="37" width="19" height="28"/>
                                             <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="gvS-GI-8TK"/>
                                             <connections>
-                                                <binding destination="kiC-lL-f0R" name="value" keyPath="requestTimeOut" id="2zJ-u0-JUz"/>
+                                                <binding destination="vwc-kc-ddL" name="value" keyPath="selection.requestTimeout" id="KB6-xs-YyG"/>
                                             </connections>
                                         </stepper>
                                         <button identifier="defaultServer" toolTip="Default Server Setup" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pKq-Hv-Jx7" userLabel="displayFreeSpace">
@@ -3856,23 +3856,9 @@ Gw
                     </connections>
                 </viewController>
                 <customObject id="fhv-wQ-mTS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController automaticallyRearrangesObjects="YES" id="vwc-kc-ddL" userLabel="Server Config Array Controller">
-                    <declaredKeys>
-                        <string>name</string>
-                        <string>host</string>
-                        <string>port</string>
-                        <string>rpcPath</string>
-                        <string>useSSL</string>
-                        <string>userName</string>
-                        <string>userPassword</string>
-                        <string>defaultServer</string>
-                        <string>requireAuth</string>
-                        <string>refreshTimeOut</string>
-                        <string>requestTimeOut</string>
-                        <string>showFreeSpace</string>
-                    </declaredKeys>
+                <arrayController objectClassName="RPCServerConfig" automaticallyPreparesContent="YES" automaticallyRearrangesObjects="YES" id="vwc-kc-ddL" userLabel="Server Config Array Controller">
                     <connections>
-                        <binding destination="kiC-lL-f0R" name="contentArray" keyPath="urlConfigList" id="CZf-tp-2J4"/>
+                        <binding destination="kiC-lL-f0R" name="contentArray" keyPath="serverConfigList" id="6im-Xp-C25"/>
                     </connections>
                 </arrayController>
             </objects>

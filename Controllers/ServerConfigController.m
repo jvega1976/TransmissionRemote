@@ -14,12 +14,7 @@
 @interface ServerConfigController () <RPCConnectorDelegate,
                                       NSTextFieldDelegate>
 
-@property (nonatomic) NSUserDefaults *defaults;
-@property (nonatomic) NSUbiquitousKeyValueStore *store;
 @property (nonatomic) NSMutableString *errorMessage;
-@property (nonatomic) NSInteger refreshTimeOut;
-@property (nonatomic) NSInteger requestTimeOut;
-@property (nonatomic) BOOL displayFreeSpace;
 @property (strong) IBOutlet NSButton *saveButton;
 
 @end
@@ -29,36 +24,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _store = [NSUbiquitousKeyValueStore defaultStore];
-    _defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
-    _errorMessage = [NSMutableString alloc];
-    _urlConfigList = [NSMutableArray array];
-//    NSDictionary *appDefaults = @{TR_URL_CONFIG_REFRESH:@(10),TR_URL_CONFIG_REQUEST:@(10)};
-//    _userDefaultsController = [[NSUserDefaultsController alloc] initWithDefaults:_defaults initialValues:appDefaults];
-    
-     [self setUrlConfigList:[NSMutableArray arrayWithArray:[_store arrayForKey:TR_URL_CONFIG_KEY]]];
-    if(!_urlConfigList)
-        _urlConfigList = [NSMutableArray arrayWithArray:[_defaults arrayForKey:TR_URL_CONFIG_KEY]];
-    //store return only immutable Objects, we need to change it to mutable Dictionary
-    [_urlConfigList enumerateObjectsUsingBlock:^(NSMutableDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:obj];
-        [self.urlConfigList setObject:dict atIndexedSubscript:idx];
-    }];
-/*    [self setRefreshTimeOut:[_store longLongForKey:TR_URL_CONFIG_REFRESH]];
-    if(!_refreshTimeOut)
-        [self setRefreshTimeOut: [_defaults integerForKey:TR_URL_CONFIG_REFRESH]];
-    [self setRequestTimeOut:[_store longLongForKey:TR_URL_CONFIG_REQUEST]];
-    if(!_requestTimeOut)
-        [self setRequestTimeOut: [_defaults integerForKey:TR_URL_CONFIG_REQUEST]];
-    [self setDisplayFreeSpace:[_store longLongForKey:TR_URL_CONFIG_FREE]];
-    if(!_displayFreeSpace)
-        [self setDisplayFreeSpace:[_defaults integerForKey:TR_URL_CONFIG_FREE]];*/
-    
 }
 
 
 -(void) viewWillAppear {
     [super viewWillAppear];
+    [RPCServerConfigDB.sharedDB loadDB];
+    [self setServerConfigList: RPCServerConfigDB.sharedDB.db];
+    _errorMessage = [NSMutableString alloc];
     
     [self.view.window setContentSize:NSMakeSize(700, 400)];
     [self.view setWantsLayer:YES];
@@ -75,22 +48,13 @@
 
 
 -(IBAction)saveConfig:(id)sender {
-    [_store setArray:_urlConfigList forKey:TR_URL_CONFIG_KEY];
-//    [_store setLongLong:_refreshTimeOut forKey:TR_URL_CONFIG_REFRESH];
-//    [_store setLongLong:_requestTimeOut forKey:TR_URL_CONFIG_REQUEST];
-//    [_store setBool:_displayFreeSpace forKey:TR_URL_CONFIG_FREE];
-    [_store synchronize];
-    [_defaults setObject:_urlConfigList forKey:TR_URL_CONFIG_KEY];
-//    [_defaults setInteger:_refreshTimeOut forKey:TR_URL_CONFIG_REFRESH];
-//    [_defaults setInteger:_requestTimeOut forKey:TR_URL_CONFIG_REQUEST];
-//    [_defaults setBool:_displayFreeSpace forKey:TR_URL_CONFIG_FREE];
-    [_defaults synchronize];
+    RPCServerConfigDB.sharedDB.db = _serverConfigList;
+    [RPCServerConfigDB.sharedDB saveDB];
     
     if(!_wizardMode){
-        NSURL *url = ((MainViewController*)((PreferencesController*)self.parentViewController).mainViewController).urlConfig;
+        RPCServerConfig *config = RPCServerConfigDB.sharedDB.defaultConfig;
        [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
-        NSDictionary *config = [[_serverConfigArrayController selectedObjects] firstObject];
-       [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithURL:url refreshTime:[config[TR_URL_CONFIG_REFRESH] intValue] andRequestTime:[config[TR_URL_CONFIG_REQUEST] intValue]];
+        [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithConfig:config];
         if(sender != self)
             [self dismissViewController:self.parentViewController];
     }
@@ -100,23 +64,23 @@
 -(IBAction)setDefaultServer:(id)sender {
     NSButton *button = sender;
     if ([button state] == NSControlStateValueOn) {
-        NSInteger index = [_urlConfigList indexOfObjectPassingTest:^BOOL(id  obj, NSUInteger idx, BOOL * stop) {
-            if (idx !=  [self.serverConfigArrayController selectionIndex] && [obj[TR_URL_CONFIG_SVR] boolValue])
+        NSInteger index = [_serverConfigList indexOfObjectPassingTest:^BOOL(id  obj, NSUInteger idx, BOOL * stop) {
+            if (idx !=  [self.serverConfigArrayController selectionIndex] && [(RPCServerConfig*)obj defaultServer])
                 return YES;
             return NO;
         }];
         if(index != NSNotFound)
-            [_urlConfigList[index] setValue:@(NO) forKey:TR_URL_CONFIG_SVR];
+            _serverConfigList[index].defaultServer = NO;
     }
 }
 
 -(IBAction)verifyAuthentication:(id)sender {
     NSButton *button = sender;
     if ([button state] == NSControlStateValueOff) {
-        NSArray *url = [self.serverConfigArrayController selectedObjects];
-        [url enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            [obj setObject:@"" forKey:TR_URL_CONFIG_USER];
-            [obj setObject:@"" forKey:TR_URL_CONFIG_PASS];
+        NSArray *serverList = [self.serverConfigArrayController selectedObjects];
+        [serverList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [(RPCServerConfig*)obj setUserName:@""];
+            [(RPCServerConfig*)obj setUserPassword:@""];
         }];
     }
 }
@@ -126,18 +90,19 @@
     //stop connecting to actual Server
 
     [self saveConfig:self];
-   if(!_wizardMode) [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
-    NSMutableDictionary *config = [_urlConfigList objectAtIndex:[_serverConfigArrayController selectionIndex]];
-    NSURL* url = urlFromConfig(config);
+   if(!_wizardMode)
+       [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
+    RPCServerConfig *config = [_serverConfigList objectAtIndex:[_serverConfigArrayController selectionIndex]];
     if(_wizardMode)
-       [_mainViewController startRefreshingWithURL:url refreshTime:[config[TR_URL_CONFIG_REFRESH] intValue] andRequestTime:[config[TR_URL_CONFIG_REQUEST] intValue]];
-      else
-       [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithURL:url refreshTime:[config[TR_URL_CONFIG_REFRESH] intValue] andRequestTime:[config[TR_URL_CONFIG_REQUEST] intValue]];
+        [_mainViewController startRefreshingWithConfig:config];
+    else
+        [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithConfig:config];
     if(_wizardMode)
         [self dismissViewController:self];
     else
         [self dismissViewController:self.parentViewController];
 }
+
 
 #pragma mark - NSControlTextEditingDelegate
 

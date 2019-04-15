@@ -12,6 +12,7 @@
 #import "CategorizationKitExtensions.h"
 #import "TransmissionRPCExtensions.h"
 #import "NSApplicationAdditions.h"
+#import "RPCServerConfig.h"
 
 
 
@@ -31,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                     NSSplitViewDelegate>
 
 @property (nonatomic) NSURL     *urlConfig;
+@property (nonatomic) RPCServerConfig *config;
 @property (nonatomic) RPCConnector *connector;
 @property (nonatomic) Categorization *torrents;
 
@@ -67,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)stopRefreshing;
 
-- (void)startRefreshingWithURL:(NSURL*)url;
+- (void)startRefreshingWithConfig:(RPCServerConfig*)config;
 - (void)startRefreshingWithURL:(NSURL*)url refreshTime:(int)refreshTime andRequestTime:(int)requestTime;
 
 

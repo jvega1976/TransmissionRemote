@@ -26,6 +26,7 @@
 #import "TransmissionRPCExtensions.h"
 #import "ServerConfigController.h"
 #import "URLConfig.h"
+#import "RPCServerConfigDB.h"
 
 
 #define MyDataType @"MyDataType"
@@ -142,8 +143,8 @@ BOOL isEditable = NO;
     _search.searchMenuTemplate.itemArray[0].tag = NSSearchFieldRecentsTitleMenuItemTag;
     _search.searchMenuTemplate.itemArray[1].tag = NSSearchFieldRecentsMenuItemTag;
     _search.searchMenuTemplate.itemArray[2].tag = NSSearchFieldClearRecentsMenuItemTag;
-    
-    [self startRefreshingWithURL:DEFAULT_URL];
+    [RPCServerConfigDB.sharedDB loadDB];
+    [self startRefreshingWithConfig:[RPCServerConfigDB.sharedDB defaultConfig]];
     [self addChildViewController:_statisticsController];
     [Categorization.shared setGroupLabel:[GroupLabel torrentLabels]];
     [self setTorrents:Categorization.shared];
@@ -164,33 +165,23 @@ BOOL isEditable = NO;
 }
 
 
-- (void)startRefreshingWithURL:(NSURL*)url {
-    if(!url)
+- (void)startRefreshingWithConfig:(RPCServerConfig*)config {
+    if(!config)
         [self startInitialWizard];
     else {
-        _urlConfig = url;
-        NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
+        _config = config;
         NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
-        int requestTimeOut = (int)[store longLongForKey:TR_URL_CONFIG_REQUEST];
-        if(!requestTimeOut)
-            requestTimeOut = (int)[defaults integerForKey:TR_URL_CONFIG_REQUEST] ;
-        int refreshTimeOut = (int)[store longLongForKey:TR_URL_CONFIG_REFRESH];
-        if(!refreshTimeOut)
-            refreshTimeOut = (int)[defaults integerForKey:TR_URL_CONFIG_REFRESH];
-        _displayFreeSpace = [store boolForKey:TR_URL_CONFIG_FREE];
-        if(!_displayFreeSpace)
-            _displayFreeSpace = [defaults boolForKey:TR_URL_CONFIG_FREE];
-        [RPCConnector.sharedConnector initWithURL:_urlConfig requestTimeout:(requestTimeOut ? requestTimeOut : 10) andDelegate:self];
+        [RPCConnector.sharedConnector initWithURL:_config.configURL requestTimeout:_config.requestTimeout andDelegate:self];
         _connector = RPCConnector.sharedConnector;
-        [self setSessionURL:[NSString stringWithFormat:@"%@://%@:%@%@", _urlConfig.scheme,_urlConfig.host,_urlConfig.port,_urlConfig.path]];
+        [self setSessionURL:_config.urlString];
         [self setUserSession:[NSString stringWithFormat:@"%@ at",_urlConfig.user]];
         _connector.delegate =self;
         [_connector getAllTorrents];
         [_connector getSessionInfo];
         [_connector getSessionStats];
-        _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:(refreshTimeOut ? refreshTimeOut : 10) target:self selector:@selector(autorefreshTimerUpdateHandler) userInfo:nil repeats:YES];
+        _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:_config.refreshTimeout target:self selector:@selector(autorefreshTimerUpdateHandler) userInfo:nil repeats:YES];
         
-        [defaults setURL:_urlConfig forKey:TR_URL_ACTUAL_KEY];
+        [defaults setObject:_config.plist forKey:TR_URL_ACTUAL_KEY];
         [defaults synchronize];
     }
 }
@@ -494,7 +485,7 @@ BOOL isEditable = NO;
     self.trEditing = -1;
     _torrentActualName = @"";
     [(TRInfo*)_torrentArrayController.arrangedObjects[row] setIsNameEditable:NO];
-    [self startRefreshingWithURL:_urlConfig];
+    [self startRefreshingWithConfig:_config];
 }
 
 
