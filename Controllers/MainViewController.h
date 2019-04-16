@@ -70,7 +70,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)stopRefreshing;
 
 - (void)startRefreshingWithConfig:(RPCServerConfig*)config;
-- (void)startRefreshingWithURL:(NSURL*)url refreshTime:(int)refreshTime andRequestTime:(int)requestTime;
 
 
 @end

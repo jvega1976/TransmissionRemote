@@ -146,7 +146,7 @@ BOOL isEditable = NO;
     [RPCServerConfigDB.sharedDB loadDB];
     [self startRefreshingWithConfig:[RPCServerConfigDB.sharedDB defaultConfig]];
     [self addChildViewController:_statisticsController];
-    [Categorization.shared setGroupLabel:[GroupLabel torrentLabels]];
+    [Categorization.shared setCategories:[Categories torrentCategories]];
     [self setTorrents:Categorization.shared];
     [_labelsArrayController setSelectionIndex:0];
 }
@@ -186,22 +186,6 @@ BOOL isEditable = NO;
     }
 }
 
-- (void)startRefreshingWithURL:(NSURL*)url refreshTime:(int)refreshTime andRequestTime:(int)requestTime {
-    _urlConfig = url;
-    [RPCConnector.sharedConnector initWithURL:_urlConfig requestTimeout:(requestTime ? requestTime : 10) andDelegate:self];
-    _connector = RPCConnector.sharedConnector;
-    [self setSessionURL:[NSString stringWithFormat:@"%@://%@:%@%@", _urlConfig.scheme,_urlConfig.host,_urlConfig.port,_urlConfig.path]];
-    [self setUserSession:[NSString stringWithFormat:@"%@ at",_urlConfig.user]];
-    _connector.delegate =self;
-    [_connector getSessionInfo];
-    [_connector getSessionStats];
-    [_connector getAllTorrents];
-    _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:(refreshTime ? refreshTime : 10) target:self selector:@selector(autorefreshTimerUpdateHandler) userInfo:nil repeats:YES];
-    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
-    [defaults setURL:_urlConfig forKey:TR_URL_ACTUAL_KEY];
-    [defaults synchronize];
-}
-
 
 - (void)stopRefreshing {
     [_refreshTimer invalidate];
@@ -217,7 +201,7 @@ BOOL isEditable = NO;
     if( _prevDownTorrents )
     {
         NSArray *dtors = _prevDownTorrents;
-        NSArray *stors = [[_torrents.groupLabel labelWithTitle:TR_GL_TITLE_SEED] items];
+        NSArray *stors = [[_torrents.categories categoryWithTitle:TR_GL_TITLE_SEED] items];
         
         for (TRInfo* dt in dtors)
         {
@@ -256,7 +240,7 @@ BOOL isEditable = NO;
         }
         
          }
-    _prevDownTorrents = [[_torrents.groupLabel labelWithTitle:TR_GL_TITLE_DOWN] items];;
+    _prevDownTorrents = [[_torrents.categories categoryWithTitle:TR_GL_TITLE_DOWN] items];;
 }
 
 

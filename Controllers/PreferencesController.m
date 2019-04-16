@@ -41,7 +41,7 @@
         [toolbarItem.view performSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOn];
     else
         [toolbarItem.view performSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOff];
-//    [self.view.window performClose:self];
+    [self dismissController:self];
 }
 
 

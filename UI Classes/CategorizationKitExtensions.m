@@ -8,7 +8,7 @@
 
 #import "CategorizationKitExtensions.h"
 
-@implementation Label (TorrentLabel)
+@implementation Category (TorrentLabel)
 
 -(NSImage*)image {
     
@@ -33,56 +33,56 @@
 
 @end
 
-@implementation GroupLabel (TorrentLabel)
+@implementation Categories (TorrentLabel)
 
 
-+(GroupLabel*)torrentLabels {
++(Categories*)torrentCategories {
     
-    NSMutableArray *labels = [NSMutableArray array];
-    Label *c;
+    NSMutableArray *categoryList = [NSMutableArray array];
+    Category *c;
     NSPredicate *p;
     
-    // Fill labels
+    // Fill Categories
     p = [NSPredicate predicateWithValue:YES];
-    c = [Label label:TR_GL_TITLE_ALL withPredicate:p andSortIndex:999 isAlwaysVisible:YES];
-    [labels addObject:c];
+    c = [Category categoryWithTitle:TR_GL_TITLE_ALL predicate:p andSortIndex:999 isAlwaysVisible:YES];
+    [categoryList addObject:c];
     
     p = [NSPredicate predicateWithFormat:@"isFinished == YES"];
-    c = [Label label:TR_GL_TITLE_COMPL withPredicate:p andSortIndex:6 isAlwaysVisible:YES];
-    [labels addObject:c];
+    c = [Category categoryWithTitle:TR_GL_TITLE_COMPL predicate:p andSortIndex:6 isAlwaysVisible:YES];
+    [categoryList addObject:c];
     
     p = [NSPredicate predicateWithFormat:@"isDownloading == YES"];
-    c = [Label label:TR_GL_TITLE_DOWN withPredicate:p andSortIndex:0 isAlwaysVisible:YES];
-    [labels addObject:c];
+    c = [Category categoryWithTitle:TR_GL_TITLE_DOWN predicate:p andSortIndex:0 isAlwaysVisible:YES];
+    [categoryList addObject:c];
     
     p = [NSPredicate predicateWithFormat:@"isWaiting == YES"];
-    c = [Label label:TR_GL_TITLE_WAIT withPredicate:p andSortIndex:1 isAlwaysVisible:NO];
-    [labels addObject:c];
+    c = [Category categoryWithTitle:TR_GL_TITLE_WAIT predicate:p andSortIndex:1 isAlwaysVisible:NO];
+    [categoryList addObject:c];
     
     p = [NSPredicate predicateWithFormat:@"downloadRate > 0 OR uploadRate > 0"];
-    c = [Label label:TR_GL_TITLE_ACTIVE withPredicate:p andSortIndex:999 isAlwaysVisible:YES];
-    [labels addObject:c];
+    c = [Category categoryWithTitle:TR_GL_TITLE_ACTIVE predicate:p andSortIndex:999 isAlwaysVisible:YES];
+    [categoryList addObject:c];
     
     p = [NSPredicate predicateWithFormat:@"isSeeding == YES"];
-    c = [Label label:TR_GL_TITLE_SEED withPredicate:p andSortIndex:5 isAlwaysVisible:YES];
-    [labels addObject:c];
+    c = [Category categoryWithTitle:TR_GL_TITLE_SEED predicate:p andSortIndex:5 isAlwaysVisible:YES];
+    [categoryList addObject:c];
     
     p = [NSPredicate predicateWithFormat:@"isStopped == YES"];
-    c = [Label label:TR_GL_TITLE_STOP withPredicate:p andSortIndex:2 isAlwaysVisible:NO];
-    [labels addObject:c];
+    c = [Category categoryWithTitle:TR_GL_TITLE_STOP predicate:p andSortIndex:2 isAlwaysVisible:NO];
+    [categoryList addObject:c];
     
     p = [NSPredicate predicateWithFormat:@"isChecking == YES"];
-    c = [Label label:TR_GL_TITLE_CHECK withPredicate:p andSortIndex:4 isAlwaysVisible:NO];
-    [labels addObject:c];
+    c = [Category categoryWithTitle:TR_GL_TITLE_CHECK predicate:p andSortIndex:4 isAlwaysVisible:NO];
+    [categoryList addObject:c];
     
     p = [NSPredicate predicateWithFormat:@"isError == YES"];
-    c = [Label label:TR_GL_TITLE_ERROR withPredicate:p andSortIndex:3 isAlwaysVisible:NO];
-    [labels addObject:c];
+    c = [Category categoryWithTitle:TR_GL_TITLE_ERROR predicate:p andSortIndex:3 isAlwaysVisible:NO];
+    [categoryList addObject:c];
     
-    GroupLabel *groupLabel = [GroupLabel groupwithLabels:labels];
+    Categories *categories = [Categories categoriesWithCategoryArray:categoryList];
     
-    [groupLabel setVisibleLabelsPredicate:[NSPredicate predicateWithFormat:@"isVisible == YES"]];
-    return groupLabel;
+    [categories setVisibleCategoriesPredicate:[NSPredicate predicateWithFormat:@"isVisible == YES"]];
+    return categories;
 }
 
 @end

@@ -3,10 +3,18 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[AppDelegate applicationWillResignActive:]:AppDelegate.m">
+         contextName = "-[MainViewController gotSessionWithStats:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(displayFreeSpace == YES)">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "__33-[RPCConnector returnAllTorrents]_block_invoke_2:RPCConnector.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RPCConnector getAllTorrents]:RPCConnector.m">
       </ContextState>
       <ContextState
          contextName = "-[ServerConfigController reloadConnection:]:ServerConfigController.m">
@@ -45,9 +53,6 @@
          contextName = "__61-[AppDelegate application:performFetchWithCompletionHandler:]_block_invoke:AppDelegate.m">
       </ContextState>
       <ContextState
-         contextName = "-[RPCConnector returnAllTorrents]:RPCConnector.m">
-      </ContextState>
-      <ContextState
          contextName = "-[ServerConfigController saveConfig:]:ServerConfigController.m">
          <PersistentStrings>
             <PersistentString
@@ -56,12 +61,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[MainViewController gotSessionWithStats:]:MainViewController.m">
+         contextName = "-[RPCConnector returnAllTorrents]:RPCConnector.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController startRefreshingWithConfig:]:MainViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "(displayFreeSpace == YES)">
+               value = "config.configURL">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate applicationWillResignActive:]:AppDelegate.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

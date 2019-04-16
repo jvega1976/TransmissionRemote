@@ -116,7 +116,7 @@ static NSString * const CODER_SHOW_FREESPACE =TR_URL_CONFIG_FREE;
                             CODER_USER_PASSWORD : _userPassword,
                             CODER_REQ_AUTH : @(_requireAuth),
                             CODER_REFRESH_TIMEOUT : @(_refreshTimeout),
-                            CODER_REQUEST_TIMEOUT : @(_refreshTimeout),
+                            CODER_REQUEST_TIMEOUT : @(_requestTimeout),
                             CODER_SHOW_FREESPACE : @(_showFreeSpace),
                             CODER_DEFAULT_SERVER : @(_defaultServer)
                             };
@@ -166,12 +166,13 @@ static NSString * const CODER_SHOW_FREESPACE =TR_URL_CONFIG_FREE;
 
 -(NSURL*)configURL {
     NSString *url = [NSString stringWithFormat:@"%@://%@:%@@%@:%d%@",
-                    _useSSL ? @"https" : @"http",
-                    _userName,
-                    _userPassword,
-                    _host,
-                    _port,
-                    _rpcPath];
+                     _useSSL ? @"https" : @"http",
+                     _userName,
+                     _userPassword,
+                     _host,
+                     _port,
+                     _rpcPath];
     return [NSURL URLWithString:url];
 }
+
 @end

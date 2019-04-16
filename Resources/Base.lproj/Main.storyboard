@@ -944,7 +944,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="x1Q-2s-92d">
+                                                        <tableCellView wantsLayer="YES" id="x1Q-2s-92d">
                                                             <rect key="frame" x="225" y="1" width="153" height="28"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -964,6 +964,15 @@
                                                                 </textField>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P3D-DB-upF" userLabel="clientIcon">
                                                                     <rect key="frame" x="2" y="5" width="20" height="20"/>
+                                                                    <contentFilters>
+                                                                        <ciFilter name="CISharpenLuminance">
+                                                                            <configuration>
+                                                                                <null key="inputImage"/>
+                                                                                <real key="inputRadius" value="1.6899999999999999"/>
+                                                                                <real key="inputSharpness" value="1"/>
+                                                                            </configuration>
+                                                                        </ciFilter>
+                                                                    </contentFilters>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="uTorrent" id="nHq-Qc-6N0"/>
                                                                     <connections>
                                                                         <binding destination="x1Q-2s-92d" name="value" keyPath="objectValue.clientImage" id="nna-4f-fZ1"/>
@@ -2605,16 +2614,16 @@
                     </connections>
                 </viewController>
                 <customObject id="hwr-II-t4j" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController objectClassName="Label" editable="NO" selectsInsertedObjects="NO" avoidsEmptySelection="NO" clearsFilterPredicateOnInsertion="NO" automaticallyRearrangesObjects="YES" id="nZh-Q0-hSO" userLabel="Labels Array Controller">
+                <arrayController objectClassName="Category" editable="NO" selectsInsertedObjects="NO" avoidsEmptySelection="NO" clearsFilterPredicateOnInsertion="NO" automaticallyRearrangesObjects="YES" id="nZh-Q0-hSO" userLabel="Labels Array Controller">
                     <connections>
-                        <binding destination="X0f-b0-vw8" name="contentArray" keyPath="torrents.groupLabel.labels" id="Mtw-v5-Mdu">
+                        <binding destination="X0f-b0-vw8" name="contentArray" keyPath="torrents.categories.categoryList" id="T3T-xb-t6M">
                             <dictionary key="options">
                                 <bool key="NSAlwaysPresentsApplicationModalAlerts" value="YES"/>
                                 <bool key="NSConditionallySetsEditable" value="NO"/>
                                 <bool key="NSValidatesImmediately" value="YES"/>
                             </dictionary>
                         </binding>
-                        <binding destination="X0f-b0-vw8" name="filterPredicate" keyPath="torrents.groupLabel.visibleLabelsPredicate" id="Odb-Lr-BaI">
+                        <binding destination="X0f-b0-vw8" name="filterPredicate" keyPath="torrents.categories.visibleCategoriesPredicate" id="fBE-om-s5Y">
                             <dictionary key="options">
                                 <bool key="NSAlwaysPresentsApplicationModalAlerts" value="YES"/>
                                 <bool key="NSValidatesImmediately" value="YES"/>
@@ -3670,9 +3679,9 @@ Gw
                                     <rect key="frame" x="1" y="1" width="392" height="112"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField identifier="refreshTime" toolTip="Refresh Time Out" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hsv-9C-QL7">
-                                            <rect key="frame" x="268" y="73" width="62" height="24"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Refresh" placeholderString="Enter the system refreh time out" drawsBackground="YES" id="9lW-ew-qrk">
+                                        <textField identifier="refreshTime" toolTip="Refresh Time Out" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hsv-9C-QL7">
+                                            <rect key="frame" x="264" y="73" width="62" height="24"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="right" title="Refresh" placeholderString="Enter the system refreh time out" drawsBackground="YES" id="9lW-ew-qrk">
                                                 <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" allowsFloats="NO" usesGroupingSeparator="NO" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="CRQ-LA-w3U">
                                                     <integer key="roundingIncrement" value="1"/>
                                                     <real key="minimum" value="1"/>
@@ -3692,7 +3701,7 @@ Gw
                                         </textField>
                                         <textField identifier="requestTime" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aiX-oW-q74">
                                             <rect key="frame" x="264" y="39" width="62" height="24"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Timeout" drawsBackground="YES" id="7XB-vU-VSe">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="right" title="Timeout" drawsBackground="YES" id="7XB-vU-VSe">
                                                 <numberFormatter key="formatter" formatterBehavior="custom10_4" allowsFloats="NO" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="4vg-i8-Qvu">
                                                     <integer key="roundingIncrement" value="1"/>
                                                     <real key="minimum" value="1"/>
@@ -4313,7 +4322,7 @@ Gw
                         <tabViewItem label="Bandwith" identifier="Bandwith" image="Bandwidth" id="oxT-gf-Cfg"/>
                         <tabViewItem label="Integration" image="NSComputer" id="TSP-mf-Bu8"/>
                     </tabViewItems>
-                    <tabView key="tabView" type="noTabsNoBorder" id="kpv-XY-RUf">
+                    <tabView key="tabView" drawsBackground="NO" type="noTabsNoBorder" id="kpv-XY-RUf">
                         <rect key="frame" x="0.0" y="0.0" width="700" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
@@ -7648,7 +7657,7 @@ Gw
         <image name="filesIcon" width="37" height="37"/>
         <image name="iconAnnounceTower" width="36" height="36"/>
         <image name="iconComputer" width="37" height="37"/>
-        <image name="iconFile" width="32" height="32"/>
+        <image name="iconFile" width="36" height="36"/>
         <image name="iconGlobeTemplate" width="19" height="19"/>
         <image name="iconHalfCloudDownload" width="37" height="37"/>
         <image name="iconHalfCloudDownload20x20" width="21" height="20"/>

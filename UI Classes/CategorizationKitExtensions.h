@@ -47,16 +47,16 @@ typedef enum : NSUInteger {
 } SortOptions;
 
 
-@interface Label (TorrentLabel)
+@interface Category (TorrentLabel)
 
 @property (nonatomic,readonly) NSImage *image;
 
 @end
 
 
-@interface GroupLabel (TorrentLabel)
+@interface Categories (TorrentLabel)
 
-+(GroupLabel*)torrentLabels;
++(Categories*)torrentCategories;
 
 @end
 

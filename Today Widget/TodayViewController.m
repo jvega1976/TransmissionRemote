@@ -53,10 +53,10 @@
 -(void)updateData{
     if(_connector) {
         TRInfos *trInfos = [_connector returnAllTorrents];
-        GroupLabel *groupLabel = [GroupLabel torrentLabels];
-        [Categorization.shared setItems:trInfos.items andLabels:groupLabel];
+        Categories *categories = [Categories torrentCategories];
+        [Categorization.shared setItems:trInfos.items andCategories:categories];
         Categorization *torrents = Categorization.shared;
-        self.torrentList = [torrents itemsInLabel:TR_GL_TITLE_DOWN];
+        self.torrentList = [torrents itemsInCategoryWithTitle:TR_GL_TITLE_DOWN];
         self.listViewController.contents = self.torrentList;
 //        [self.listViewController.view display];
     }

@@ -68,20 +68,20 @@ static char selectedFlag;
 
 -(NSInteger)sortValue {
     if(self.isError)
-        return [[GroupLabel torrentLabels] sortIndexForLabelWithTitle:TR_GL_TITLE_ERROR];
+        return [[Categories torrentCategories] sortIndexForCategoryWithTitle:TR_GL_TITLE_ERROR];
     else if(self.isDownloading)
-        return [[GroupLabel torrentLabels] sortIndexForLabelWithTitle:TR_GL_TITLE_DOWN];
+        return [[Categories torrentCategories] sortIndexForCategoryWithTitle:TR_GL_TITLE_DOWN];
     else if(self.isSeeding)
-        return [[GroupLabel torrentLabels] sortIndexForLabelWithTitle:TR_GL_TITLE_SEED];
+        return [[Categories torrentCategories] sortIndexForCategoryWithTitle:TR_GL_TITLE_SEED];
     else if(self.isWaiting)
-        return [[GroupLabel torrentLabels] sortIndexForLabelWithTitle:TR_GL_TITLE_WAIT];
+        return [[Categories torrentCategories] sortIndexForCategoryWithTitle:TR_GL_TITLE_WAIT];
     else if(self.isStopped)
-        return [[GroupLabel torrentLabels] sortIndexForLabelWithTitle:TR_GL_TITLE_STOP];
+        return [[Categories torrentCategories] sortIndexForCategoryWithTitle:TR_GL_TITLE_STOP];
     else if(self.isChecking)
-        return [[GroupLabel torrentLabels] sortIndexForLabelWithTitle:TR_GL_TITLE_CHECK];
+        return [[Categories torrentCategories] sortIndexForCategoryWithTitle:TR_GL_TITLE_CHECK];
     else if(self.isFinished)
-        return [[GroupLabel torrentLabels] sortIndexForLabelWithTitle:TR_GL_TITLE_COMPL];
-    return [[GroupLabel torrentLabels] sortIndexForLabelWithTitle:TR_GL_TITLE_ALL];
+        return [[Categories torrentCategories] sortIndexForCategoryWithTitle:TR_GL_TITLE_COMPL];
+    return [[Categories torrentCategories] sortIndexForCategoryWithTitle:TR_GL_TITLE_ALL];
 }
 
 @end
