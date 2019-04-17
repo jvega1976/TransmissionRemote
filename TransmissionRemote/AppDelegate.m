@@ -16,7 +16,6 @@
 
 @interface AppDelegate()
 
-@property (weak, nonatomic) IBOutlet NSMenu *menuBar;
 @property (strong, nonatomic) NSStatusItem *statusBar;
 
 @end
@@ -27,6 +26,7 @@
     AddTorrentController  *addTorrentController;
     NSMutableArray<TorrentFile*>* torrentFiles;
     BOOL haveFilesToOpen;
+    NSUserDefaults *defaults;
 }
 - (void) awakeFromNib {
     self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
@@ -43,7 +43,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     
-    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
+    defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
+//    [defaults removeObjectForKey:@"SpeedMenuItems"];
+//    [defaults synchronize];
     NSDictionary *dict = @{@"name":@"TheServer",@"host":@"hostname",@"port":@(9091),@"userName":@"jdoe",@"userPassword":@"*****",@"useSSL":@(NO),@"requireAuth":@(NO),@"defaultServer":@(NO),@"rpcPath":@"/transmission/rpc"};
     NSArray *configArray = [NSArray arrayWithObject:dict];
     NSMutableDictionary *appDefaults = [NSMutableDictionary dictionaryWithObject:configArray forKey:TR_URL_CONFIG_KEY];
@@ -52,6 +54,7 @@
     [appDefaults setValue:@(10) forKey:TR_URL_CONFIG_REFRESH];
     [appDefaults setValue:@"none" forKey:@"videoApplication"];
     [appDefaults setValue:[NSArray array] forKey: @"DirectoryMapping"];
+    [appDefaults setObject:@[@{@"rate":@(50)},@{@"rate":@(100)},@{@"rate":@(250)},@{@"rate":@(500)},@{@"rate":@(1024)}] forKey:@"SpeedMenuItems"];
     [defaults registerDefaults:appDefaults];
     [defaults synchronize];
     UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
@@ -80,7 +83,26 @@
             [NSApplication.sharedApplication.mainWindow.contentViewController presentViewControllerAsSheet:addTorrentController];
         }
     }
+    
+    [self loadSpeedLimitMenuItems];
 }
+
+
+-(void)loadSpeedLimitMenuItems {
+    
+    NSArray *speedItems = [defaults arrayForKey:@"SpeedMenuItems"];
+    [_maximumDownloadSpeedSubmenu removeAllItems];
+    [_maximumUploadSpeedSubmenu removeAllItems];
+    for (NSDictionary *i in speedItems) {
+        NSMenuItem *menuItemDownload = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"%@ Kb/s", i[@"rate"]]  action:@selector(limitDownloadRateWithSpeed:) keyEquivalent:@""];
+        menuItemDownload.tag = [i[@"rate"] integerValue];
+        [_maximumDownloadSpeedSubmenu addItem:menuItemDownload];
+        NSMenuItem *menuItemUpload = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"%@ Kb/s", i[@"rate"]] action:@selector(limitUploadRateWithSpeed:) keyEquivalent:@""];
+        menuItemUpload.tag = [i[@"rate"] integerValue];
+        [_maximumUploadSpeedSubmenu addItem:menuItemUpload];
+    }
+}
+
 
 - (void)storeChanged:(NSNotification*)notification {
     
@@ -114,16 +136,12 @@
 }
 
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
-}
-
-
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag {
     if (![NSApp keyWindow])
         [_windowController showWindow:self];
     return YES;
 }
+
 
 - (void)application:(NSApplication *)sender openFiles:(NSArray<NSString *> *)filenames {
     addTorrentController = instantiateController(@"AddTorrentController");

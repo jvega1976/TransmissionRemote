@@ -815,6 +815,27 @@ BOOL isEditable = NO;
     }
 }
 
+- (IBAction)limitDownloadRateWithSpeed:(id)sender {
+    NSMenuItem *menuItem = (NSMenuItem*)sender;
+    NSUInteger rateKbs = menuItem.tag;
+    [_connector limitDownloadRateWithSpeed:(int)rateKbs];
+    NSMenu *menu = menuItem.menu;
+    NSArray *menuItems = menu.itemArray;
+    [menuItems makeObjectsPerformSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOff];
+    menuItem.state = NSControlStateValueOn;
+}
+
+
+- (IBAction)limitUploadRateWithSpeed:(id)sender {
+    NSMenuItem *menuItem = (NSMenuItem*)sender;
+    NSUInteger rateKbs = menuItem.tag;
+    [_connector limitUploadRateWithSpeed:(int)rateKbs];
+    NSMenu *menu = menuItem.menu;
+    NSArray *menuItems = menu.itemArray;
+    [menuItems makeObjectsPerformSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOff];
+    menuItem.state = NSControlStateValueOn;
+}
+
 
 #pragma mark - RPCConnectorDelegate
 
@@ -906,8 +927,33 @@ BOOL isEditable = NO;
         [[(AppDelegate*)[[NSApplication sharedApplication] delegate] toggleAltMenuItem] setState:NSControlStateValueOff];
         [[(AppDelegate*)[[NSApplication sharedApplication] delegate] manuBarToggleAlt] setState:NSControlStateValueOff];
     }
+    
     if(_displayFreeSpace)
         [_connector getFreeSpaceWithDownloadDir:info.downloadDir];
+    
+    //Update state of Status Bar Download Limit Menu Items
+    
+    if(!info.downLimitEnabled) {
+        NSArray *menuItems = [[(AppDelegate*)[[NSApplication sharedApplication] delegate] maximumDownloadSpeedSubmenu] itemArray];
+        for(NSMenuItem *menuItem in menuItems)
+            [menuItem setState:NSControlStateValueOff];
+    }
+    else {
+        NSMenu *menu = [[[(AppDelegate*)[[NSApplication sharedApplication] delegate] menuBar] itemWithTitle:@"Maximum Download Speed"] submenu];
+        [[menu itemWithTag:info.downLimitRate] setState:NSControlStateValueOn];
+    }
+    
+    //Update state of Status Bar Upload Limit Menu Items
+    
+    if(!info.upLimitEnabled) {
+        NSArray *menuItems = [[(AppDelegate*)[[NSApplication sharedApplication] delegate] maximumUploadSpeedSubmenu] itemArray];
+        for(NSMenuItem *menuItem in menuItems)
+            [menuItem setState:NSControlStateValueOff];
+    }
+    else {
+        NSMenu *menu = [[[(AppDelegate*)[[NSApplication sharedApplication] delegate] menuBar] itemWithTitle:@"Maximum Upload Speed"] submenu];
+        [[menu itemWithTag:info.upLimitRate] setState:NSControlStateValueOn];
+    }
 }
 
 

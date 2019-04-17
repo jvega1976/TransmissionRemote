@@ -14,6 +14,7 @@
 		B85A6E652257C13A0017C009 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89AD25B225477BE00AE0DFD /* Images.xcassets */; };
 		B85A6EFE22583DCB0017C009 /* NSCategorization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85A6EB5225831110017C009 /* NSCategorization.framework */; };
 		B85A6EFF22583DCB0017C009 /* NSTransmissionRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85A6EA8225830CB0017C009 /* NSTransmissionRPC.framework */; };
+		B8691B6E2266D58D005B24A7 /* PreferencesMenuItemsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8691B6D2266D58D005B24A7 /* PreferencesMenuItemsController.m */; };
 		B86F63F722644EB30055F814 /* RPCServerConfigDB.m in Sources */ = {isa = PBXBuildFile; fileRef = B86F63F422644EB20055F814 /* RPCServerConfigDB.m */; };
 		B86F63F822644EB30055F814 /* RPCServerConfigDB.m in Sources */ = {isa = PBXBuildFile; fileRef = B86F63F422644EB20055F814 /* RPCServerConfigDB.m */; };
 		B86F63F922644EB30055F814 /* RPCServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B86F63F522644EB20055F814 /* RPCServerConfig.m */; };
@@ -439,6 +440,8 @@
 		B85A6E4B2255BB5B0017C009 /* URLConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLConfig.m; sourceTree = "<group>"; };
 		B85A6EA1225830CB0017C009 /* TransmissionRPC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TransmissionRPC.xcodeproj; path = TransmissionRPC/TransmissionRPC.xcodeproj; sourceTree = "<group>"; };
 		B85A6EAE225831110017C009 /* CategorizationKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CategorizationKit.xcodeproj; path = CategorizationKit/CategorizationKit.xcodeproj; sourceTree = "<group>"; };
+		B8691B6C2266D58D005B24A7 /* PreferencesMenuItemsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PreferencesMenuItemsController.h; path = Controllers/PreferencesMenuItemsController.h; sourceTree = SOURCE_ROOT; };
+		B8691B6D2266D58D005B24A7 /* PreferencesMenuItemsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PreferencesMenuItemsController.m; path = Controllers/PreferencesMenuItemsController.m; sourceTree = SOURCE_ROOT; };
 		B86F63F022644EB20055F814 /* RPCServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPCServerConfig.h; sourceTree = "<group>"; };
 		B86F63F422644EB20055F814 /* RPCServerConfigDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPCServerConfigDB.m; sourceTree = "<group>"; };
 		B86F63F522644EB20055F814 /* RPCServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPCServerConfig.m; sourceTree = "<group>"; };
@@ -1208,6 +1211,8 @@
 		B89AD272225477BE00AE0DFD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B8691B6C2266D58D005B24A7 /* PreferencesMenuItemsController.h */,
+				B8691B6D2266D58D005B24A7 /* PreferencesMenuItemsController.m */,
 				B89AD27A225477BE00AE0DFD /* AddTorrentController.h */,
 				B89AD28E225477BE00AE0DFD /* AddTorrentController.m */,
 				B89AD28B225477BE00AE0DFD /* CreatorWindowController.h */,
@@ -1751,6 +1756,7 @@
 				B85A6E4C2255BB5B0017C009 /* URLConfig.m in Sources */,
 				B89AD3CF225477BE00AE0DFD /* PreferencesNetworkController.m in Sources */,
 				B89AD3DB225477BE00AE0DFD /* MainViewController.m in Sources */,
+				B8691B6E2266D58D005B24A7 /* PreferencesMenuItemsController.m in Sources */,
 				B86F63F722644EB30055F814 /* RPCServerConfigDB.m in Sources */,
 				B86F63F922644EB30055F814 /* RPCServerConfig.m in Sources */,
 				B89AD2A8225477BE00AE0DFD /* NSStringAdditions.m in Sources */,
