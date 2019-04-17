@@ -11,6 +11,7 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (nonatomic) IBOutlet NSMenuItem *toggleAltMenuItem;
+@property (weak) IBOutlet NSMenuItem *manuBarToggleAlt;
 
 //@property (strong, nonatomic) NSStatusItem *statusBar;
 @end

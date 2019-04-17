@@ -14,12 +14,25 @@
 #import <UserNotifications/UserNotifications.h>
 #import "URLConfig.h"
 
+@interface AppDelegate()
+
+@property (weak, nonatomic) IBOutlet NSMenu *menuBar;
+@property (strong, nonatomic) NSStatusItem *statusBar;
+
+@end
+
 @implementation AppDelegate {
     
     WindowController *_windowController;
     AddTorrentController  *addTorrentController;
     NSMutableArray<TorrentFile*>* torrentFiles;
     BOOL haveFilesToOpen;
+}
+- (void) awakeFromNib {
+    self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    
+    self.statusBar.button.image = [NSImage imageNamed: @"statusBarIcon"];
+    self.statusBar.menu = _menuBar;
 }
 
 -(void)applicationWillFinishLaunching:(NSNotification *)notification {

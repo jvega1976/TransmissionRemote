@@ -143,7 +143,8 @@ NSMutableSet *creatorWindowControllerSet = nil;
     NSString * name = [fPath lastPathComponent];
 
     [[self window] setTitle: name];
-
+    self.window.contentView.wantsLayer = YES;
+    self.window.contentView.layer.backgroundColor = [NSColor windowBackgroundColor].CGColor;
     [fNameField setStringValue: name];
     [fNameField setToolTip: [fPath path]];
 
@@ -153,7 +154,7 @@ NSMutableSet *creatorWindowControllerSet = nil;
                         ? NSFileTypeForHFSTypeCode(kGenericFolderIcon) : [fPath pathExtension]];
     [icon setSize: [fIconView frame].size];
     [fIconView setImage: icon];
-
+    
     NSString * statusString = [NSString stringForFileSize: fInfo->totalSize];
     if (multifile)
     {

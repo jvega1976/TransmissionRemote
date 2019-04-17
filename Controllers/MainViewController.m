@@ -173,13 +173,14 @@ BOOL isEditable = NO;
         NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
         [RPCConnector.sharedConnector initWithURL:_config.configURL requestTimeout:_config.requestTimeout andDelegate:self];
         _connector = RPCConnector.sharedConnector;
-        [self setSessionURL:_config.urlString];
-        [self setUserSession:[NSString stringWithFormat:@"%@ at",_urlConfig.user]];
+        [self setSessionURL:config.urlString];
+        [self setUserSession:[NSString stringWithFormat:@"%@ at",config.userName]];
+        _displayFreeSpace = config.showFreeSpace;
         _connector.delegate =self;
         [_connector getAllTorrents];
         [_connector getSessionInfo];
         [_connector getSessionStats];
-        _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:_config.refreshTimeout target:self selector:@selector(autorefreshTimerUpdateHandler) userInfo:nil repeats:YES];
+        _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:config.refreshTimeout target:self selector:@selector(autorefreshTimerUpdateHandler) userInfo:nil repeats:YES];
         
         [defaults setObject:_config.plist forKey:TR_URL_ACTUAL_KEY];
         [defaults synchronize];
@@ -214,7 +215,7 @@ BOOL isEditable = NO;
                     
                     content.title = [NSString localizedUserNotificationStringForKey:@"Torrent Finished" arguments:nil];
                     
-                    content.body = [NSString localizedUserNotificationStringForKey:@"\"%@\" finished downloading" arguments: @[st.name]];
+                    content.body = [NSString localizedUserNotificationStringForKey:@"\"%@\" have been downloaded" arguments: @[st.name]];
                     
                     content.sound = [UNNotificationSound defaultSound];
                     
@@ -896,12 +897,14 @@ BOOL isEditable = NO;
         [toolbarItem.view performSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOn];
         //Update Toogle Alt Dock Menu Item state
         [[(AppDelegate*)[[NSApplication sharedApplication] delegate] toggleAltMenuItem] setState:NSControlStateValueOn];
+        [[(AppDelegate*)[[NSApplication sharedApplication] delegate] manuBarToggleAlt] setState:NSControlStateValueOn];
     }
     else {
         //Update Toogle Alt Toolbar Item state
         [toolbarItem.view performSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOff];
         //Update Toogle Alt Dock Menu Item state
         [[(AppDelegate*)[[NSApplication sharedApplication] delegate] toggleAltMenuItem] setState:NSControlStateValueOff];
+        [[(AppDelegate*)[[NSApplication sharedApplication] delegate] manuBarToggleAlt] setState:NSControlStateValueOff];
     }
     if(_displayFreeSpace)
         [_connector getFreeSpaceWithDownloadDir:info.downloadDir];

@@ -348,9 +348,35 @@
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
                     <connections>
+                        <outlet property="manuBarToggleAlt" destination="ElY-wR-GTf" id="XmP-oF-hNt"/>
+                        <outlet property="menuBar" destination="auQ-Ra-C1X" id="6oQ-5Y-EdS"/>
+                        <outlet property="statusBarMenu" destination="auQ-Ra-C1X" id="jbS-pq-DDQ"/>
                         <outlet property="toggleAltMenuItem" destination="PeW-Is-TFT" id="IoV-qf-clo"/>
                     </connections>
                 </customObject>
+                <menu id="auQ-Ra-C1X" userLabel="Status Bar">
+                    <items>
+                        <menuItem title="Start All" id="ufJ-kT-a6N">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="startAllTorrents:" target="Ady-hI-5gd" id="gG9-sG-RrV"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Stop All" id="lDy-0m-Bsm">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="stopAllTorrents:" target="Ady-hI-5gd" id="wJk-49-wQh"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="kcY-75-GNs"/>
+                        <menuItem title="Alt Speed" id="ElY-wR-GTf">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="toggleSessionAltLimitMode:" target="Ady-hI-5gd" id="Dzx-Yp-ChF"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                </menu>
                 <menu title="Transmission Remote" id="0g3-Qd-eqi" userLabel="Dock Menu">
                     <items>
                         <menuItem title="Add Torrent..." id="NAl-bA-emD">
@@ -373,10 +399,10 @@
                             </connections>
                         </menuItem>
                         <menuItem isSeparatorItem="YES" id="471-Gh-IV6"/>
-                        <menuItem title="Alt Speed" alternate="YES" id="PeW-Is-TFT">
+                        <menuItem title="Alt Speed" id="PeW-Is-TFT">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <action selector="toggleAltLimitMode:" target="Ady-hI-5gd" id="50H-Ta-JHc"/>
+                                <action selector="toggleSessionAltLimitMode:" target="Ady-hI-5gd" id="Bi6-qa-Eeu"/>
                             </connections>
                         </menuItem>
                     </items>
@@ -2231,6 +2257,15 @@
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="21" id="0M9-yX-ysm"/>
                                                                                     </constraints>
+                                                                                    <contentFilters>
+                                                                                        <ciFilter name="CISharpenLuminance">
+                                                                                            <configuration>
+                                                                                                <null key="inputImage"/>
+                                                                                                <real key="inputRadius" value="4.7000000000000002"/>
+                                                                                                <real key="inputSharpness" value="2.3999999999999999"/>
+                                                                                            </configuration>
+                                                                                        </ciFilter>
+                                                                                    </contentFilters>
                                                                                     <buttonCell key="cell" type="smallSquare" title="peersButton" bezelStyle="smallSquare" image="PeersTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" transparent="YES" imageScaling="proportionallyUpOrDown" inset="2" id="6lx-Ia-KOK">
                                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                                         <font key="font" metaFont="system"/>
@@ -7654,10 +7689,10 @@ Gw
         <image name="Upload Badget" width="128" height="30"/>
         <image name="VerifyTemplate" width="19" height="19"/>
         <image name="downloadIcon" width="60" height="60"/>
-        <image name="filesIcon" width="37" height="37"/>
+        <image name="filesIcon" width="32" height="32"/>
         <image name="iconAnnounceTower" width="36" height="36"/>
         <image name="iconComputer" width="37" height="37"/>
-        <image name="iconFile" width="36" height="36"/>
+        <image name="iconFile" width="32" height="32"/>
         <image name="iconGlobeTemplate" width="19" height="19"/>
         <image name="iconHalfCloudDownload" width="37" height="37"/>
         <image name="iconHalfCloudDownload20x20" width="21" height="20"/>
