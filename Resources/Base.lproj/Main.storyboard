@@ -7836,10 +7836,6 @@ Gw
                             <constraint firstItem="IIr-q9-viv" firstAttribute="leading" secondItem="8rx-fI-2aR" secondAttribute="leading" constant="195" id="y3p-hd-6we"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="speedMenuItemsArrayController" destination="eLd-59-T4F" id="MqR-BZ-qZU"/>
-                        <outlet property="speedMenuItemsView" destination="nkc-8I-9wh" id="UeS-2q-HsF"/>
-                    </connections>
                 </viewController>
                 <customObject id="7nk-VT-QJC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController automaticallyRearrangesObjects="YES" id="eLd-59-T4F" userLabel="Speed Menu Items Array Controller">
@@ -7854,7 +7850,6 @@ Gw
                                 <bool key="NSValidatesImmediately" value="YES"/>
                             </dictionary>
                         </binding>
-                        <outlet property="speedMenuItemsView" destination="nkc-8I-9wh" id="0nv-10-jjq"/>
                     </connections>
                 </arrayController>
             </objects>

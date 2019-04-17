@@ -12,8 +12,6 @@
 
 
 @interface PreferencesMenuItemsController ()
-@property (strong) IBOutlet NSArrayController *speedMenuItemsArrayController;
-@property (strong) IBOutlet NSTableView *speedMenuItemsView;
 
 @end
 
