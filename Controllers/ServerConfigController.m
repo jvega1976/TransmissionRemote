@@ -55,8 +55,8 @@
         RPCServerConfig *config = RPCServerConfigDB.sharedDB.defaultConfig;
        [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
         [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithConfig:config];
-        if(sender != self)
-            [self dismissViewController:self.parentViewController];
+        [(PreferencesController*)self.parentViewController setTorrentSessionInfo:self];
+        
     }
 }
 

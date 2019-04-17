@@ -11,7 +11,13 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (nonatomic) IBOutlet NSMenuItem *toggleAltMenuItem;
+
+@property (weak, nonatomic) IBOutlet NSMenu *menuBar;
 @property (weak) IBOutlet NSMenuItem *manuBarToggleAlt;
+@property (weak) IBOutlet NSMenu *maximumDownloadSpeedSubmenu;
+@property (weak) IBOutlet NSMenu *maximumUploadSpeedSubmenu;
+
+-(void)loadSpeedLimitMenuItems;
 
 //@property (strong, nonatomic) NSStatusItem *statusBar;
 @end

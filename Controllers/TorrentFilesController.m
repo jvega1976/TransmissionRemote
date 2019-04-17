@@ -10,6 +10,27 @@
 #import "PreferencesOtherController.h"
 #import "MainViewController.h"
 
+TorrentFilesController *torrentFilesController;
+
+@implementation FSItem (FileEditing)
+
+BOOL isFileEditable = NO;
+
+-(BOOL)isNameEditable {
+    if ([self.fullName  isEqualToString:torrentFilesController.fileName])
+        return YES;
+    else
+        return NO;
+}
+
+-(void)setIsNameEditable:(BOOL)isNameEditable {
+    
+    isFileEditable = isNameEditable;
+}
+
+@end
+
+
 
 @interface TorrentFilesController () <RPCConnectorDelegate,
                                       NSTextFieldDelegate>
@@ -17,7 +38,6 @@
 @property (strong) IBOutlet NSTreeController *filesTreeController;
 
 @property (strong,nonatomic) IBOutlet NSMenu *filesMenu;
-@property (strong,nonatomic) IBOutlet NSOutlineView *torrentFilesView;
 @property (strong) IBOutlet NSTextField *fileLocation;
 @property (strong) IBOutlet NSView *fileLocationView;
 @property (nonatomic) NSMutableArray<DirectoryMapping *> *directoryMapping;
@@ -39,7 +59,7 @@
     [super viewDidLoad];
     // Do view setup here.
     [self setConnector:[RPCConnector sharedConnector]];
-    
+    torrentFilesController = self;
 }
 
 
@@ -154,13 +174,25 @@
 
 
 -(void)renameFile:(id)sender {
-    NSInteger row = [_torrentFilesView clickedRow];
-//    [[_torrentFiles itemAtIndex:row] setIsEditable:YES];
-    [_torrentFilesView editColumn:0 row:row withEvent:nil select:YES];
+    if(!_openFilesWithDoubleClick) {
+        NSInteger row = [_torrentFilesView clickedRow];
+        FSItem *file = [_torrentFiles itemAtIndex:row];
+        [self setFileName: file.fullName];
+        [(FSItem*)[_torrentFiles itemAtIndex:row] setIsNameEditable:YES];
+        [_torrentFilesView editColumn:1 row:row withEvent:nil select:YES];
+        [_torrentFilesView.window makeFirstResponder:[_torrentFilesView viewAtColumn:1 row:row makeIfNecessary:NO].subviews.firstObject];
+    } else {
+        NSInteger row = [_torrentFilesView selectedRow];
+        FSItem *file = [_torrentFiles itemAtIndex:row];
+        [self setFileName: file.fullName];
+        [(FSItem*)[_torrentFiles itemAtIndex:row] setIsNameEditable:YES];
+        [_torrentFilesView editColumn:1 row:row withEvent:nil select:YES];
+        [_torrentFilesView.window makeFirstResponder:[_torrentFilesView viewAtColumn:1 row:row makeIfNecessary:NO].subviews.firstObject];
+    }
 }
 
 
--(IBAction)nameFile:(id)sender{
+-(IBAction)nameFile:(id)sender {
     FSItem *file = [_torrentFiles itemAtIndex:[_torrentFilesView selectedRow]];
     NSTextField *name = (NSTextField*)sender;
     _connector.delegate = self;

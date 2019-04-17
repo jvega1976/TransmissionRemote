@@ -331,6 +331,12 @@
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Check for Updates..." id="xT3-3y-O0y">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="checkForUpdates:" target="DSc-2a-JCh" id="opD-io-HaT"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -346,9 +352,14 @@
                 </application>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="DSc-2a-JCh" customClass="SUUpdater"/>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
                     <connections>
                         <outlet property="manuBarToggleAlt" destination="ElY-wR-GTf" id="XmP-oF-hNt"/>
+                        <outlet property="maximumDownloadSpeedMenuItem" destination="8lc-FY-35j" id="UBn-JD-wya"/>
+                        <outlet property="maximumDownloadSpeedSubmenu" destination="jNb-dB-I6g" id="azu-LD-4jQ"/>
+                        <outlet property="maximumUploadSpeedMenuItem" destination="7MF-8c-Qhz" id="4yW-Ui-x0s"/>
+                        <outlet property="maximumUploadSpeedSubmenu" destination="wlY-WX-MEY" id="hKx-OG-apL"/>
                         <outlet property="menuBar" destination="auQ-Ra-C1X" id="6oQ-5Y-EdS"/>
                         <outlet property="statusBarMenu" destination="auQ-Ra-C1X" id="jbS-pq-DDQ"/>
                         <outlet property="toggleAltMenuItem" destination="PeW-Is-TFT" id="IoV-qf-clo"/>
@@ -368,11 +379,27 @@
                                 <action selector="stopAllTorrents:" target="Ady-hI-5gd" id="wJk-49-wQh"/>
                             </connections>
                         </menuItem>
-                        <menuItem isSeparatorItem="YES" id="kcY-75-GNs"/>
+                        <menuItem isSeparatorItem="YES" id="UT6-JP-Wz7"/>
                         <menuItem title="Alt Speed" id="ElY-wR-GTf">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
                                 <action selector="toggleSessionAltLimitMode:" target="Ady-hI-5gd" id="Dzx-Yp-ChF"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="kcY-75-GNs"/>
+                        <menuItem title="Maximum Download Speed" id="8lc-FY-35j">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <menu key="submenu" title="Maximum Download Speed" id="jNb-dB-I6g"/>
+                        </menuItem>
+                        <menuItem title="Maximum Upload Speed" id="7MF-8c-Qhz">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <menu key="submenu" title="Maximum Upload Speed" id="wlY-WX-MEY"/>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="gvS-Lo-mi0"/>
+                        <menuItem title="Exit" id="xek-qe-Zw0">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="terminate:" target="Ady-hI-5gd" id="Ctr-oP-wvf"/>
                             </connections>
                         </menuItem>
                     </items>
@@ -1987,7 +2014,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="Kqe-BH-f6E"/>
                                                 </constraints>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iconHalfCloudDownload20x20" id="YWS-Wq-3hc"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="iconHalfCloudDownload20x20" id="YWS-Wq-3hc"/>
                                             </imageView>
                                             <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-eC-Yjx" userLabel="Label DL">
                                                 <rect key="frame" x="48" y="745" width="85" height="22"/>
@@ -2005,13 +2032,13 @@
                                                     </ciFilter>
                                                 </contentFilters>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" focusRingType="none" title="9999 bytes/s" drawsBackground="YES" id="3H5-gw-fcF">
-                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ejD-hh-H5w" userLabel="Label UL">
-                                                <rect key="frame" x="170" y="745" width="80" height="22"/>
+                                                <rect key="frame" x="165" y="745" width="85" height="22"/>
                                                 <contentFilters>
                                                     <ciFilter name="CISharpenLuminance">
                                                         <configuration>
@@ -2022,17 +2049,17 @@
                                                     </ciFilter>
                                                 </contentFilters>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" focusRingType="none" alignment="right" title="9999 bytes/s" drawsBackground="YES" id="hr9-VQ-1iQ">
-                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </textFieldCell>
                                             </textField>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tNN-P7-gzy" userLabel="Icon UL">
-                                                <rect key="frame" x="142" y="746" width="25" height="25"/>
+                                                <rect key="frame" x="137" y="746" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="qGy-N1-2Pe"/>
                                                 </constraints>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iconHalfCloudUpload20x20" id="oJq-8B-vxc"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="iconHalfCloudUpload20x20" id="oJq-8B-vxc"/>
                                             </imageView>
                                             <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aEP-Dv-dBL">
                                                 <rect key="frame" x="7" y="5" width="254" height="25"/>
@@ -2635,6 +2662,7 @@
                         <outlet property="categoryView" destination="sdw-dc-puv" id="F6U-W7-QWA"/>
                         <outlet property="dockView" destination="AON-mD-1yj" id="3JO-eX-Oxu"/>
                         <outlet property="downloadRate" destination="6Mb-eC-Yjx" id="VTh-wn-fJn"/>
+                        <outlet property="downloadRateIcon" destination="a98-e8-zes" id="BH4-5y-jPH"/>
                         <outlet property="errorMessage" destination="SpO-2y-igt" id="Gye-51-ukS"/>
                         <outlet property="filterEditorView" destination="SgM-j6-I3b" id="rPZ-M4-XGG"/>
                         <outlet property="labelsArrayController" destination="nZh-Q0-hSO" id="4m0-Zz-zwl"/>
@@ -2646,6 +2674,7 @@
                         <outlet property="torrentListView" destination="PRH-Ed-YHn" id="qDK-Mz-orZ"/>
                         <outlet property="torrentView" destination="y0U-wH-eEn" id="eIv-gC-HYc"/>
                         <outlet property="uploadRate" destination="ejD-hh-H5w" id="bjJ-X4-7Ib"/>
+                        <outlet property="uploadRateIcon" destination="tNN-P7-gzy" id="KJe-1C-84W"/>
                     </connections>
                 </viewController>
                 <customObject id="hwr-II-t4j" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -3306,9 +3335,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xHS-vz-HRN">
-                                <rect key="frame" x="313" y="27" width="56" height="23"/>
+                                <rect key="frame" x="313" y="27" width="60" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="Tte-Ew-bnC"/>
+                                    <constraint firstAttribute="width" constant="60" id="Tte-Ew-bnC"/>
                                 </constraints>
                                 <buttonCell key="cell" type="roundTextured" title="OK" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PxG-55-UzU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -3319,9 +3348,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XLg-Zh-sTw">
-                                <rect key="frame" x="236" y="27" width="56" height="23"/>
+                                <rect key="frame" x="236" y="27" width="60" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="6DL-wL-P5k"/>
+                                    <constraint firstAttribute="width" constant="60" id="6DL-wL-P5k"/>
                                 </constraints>
                                 <buttonCell key="cell" type="roundTextured" title="Cancel" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DQE-uO-iGR">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -3352,11 +3381,11 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="xHS-vz-HRN" firstAttribute="leading" secondItem="XLg-Zh-sTw" secondAttribute="trailing" constant="21" id="FTI-aj-A7A"/>
+                            <constraint firstItem="xHS-vz-HRN" firstAttribute="leading" secondItem="XLg-Zh-sTw" secondAttribute="trailing" constant="17" id="FTI-aj-A7A"/>
                             <constraint firstItem="Mcr-zI-3Rd" firstAttribute="leading" secondItem="z6K-vT-h7g" secondAttribute="trailing" constant="14" id="Fh0-Cp-yay"/>
                             <constraint firstItem="Mcr-zI-3Rd" firstAttribute="centerY" secondItem="bz6-oR-isd" secondAttribute="centerY" id="Mmq-Hp-zkB"/>
                             <constraint firstItem="z6K-vT-h7g" firstAttribute="leading" secondItem="bz6-oR-isd" secondAttribute="leading" constant="20" id="XjI-dr-G7K"/>
-                            <constraint firstAttribute="trailing" secondItem="xHS-vz-HRN" secondAttribute="trailing" constant="20" id="abn-Wg-NM5"/>
+                            <constraint firstAttribute="trailing" secondItem="xHS-vz-HRN" secondAttribute="trailing" constant="16" id="abn-Wg-NM5"/>
                             <constraint firstItem="z6K-vT-h7g" firstAttribute="baseline" secondItem="Mcr-zI-3Rd" secondAttribute="baseline" id="cQ4-X1-eFL"/>
                             <constraint firstItem="XLg-Zh-sTw" firstAttribute="baseline" secondItem="xHS-vz-HRN" secondAttribute="baseline" id="e1t-yl-Vbf"/>
                             <constraint firstItem="Mcr-zI-3Rd" firstAttribute="baseline" secondItem="XLg-Zh-sTw" secondAttribute="baseline" id="gzV-70-Lmf"/>
@@ -3369,7 +3398,7 @@
                 </viewController>
                 <customObject id="xK2-aF-YyU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.5" y="1601.5"/>
+            <point key="canvasLocation" x="1" y="1575"/>
         </scene>
         <!--Server Config View Controller-->
         <scene sceneID="6a2-LZ-WHw">
@@ -4356,6 +4385,7 @@ Gw
                         <tabViewItem label="Network" identifier="Network" image="NSNetwork" id="btS-8H-UAy"/>
                         <tabViewItem label="Bandwith" identifier="Bandwith" image="Bandwidth" id="oxT-gf-Cfg"/>
                         <tabViewItem label="Integration" image="NSComputer" id="TSP-mf-Bu8"/>
+                        <tabViewItem label="Speed Menu Items" image="PreferencesLimitSpeedIcon" id="L0f-iF-Y4w"/>
                     </tabViewItems>
                     <tabView key="tabView" drawsBackground="NO" type="noTabsNoBorder" id="kpv-XY-RUf">
                         <rect key="frame" x="0.0" y="0.0" width="700" height="480"/>
@@ -4373,6 +4403,7 @@ Gw
                         <segue destination="7fp-EN-88r" kind="relationship" relationship="tabItems" id="hBO-x3-Sif"/>
                         <segue destination="ar3-qM-hMo" kind="relationship" relationship="tabItems" id="h2l-LJ-eA2"/>
                         <segue destination="wbS-TX-vrU" kind="relationship" relationship="tabItems" id="ya6-Bw-2gG"/>
+                        <segue destination="VWT-0f-Yv5" kind="relationship" relationship="tabItems" id="rtw-tP-7Eo"/>
                     </connections>
                 </tabViewController>
                 <customObject id="0D6-yK-Zsl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -4727,7 +4758,7 @@ Gw
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn editable="NO" width="376" minWidth="40" maxWidth="1000" id="HfH-0k-BTR">
+                                                <tableColumn width="376" minWidth="40" maxWidth="1000" id="HfH-0k-BTR">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="File Name">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -4746,19 +4777,19 @@ Gw
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kts-ky-Qkb">
-                                                                    <rect key="frame" x="4" y="5" width="58" height="17"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Filename" id="bDs-Xd-Q84">
+                                                                    <rect key="frame" x="4" y="5" width="371" height="17"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="367" id="E48-2V-rWa"/>
+                                                                    </constraints>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" title="Filename" id="bDs-Xd-Q84">
                                                                         <font key="font" metaFont="systemLight" size="13"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
                                                                         <action selector="nameFile:" target="ntQ-GI-NfT" id="FAD-b1-MAS"/>
-                                                                        <binding destination="W9C-8u-6jz" name="value" keyPath="objectValue.name" id="efu-Yl-0cF">
-                                                                            <dictionary key="options">
-                                                                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
-                                                                            </dictionary>
-                                                                        </binding>
+                                                                        <binding destination="W9C-8u-6jz" name="editable" keyPath="objectValue.isNameEditable" id="ClT-b4-AsU"/>
+                                                                        <binding destination="W9C-8u-6jz" name="value" keyPath="objectValue.name" id="YSf-Eg-PA6"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -5062,7 +5093,7 @@ Gw
                         <menuItem title="Rename" id="jt5-oa-m7E">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <action selector="renameSelectedFile:" target="ntQ-GI-NfT" id="EPC-Rj-SGE"/>
+                                <action selector="renameSelectedFile:" target="ntQ-GI-NfT" id="Ab1-Zl-Nwv"/>
                             </connections>
                         </menuItem>
                         <menuItem title="Download" id="dcU-mr-hJt">
@@ -5099,13 +5130,9 @@ Gw
                         </menuItem>
                     </items>
                 </menu>
-                <treeController objectClassName="FSItem" editable="NO" childrenKeyPath="items" countKeyPath="filesCount" leafKeyPath="isFile" avoidsEmptySelection="NO" selectsInsertedObjects="NO" id="W51-J0-aJ8" userLabel="Torrent Files Array Controller">
+                <treeController objectClassName="FSItem" childrenKeyPath="items" countKeyPath="filesCount" leafKeyPath="isFile" avoidsEmptySelection="NO" selectsInsertedObjects="NO" id="W51-J0-aJ8" userLabel="Torrent Files Array Controller">
                     <connections>
-                        <binding destination="ntQ-GI-NfT" name="contentArray" keyPath="torrentFiles.rootItem.items" id="454-8Y-WWT">
-                            <dictionary key="options">
-                                <bool key="NSConditionallySetsEditable" value="NO"/>
-                            </dictionary>
-                        </binding>
+                        <binding destination="ntQ-GI-NfT" name="contentArray" keyPath="torrentFiles.rootItem.items" id="Oh5-5c-u0q"/>
                     </connections>
                 </treeController>
             </objects>
@@ -7381,7 +7408,7 @@ Gw
 </string>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="performClose:" target="MCN-lx-LLn" id="YAQ-st-gPL"/>
+                                    <action selector="performClose:" target="MCN-lx-LLn" id="nsw-nN-ikj"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Xz-IT-6iQ">
@@ -7651,6 +7678,194 @@ Gw
             </objects>
             <point key="canvasLocation" x="3412" y="365"/>
         </scene>
+        <!--Speed Menu Items Controller-->
+        <scene sceneID="J5L-4u-zr8">
+            <objects>
+                <viewController title="Speed Menu Items" storyboardIdentifier="SpeedMenuItemsController" id="VWT-0f-Yv5" userLabel="Speed Menu Items Controller" customClass="PreferencesMenuItemsController" sceneMemberID="viewController">
+                    <view key="view" id="8rx-fI-2aR">
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="400"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VnQ-Zw-iqf" userLabel="Save Button">
+                                <rect key="frame" x="476" y="23" width="82" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="ATb-yQ-AvG"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gqb-W6-cGO">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveSpeedLimits:" target="VWT-0f-Yv5" id="Pxj-UX-mS6"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9ee-Bb-gHK" userLabel="Cancel Button">
+                                <rect key="frame" x="580" y="23" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lxL-Lv-hQb">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="performClose:" target="7nk-VT-QJC" id="yim-sU-LeR"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mCY-ND-cUt">
+                                <rect key="frame" x="41" y="333" width="221" height="19"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Global Speed Limit Menu Items:" id="GZU-qO-MZm">
+                                    <font key="font" metaFont="system" size="15"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIr-q9-viv">
+                                <rect key="frame" x="195" y="94" width="117" height="222"/>
+                                <clipView key="contentView" id="i5t-1e-wqH">
+                                    <rect key="frame" x="1" y="1" width="115" height="220"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="nkc-8I-9wh" userLabel="Speed Menu Items">
+                                            <rect key="frame" x="0.0" y="0.0" width="115" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn width="112" minWidth="40" maxWidth="1000" id="idd-Fs-LNW">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="kCM-iJ-dRH">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView id="diT-xb-0f7">
+                                                            <rect key="frame" x="1" y="1" width="112" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="zYc-DB-yoG">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="18"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" title="10" placeholderString="Speed Limit Item" id="FCv-KV-SKw">
+                                                                        <numberFormatter key="formatter" formatterBehavior="custom10_4" minimumIntegerDigits="0" maximumIntegerDigits="42" id="3Wj-94-981">
+                                                                            <integer key="roundingIncrement" value="1"/>
+                                                                            <real key="minimum" value="0.0"/>
+                                                                        </numberFormatter>
+                                                                        <font key="font" metaFont="system" size="14"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="diT-xb-0f7" name="value" keyPath="objectValue.rate" id="LWG-RV-71E">
+                                                                            <dictionary key="options">
+                                                                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                                                                <bool key="NSAlwaysPresentsApplicationModalAlerts" value="YES"/>
+                                                                                <bool key="NSConditionallySetsEditable" value="YES"/>
+                                                                                <string key="NSNullPlaceholder">10</string>
+                                                                            </dictionary>
+                                                                        </binding>
+                                                                    </connections>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="zYc-DB-yoG" firstAttribute="centerY" secondItem="diT-xb-0f7" secondAttribute="centerY" id="OSE-do-PmK"/>
+                                                                <constraint firstItem="zYc-DB-yoG" firstAttribute="centerX" secondItem="diT-xb-0f7" secondAttribute="centerX" id="eQu-FQ-54S"/>
+                                                                <constraint firstItem="zYc-DB-yoG" firstAttribute="leading" secondItem="diT-xb-0f7" secondAttribute="leading" constant="2" id="f1o-vS-Bgs"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="textField" destination="zYc-DB-yoG" id="bAd-FG-TBG"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <binding destination="eLd-59-T4F" name="content" keyPath="arrangedObjects" id="JtK-Hw-n6a"/>
+                                                <binding destination="eLd-59-T4F" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="JtK-Hw-n6a" id="tCS-8y-pqV"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Uz3-c3-qzg">
+                                    <rect key="frame" x="1" y="205" width="114" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="a2c-zq-weq">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Qr-AF-4nQ" userLabel="Remove Button">
+                                <rect key="frame" x="291" y="66" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="21" id="6hp-kl-Ram"/>
+                                </constraints>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3aA-ew-qWV">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="remove:" target="eLd-59-T4F" id="dWd-uZ-KPr"/>
+                                    <binding destination="eLd-59-T4F" name="enabled" keyPath="canRemove" id="FM8-OH-JkI"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8NJ-zB-lJx" userLabel="Add Button">
+                                <rect key="frame" x="263" y="66" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="21" id="rmu-zd-dSp"/>
+                                </constraints>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rj5-Ma-osS">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="add:" target="eLd-59-T4F" id="LbA-vc-7Hk"/>
+                                    <binding destination="eLd-59-T4F" name="enabled" keyPath="canAdd" id="6pf-ul-BlU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mCY-ND-cUt" firstAttribute="leading" secondItem="8rx-fI-2aR" secondAttribute="leading" constant="43" id="4Zo-RG-JrT"/>
+                            <constraint firstAttribute="bottom" secondItem="8NJ-zB-lJx" secondAttribute="bottom" constant="67" id="5Dv-an-TbF"/>
+                            <constraint firstItem="0Qr-AF-4nQ" firstAttribute="leading" secondItem="8NJ-zB-lJx" secondAttribute="trailing" constant="7" id="6nR-wM-Jgv"/>
+                            <constraint firstItem="8NJ-zB-lJx" firstAttribute="top" secondItem="IIr-q9-viv" secondAttribute="bottom" constant="8" symbolic="YES" id="DuV-z3-zxM"/>
+                            <constraint firstItem="IIr-q9-viv" firstAttribute="trailing" secondItem="0Qr-AF-4nQ" secondAttribute="trailing" id="LFN-FI-uYH"/>
+                            <constraint firstItem="mCY-ND-cUt" firstAttribute="top" secondItem="8rx-fI-2aR" secondAttribute="top" constant="48" id="RAH-WC-dKb"/>
+                            <constraint firstItem="VnQ-Zw-iqf" firstAttribute="baseline" secondItem="9ee-Bb-gHK" secondAttribute="baseline" id="VAY-mQ-QQH"/>
+                            <constraint firstItem="9ee-Bb-gHK" firstAttribute="leading" secondItem="VnQ-Zw-iqf" secondAttribute="trailing" constant="34" id="WJW-w4-h6W"/>
+                            <constraint firstItem="8NJ-zB-lJx" firstAttribute="baseline" secondItem="0Qr-AF-4nQ" secondAttribute="baseline" id="fB2-ba-7w8"/>
+                            <constraint firstAttribute="bottom" secondItem="VnQ-Zw-iqf" secondAttribute="bottom" constant="30" id="kxB-Et-bHD"/>
+                            <constraint firstAttribute="trailing" secondItem="9ee-Bb-gHK" secondAttribute="trailing" constant="44" id="mjr-Kw-tZD"/>
+                            <constraint firstItem="IIr-q9-viv" firstAttribute="top" secondItem="mCY-ND-cUt" secondAttribute="bottom" constant="17" id="pxC-v5-bQU"/>
+                            <constraint firstItem="8NJ-zB-lJx" firstAttribute="leading" secondItem="8rx-fI-2aR" secondAttribute="leading" constant="263" id="qwK-8D-Kwg"/>
+                            <constraint firstItem="IIr-q9-viv" firstAttribute="leading" secondItem="8rx-fI-2aR" secondAttribute="leading" constant="195" id="y3p-hd-6we"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="7nk-VT-QJC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController automaticallyRearrangesObjects="YES" id="eLd-59-T4F" userLabel="Speed Menu Items Array Controller">
+                    <declaredKeys>
+                        <string>rate</string>
+                    </declaredKeys>
+                    <connections>
+                        <binding destination="VWT-0f-Yv5" name="contentArray" keyPath="speedMenuItems" id="809-w6-897">
+                            <dictionary key="options">
+                                <bool key="NSAlwaysPresentsApplicationModalAlerts" value="YES"/>
+                                <bool key="NSDeletesObjectsOnRemove" value="YES"/>
+                                <bool key="NSValidatesImmediately" value="YES"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </arrayController>
+            </objects>
+            <point key="canvasLocation" x="2966" y="-100"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ActivityTemplate" width="16" height="16"/>
@@ -7677,6 +7892,7 @@ Gw
         <image name="PauseAllTemplate" width="16" height="16"/>
         <image name="PauseTemplate" width="16" height="16"/>
         <image name="PeersTemplate" width="32" height="32"/>
+        <image name="PreferencesLimitSpeedIcon" width="225" height="225"/>
         <image name="QueueTemplate" width="32" height="32"/>
         <image name="SideBarIcon" width="20" height="18"/>
         <image name="StartAllTemplate" width="16" height="16"/>

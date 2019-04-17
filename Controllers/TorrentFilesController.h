@@ -12,21 +12,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef enum : NSUInteger {
-    Trackers,
-    Peers,
-    Files,
-    Pieces,
-    Settings,
-} ViewTab;
+@interface FSItem (FileEditing)
+
+@property BOOL isNameEditable;
+
+@end;
 
 @interface TorrentFilesController : NSViewController
+
+@property (strong,nonatomic) IBOutlet NSOutlineView *torrentFilesView;
 
 @property RPCConnector  *connector;
 @property  FSDirectory  *torrentFiles;
 @property BOOL          viewAppeared;
 @property int           torrentId;
-
+@property (nonatomic)  NSString *fileName;
 
 @end
 
