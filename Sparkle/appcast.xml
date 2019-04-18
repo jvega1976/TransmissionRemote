@@ -1,1 +1,17 @@
+<?xml version="1.0" standalone="yes"?><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+<channel>
+<title>Transmission Remote</title>
+<item>
+<title>1.5</title>
+<pubDate>Wed, 17 Apr 2019 22:09:39 -0500</pubDate>
+<sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+<enclosure url="Transmission%20Remote-v1.5.zip" sparkle:version="102" sparkle:shortVersionString="1.5" length="14630194" type="application/octet-stream"/>
+</item>
 
+<item>
+<title>1.0</title>
+<pubDate>Wed, 17 Apr 2019 22:11:36 -0500</pubDate>
+<sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+<enclosure url="Transmission%20Remote-v1.0.zip" sparkle:version="1" sparkle:shortVersionString="1.0" length="12924958" type="application/octet-stream"/>
+</item>
+</channel></rss>

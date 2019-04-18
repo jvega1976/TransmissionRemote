@@ -335,6 +335,7 @@
 		B8B11BF72262FA8F00A58B92 /* StatisticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89AD29B225477BE00AE0DFD /* StatisticsController.m */; };
 		B8EE112B2267D65E00ED4FEE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EE11252267D64B00ED4FEE /* Sparkle.framework */; };
 		B8EE112C2267D65E00ED4FEE /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8EE11252267D64B00ED4FEE /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B8EE113C22681ADA00ED4FEE /* appcast.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8EE113B22681ADA00ED4FEE /* appcast.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -798,6 +799,7 @@
 		B8B11AB32262ED0D00A58B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8B11AB42262ED0D00A58B92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8EE11252267D64B00ED4FEE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		B8EE113B22681ADA00ED4FEE /* appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appcast.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -868,6 +870,7 @@
 				B89AD148225477BD00AE0DFD /* Resources */,
 				B89AD13B225477BD00AE0DFD /* UI Classes */,
 				B89AD10D225476F800AE0DFD /* Products */,
+				B8EE113A22681AAF00ED4FEE /* Sparkle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1300,6 +1303,14 @@
 			path = TransmissionRemote;
 			sourceTree = "<group>";
 		};
+		B8EE113A22681AAF00ED4FEE /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				B8EE113B22681ADA00ED4FEE /* appcast.xml */,
+			);
+			path = Sparkle;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1668,6 +1679,7 @@
 				B89AD32B225477BE00AE0DFD /* PH.png in Resources */,
 				B89AD2B9225477BE00AE0DFD /* AF.png in Resources */,
 				B89AD39C225477BE00AE0DFD /* ZW.png in Resources */,
+				B8EE113C22681ADA00ED4FEE /* appcast.xml in Resources */,
 				B89AD368225477BE00AE0DFD /* AX.png in Resources */,
 				B89AD34C225477BE00AE0DFD /* PT.png in Resources */,
 				B89AD382225477BE00AE0DFD /* AM.png in Resources */,
