@@ -14,4 +14,11 @@
 <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
 <enclosure url="Transmission%20Remote-v1.0.zip" sparkle:version="1" sparkle:shortVersionString="1.0" length="12924958" type="application/octet-stream"/>
 </item>
+<item>
+<title>1.5.1</title>
+<pubDate>Wed, 17 Apr 2019 22:30:18 -0500</pubDate>
+<sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote-v1.5.1.zip" sparkle:version="105" sparkle:shortVersionString="1.5.1" length="14629614" type="application/octet-stream" sparkle:edSignature="SvB86Zm113EPwUt0uXShO+hUfz2Cwt1OzbN62vbNh3m5uHImupCfD5xV4DK4YiG+HcduqP1VLxNeN4oKndShCA=="/>
+</item>
+
 </channel></rss>
