@@ -333,6 +333,8 @@
 		B89AD58C2254A63C00AE0DFD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AD58B2254A63C00AE0DFD /* libz.tbd */; };
 		B89AD58E2254A65600AE0DFD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AD58D2254A65600AE0DFD /* libsqlite3.tbd */; };
 		B8B11BF72262FA8F00A58B92 /* StatisticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89AD29B225477BE00AE0DFD /* StatisticsController.m */; };
+		B8EE112B2267D65E00ED4FEE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EE11252267D64B00ED4FEE /* Sparkle.framework */; };
+		B8EE112C2267D65E00ED4FEE /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8EE11252267D64B00ED4FEE /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -411,11 +413,12 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		B89A060D2263C2A6007A5AB3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 				B89A06062263C2A6007A5AB3 /* NSCategorization.framework in Embed Frameworks */,
+				B8EE112C2267D65E00ED4FEE /* Sparkle.framework in Embed Frameworks */,
 				B89A060A2263C2A6007A5AB3 /* NSTransmissionRPC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -423,7 +426,7 @@
 		};
 		B89AD4D622547AFA00AE0DFD /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
@@ -794,6 +797,7 @@
 		B8B11AA62262ED0B00A58B92 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B8B11AB32262ED0D00A58B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8B11AB42262ED0D00A58B92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B8EE11252267D64B00ED4FEE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -808,6 +812,7 @@
 				B89AD3C6225477BE00AE0DFD /* libutp.a in Frameworks */,
 				B89AD3C4225477BE00AE0DFD /* libtransmission.a in Frameworks */,
 				B89AD3C5225477BE00AE0DFD /* libnatpmp.a in Frameworks */,
+				B8EE112B2267D65E00ED4FEE /* Sparkle.framework in Frameworks */,
 				B89AD3CB225477BE00AE0DFD /* libminiupnp.a in Frameworks */,
 				B89AD3C7225477BE00AE0DFD /* libevent.a in Frameworks */,
 				B89AD3C8225477BE00AE0DFD /* libdht.a in Frameworks */,
@@ -1189,6 +1194,7 @@
 		B89AD267225477BE00AE0DFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8EE11252267D64B00ED4FEE /* Sparkle.framework */,
 				B89AD58D2254A65600AE0DFD /* libsqlite3.tbd */,
 				B89AD58B2254A63C00AE0DFD /* libz.tbd */,
 				B89AD5892254A61C00AE0DFD /* libiconv.tbd */,
@@ -1911,7 +1917,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$PROJECT_DIR)/**";
+				FRAMEWORK_SEARCH_PATHS = "$PROJECT_DIR/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1974,7 +1980,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$PROJECT_DIR)/**";
+				FRAMEWORK_SEARCH_PATHS = "$PROJECT_DIR/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

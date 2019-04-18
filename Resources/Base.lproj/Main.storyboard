@@ -331,6 +331,12 @@
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Check for Updates..." id="xT3-3y-O0y">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="checkForUpdates:" target="DSc-2a-JCh" id="opD-io-HaT"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -346,6 +352,7 @@
                 </application>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="DSc-2a-JCh" customClass="SUUpdater"/>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
                     <connections>
                         <outlet property="manuBarToggleAlt" destination="ElY-wR-GTf" id="XmP-oF-hNt"/>
@@ -353,7 +360,6 @@
                         <outlet property="maximumDownloadSpeedSubmenu" destination="jNb-dB-I6g" id="azu-LD-4jQ"/>
                         <outlet property="maximumUploadSpeedMenuItem" destination="7MF-8c-Qhz" id="4yW-Ui-x0s"/>
                         <outlet property="maximumUploadSpeedSubmenu" destination="wlY-WX-MEY" id="hKx-OG-apL"/>
-                        <outlet property="maxmimDownloadSpeedSubmenu" destination="wlY-WX-MEY" id="Ft4-0C-JU3"/>
                         <outlet property="menuBar" destination="auQ-Ra-C1X" id="6oQ-5Y-EdS"/>
                         <outlet property="statusBarMenu" destination="auQ-Ra-C1X" id="jbS-pq-DDQ"/>
                         <outlet property="toggleAltMenuItem" destination="PeW-Is-TFT" id="IoV-qf-clo"/>
@@ -388,6 +394,13 @@
                         <menuItem title="Maximum Upload Speed" id="7MF-8c-Qhz">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <menu key="submenu" title="Maximum Upload Speed" id="wlY-WX-MEY"/>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="gvS-Lo-mi0"/>
+                        <menuItem title="Exit" id="xek-qe-Zw0">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="terminate:" target="Ady-hI-5gd" id="Ctr-oP-wvf"/>
+                            </connections>
                         </menuItem>
                     </items>
                 </menu>
@@ -2001,7 +2014,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="Kqe-BH-f6E"/>
                                                 </constraints>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iconHalfCloudDownload20x20" id="YWS-Wq-3hc"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="iconHalfCloudDownload20x20" id="YWS-Wq-3hc"/>
                                             </imageView>
                                             <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-eC-Yjx" userLabel="Label DL">
                                                 <rect key="frame" x="48" y="745" width="85" height="22"/>
@@ -2019,13 +2032,13 @@
                                                     </ciFilter>
                                                 </contentFilters>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" focusRingType="none" title="9999 bytes/s" drawsBackground="YES" id="3H5-gw-fcF">
-                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ejD-hh-H5w" userLabel="Label UL">
-                                                <rect key="frame" x="170" y="745" width="80" height="22"/>
+                                                <rect key="frame" x="165" y="745" width="85" height="22"/>
                                                 <contentFilters>
                                                     <ciFilter name="CISharpenLuminance">
                                                         <configuration>
@@ -2036,17 +2049,17 @@
                                                     </ciFilter>
                                                 </contentFilters>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" focusRingType="none" alignment="right" title="9999 bytes/s" drawsBackground="YES" id="hr9-VQ-1iQ">
-                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </textFieldCell>
                                             </textField>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tNN-P7-gzy" userLabel="Icon UL">
-                                                <rect key="frame" x="142" y="746" width="25" height="25"/>
+                                                <rect key="frame" x="137" y="746" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="qGy-N1-2Pe"/>
                                                 </constraints>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iconHalfCloudUpload20x20" id="oJq-8B-vxc"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="iconHalfCloudUpload20x20" id="oJq-8B-vxc"/>
                                             </imageView>
                                             <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aEP-Dv-dBL">
                                                 <rect key="frame" x="7" y="5" width="254" height="25"/>
@@ -2649,6 +2662,7 @@
                         <outlet property="categoryView" destination="sdw-dc-puv" id="F6U-W7-QWA"/>
                         <outlet property="dockView" destination="AON-mD-1yj" id="3JO-eX-Oxu"/>
                         <outlet property="downloadRate" destination="6Mb-eC-Yjx" id="VTh-wn-fJn"/>
+                        <outlet property="downloadRateIcon" destination="a98-e8-zes" id="BH4-5y-jPH"/>
                         <outlet property="errorMessage" destination="SpO-2y-igt" id="Gye-51-ukS"/>
                         <outlet property="filterEditorView" destination="SgM-j6-I3b" id="rPZ-M4-XGG"/>
                         <outlet property="labelsArrayController" destination="nZh-Q0-hSO" id="4m0-Zz-zwl"/>
@@ -2660,6 +2674,7 @@
                         <outlet property="torrentListView" destination="PRH-Ed-YHn" id="qDK-Mz-orZ"/>
                         <outlet property="torrentView" destination="y0U-wH-eEn" id="eIv-gC-HYc"/>
                         <outlet property="uploadRate" destination="ejD-hh-H5w" id="bjJ-X4-7Ib"/>
+                        <outlet property="uploadRateIcon" destination="tNN-P7-gzy" id="KJe-1C-84W"/>
                     </connections>
                 </viewController>
                 <customObject id="hwr-II-t4j" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -3320,9 +3335,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xHS-vz-HRN">
-                                <rect key="frame" x="313" y="27" width="56" height="23"/>
+                                <rect key="frame" x="313" y="27" width="60" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="Tte-Ew-bnC"/>
+                                    <constraint firstAttribute="width" constant="60" id="Tte-Ew-bnC"/>
                                 </constraints>
                                 <buttonCell key="cell" type="roundTextured" title="OK" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PxG-55-UzU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -3333,9 +3348,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XLg-Zh-sTw">
-                                <rect key="frame" x="236" y="27" width="56" height="23"/>
+                                <rect key="frame" x="236" y="27" width="60" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="6DL-wL-P5k"/>
+                                    <constraint firstAttribute="width" constant="60" id="6DL-wL-P5k"/>
                                 </constraints>
                                 <buttonCell key="cell" type="roundTextured" title="Cancel" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DQE-uO-iGR">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -3366,11 +3381,11 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="xHS-vz-HRN" firstAttribute="leading" secondItem="XLg-Zh-sTw" secondAttribute="trailing" constant="21" id="FTI-aj-A7A"/>
+                            <constraint firstItem="xHS-vz-HRN" firstAttribute="leading" secondItem="XLg-Zh-sTw" secondAttribute="trailing" constant="17" id="FTI-aj-A7A"/>
                             <constraint firstItem="Mcr-zI-3Rd" firstAttribute="leading" secondItem="z6K-vT-h7g" secondAttribute="trailing" constant="14" id="Fh0-Cp-yay"/>
                             <constraint firstItem="Mcr-zI-3Rd" firstAttribute="centerY" secondItem="bz6-oR-isd" secondAttribute="centerY" id="Mmq-Hp-zkB"/>
                             <constraint firstItem="z6K-vT-h7g" firstAttribute="leading" secondItem="bz6-oR-isd" secondAttribute="leading" constant="20" id="XjI-dr-G7K"/>
-                            <constraint firstAttribute="trailing" secondItem="xHS-vz-HRN" secondAttribute="trailing" constant="20" id="abn-Wg-NM5"/>
+                            <constraint firstAttribute="trailing" secondItem="xHS-vz-HRN" secondAttribute="trailing" constant="16" id="abn-Wg-NM5"/>
                             <constraint firstItem="z6K-vT-h7g" firstAttribute="baseline" secondItem="Mcr-zI-3Rd" secondAttribute="baseline" id="cQ4-X1-eFL"/>
                             <constraint firstItem="XLg-Zh-sTw" firstAttribute="baseline" secondItem="xHS-vz-HRN" secondAttribute="baseline" id="e1t-yl-Vbf"/>
                             <constraint firstItem="Mcr-zI-3Rd" firstAttribute="baseline" secondItem="XLg-Zh-sTw" secondAttribute="baseline" id="gzV-70-Lmf"/>
@@ -3383,7 +3398,7 @@
                 </viewController>
                 <customObject id="xK2-aF-YyU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.5" y="1601.5"/>
+            <point key="canvasLocation" x="1" y="1575"/>
         </scene>
         <!--Server Config View Controller-->
         <scene sceneID="6a2-LZ-WHw">
@@ -4743,7 +4758,7 @@ Gw
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn editable="NO" width="376" minWidth="40" maxWidth="1000" id="HfH-0k-BTR">
+                                                <tableColumn width="376" minWidth="40" maxWidth="1000" id="HfH-0k-BTR">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="File Name">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -4762,19 +4777,19 @@ Gw
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kts-ky-Qkb">
-                                                                    <rect key="frame" x="4" y="5" width="58" height="17"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Filename" id="bDs-Xd-Q84">
+                                                                    <rect key="frame" x="4" y="5" width="371" height="17"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="367" id="E48-2V-rWa"/>
+                                                                    </constraints>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" title="Filename" id="bDs-Xd-Q84">
                                                                         <font key="font" metaFont="systemLight" size="13"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
                                                                         <action selector="nameFile:" target="ntQ-GI-NfT" id="FAD-b1-MAS"/>
-                                                                        <binding destination="W9C-8u-6jz" name="value" keyPath="objectValue.name" id="efu-Yl-0cF">
-                                                                            <dictionary key="options">
-                                                                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
-                                                                            </dictionary>
-                                                                        </binding>
+                                                                        <binding destination="W9C-8u-6jz" name="editable" keyPath="objectValue.isNameEditable" id="ClT-b4-AsU"/>
+                                                                        <binding destination="W9C-8u-6jz" name="value" keyPath="objectValue.name" id="YSf-Eg-PA6"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -5078,7 +5093,7 @@ Gw
                         <menuItem title="Rename" id="jt5-oa-m7E">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <action selector="renameSelectedFile:" target="ntQ-GI-NfT" id="EPC-Rj-SGE"/>
+                                <action selector="renameSelectedFile:" target="ntQ-GI-NfT" id="Ab1-Zl-Nwv"/>
                             </connections>
                         </menuItem>
                         <menuItem title="Download" id="dcU-mr-hJt">
@@ -5115,13 +5130,9 @@ Gw
                         </menuItem>
                     </items>
                 </menu>
-                <treeController objectClassName="FSItem" editable="NO" childrenKeyPath="items" countKeyPath="filesCount" leafKeyPath="isFile" avoidsEmptySelection="NO" selectsInsertedObjects="NO" id="W51-J0-aJ8" userLabel="Torrent Files Array Controller">
+                <treeController objectClassName="FSItem" childrenKeyPath="items" countKeyPath="filesCount" leafKeyPath="isFile" avoidsEmptySelection="NO" selectsInsertedObjects="NO" id="W51-J0-aJ8" userLabel="Torrent Files Array Controller">
                     <connections>
-                        <binding destination="ntQ-GI-NfT" name="contentArray" keyPath="torrentFiles.rootItem.items" id="454-8Y-WWT">
-                            <dictionary key="options">
-                                <bool key="NSConditionallySetsEditable" value="NO"/>
-                            </dictionary>
-                        </binding>
+                        <binding destination="ntQ-GI-NfT" name="contentArray" keyPath="torrentFiles.rootItem.items" id="Oh5-5c-u0q"/>
                     </connections>
                 </treeController>
             </objects>
@@ -7897,7 +7908,7 @@ Gw
         <image name="filesIcon" width="32" height="32"/>
         <image name="iconAnnounceTower" width="36" height="36"/>
         <image name="iconComputer" width="37" height="37"/>
-        <image name="iconFile" width="36" height="36"/>
+        <image name="iconFile" width="32" height="32"/>
         <image name="iconGlobeTemplate" width="19" height="19"/>
         <image name="iconHalfCloudDownload" width="37" height="37"/>
         <image name="iconHalfCloudDownload20x20" width="21" height="20"/>

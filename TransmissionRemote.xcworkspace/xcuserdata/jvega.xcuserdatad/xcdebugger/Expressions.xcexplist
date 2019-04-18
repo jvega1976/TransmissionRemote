@@ -3,18 +3,13 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[MainViewController gotSessionWithStats:]:MainViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "(displayFreeSpace == YES)">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "-[RPCConnector getAllTorrents]:RPCConnector.m">
       </ContextState>
       <ContextState
          contextName = "__33-[RPCConnector returnAllTorrents]_block_invoke_2:RPCConnector.m">
       </ContextState>
       <ContextState
-         contextName = "-[RPCConnector getAllTorrents]:RPCConnector.m">
+         contextName = "-[AppDelegate applicationWillResignActive:]:AppDelegate.m">
       </ContextState>
       <ContextState
          contextName = "-[ServerConfigController reloadConnection:]:ServerConfigController.m">
@@ -31,6 +26,26 @@
          contextName = "-[MainViewController startInitialWizard]:MainViewController.m">
       </ContextState>
       <ContextState
+         contextName = "-[TorrentFilesController renameFile:]:TorrentFilesController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[_torrentFiles itemAtIndex:row].isNameEditable">
+            </PersistentString>
+            <PersistentString
+               value = "[_torrentFilesView viewAtColumn:1 row:row makeIfNecessary:NO]">
+            </PersistentString>
+            <PersistentString
+               value = "[_torrentFilesView rowViewAtRow:row makeIfNecessary:NO]">
+            </PersistentString>
+            <PersistentString
+               value = "[_torrentFiles itemAtIndex:row].fullName">
+            </PersistentString>
+            <PersistentString
+               value = "_fileName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[ServerConfigController viewWillAppear]:ServerConfigController.m">
       </ContextState>
       <ContextState
@@ -40,6 +55,9 @@
                value = "NSLocalizedString(@&quot;trWaitingCheck&quot;, @&quot;Waiting for Check&quot;)">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FSItem(FileEditing) isNameEditable]:TorrentFilesController.m">
       </ContextState>
       <ContextState
          contextName = "-[AppDelegate gotAllTorrents:]:AppDelegate.m">
@@ -72,7 +90,15 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[AppDelegate applicationWillResignActive:]:AppDelegate.m">
+         contextName = "-[TorrentFilesController openFile:]:TorrentFilesController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController gotSessionWithStats:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(displayFreeSpace == YES)">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

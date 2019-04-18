@@ -38,14 +38,10 @@ MainViewController *mainViewController;
 BOOL isEditable = NO;
 
 -(BOOL)isNameEditable {
-    if (self.trId == mainViewController.trEditing) {
- //       [self setIsNameEditable:YES] ;
+    if (self.trId == mainViewController.trEditing) 
         return YES;
-    }
-    else {
-//        [self setIsNameEditable:NO] ;
+    else
         return NO;
-    }
 }
 
 
@@ -76,6 +72,8 @@ BOOL isEditable = NO;
 @property (strong) IBOutlet NSTextField *downloadRate;
 @property (strong) NSString *drate;
 @property (strong) NSString *urate;
+@property (strong) IBOutlet NSImageView *downloadRateIcon;
+@property (strong) IBOutlet NSImageView *uploadRateIcon;
 
 @property (weak) IBOutlet NSButton *sideBarButton;
 
@@ -817,23 +815,37 @@ BOOL isEditable = NO;
 
 - (IBAction)limitDownloadRateWithSpeed:(id)sender {
     NSMenuItem *menuItem = (NSMenuItem*)sender;
-    NSUInteger rateKbs = menuItem.tag;
-    [_connector limitDownloadRateWithSpeed:(int)rateKbs];
-    NSMenu *menu = menuItem.menu;
-    NSArray *menuItems = menu.itemArray;
-    [menuItems makeObjectsPerformSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOff];
-    menuItem.state = NSControlStateValueOn;
+    
+    if(menuItem.state == NSControlStateValueOn) {
+        [_connector limitDownloadRateWithSpeed:0];
+        menuItem.state = NSControlStateValueOff;
+    }
+    else {
+        NSUInteger rateKbs = menuItem.tag;
+        [_connector limitDownloadRateWithSpeed:(int)rateKbs];
+        NSMenu *menu = menuItem.menu;
+        NSArray *menuItems = menu.itemArray;
+        [menuItems makeObjectsPerformSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOff];
+        menuItem.state = NSControlStateValueOn;
+    }
 }
 
 
 - (IBAction)limitUploadRateWithSpeed:(id)sender {
     NSMenuItem *menuItem = (NSMenuItem*)sender;
-    NSUInteger rateKbs = menuItem.tag;
-    [_connector limitUploadRateWithSpeed:(int)rateKbs];
-    NSMenu *menu = menuItem.menu;
-    NSArray *menuItems = menu.itemArray;
-    [menuItems makeObjectsPerformSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOff];
-    menuItem.state = NSControlStateValueOn;
+   
+    if(menuItem.state == NSControlStateValueOn) {
+        [_connector limitUploadRateWithSpeed:0];
+        menuItem.state = NSControlStateValueOff;
+    }
+    else {
+        NSUInteger rateKbs = menuItem.tag;
+        [_connector limitUploadRateWithSpeed:(int)rateKbs];
+        NSMenu *menu = menuItem.menu;
+        NSArray *menuItems = menu.itemArray;
+        [menuItems makeObjectsPerformSelector:@selector(setState:) withObject:(__bridge id)(void*)NSControlStateValueOff];
+        menuItem.state = NSControlStateValueOn;
+    }
 }
 
 
@@ -937,10 +949,15 @@ BOOL isEditable = NO;
         NSArray *menuItems = [[(AppDelegate*)[[NSApplication sharedApplication] delegate] maximumDownloadSpeedSubmenu] itemArray];
         for(NSMenuItem *menuItem in menuItems)
             [menuItem setState:NSControlStateValueOff];
+        _downloadRateIcon.contentTintColor = nil;
+        _downloadRate.textColor = nil;
+        
     }
     else {
         NSMenu *menu = [[[(AppDelegate*)[[NSApplication sharedApplication] delegate] menuBar] itemWithTitle:@"Maximum Download Speed"] submenu];
         [[menu itemWithTag:info.downLimitRate] setState:NSControlStateValueOn];
+        _downloadRateIcon.contentTintColor = [NSColor redColor];
+        _downloadRate.textColor = [NSColor redColor];
     }
     
     //Update state of Status Bar Upload Limit Menu Items
@@ -949,10 +966,14 @@ BOOL isEditable = NO;
         NSArray *menuItems = [[(AppDelegate*)[[NSApplication sharedApplication] delegate] maximumUploadSpeedSubmenu] itemArray];
         for(NSMenuItem *menuItem in menuItems)
             [menuItem setState:NSControlStateValueOff];
+         _uploadRateIcon.contentTintColor = nil;
+         _uploadRate.textColor = nil;
     }
     else {
         NSMenu *menu = [[[(AppDelegate*)[[NSApplication sharedApplication] delegate] menuBar] itemWithTitle:@"Maximum Upload Speed"] submenu];
         [[menu itemWithTag:info.upLimitRate] setState:NSControlStateValueOn];
+        _uploadRateIcon.contentTintColor = [NSColor redColor];
+        _uploadRate.textColor = [NSColor redColor];
     }
 }
 
