@@ -3,29 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[RPCConnector getAllTorrents]:RPCConnector.m">
-      </ContextState>
-      <ContextState
-         contextName = "__33-[RPCConnector returnAllTorrents]_block_invoke_2:RPCConnector.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[AppDelegate applicationWillResignActive:]:AppDelegate.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[ServerConfigController reloadConnection:]:ServerConfigController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.parentViewController">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[ServerConfigController control:isValidObject:]:ServerConfigController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[MainViewController startInitialWizard]:MainViewController.m">
-      </ContextState>
-      <ContextState
          contextName = "-[TorrentFilesController renameFile:]:TorrentFilesController.m">
          <PersistentStrings>
             <PersistentString
@@ -46,6 +23,26 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[MainViewController startRefreshingWithConfig:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "config.configURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ServerConfigController control:isValidObject:]:ServerConfigController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[TorrentFilesController openFile:]:TorrentFilesController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__33-[RPCConnector returnAllTorrents]_block_invoke_2:RPCConnector.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FSItem(FileEditing) isNameEditable]:TorrentFilesController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[ServerConfigController viewWillAppear]:ServerConfigController.m">
       </ContextState>
       <ContextState
@@ -57,18 +54,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[FSItem(FileEditing) isNameEditable]:TorrentFilesController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[AppDelegate gotAllTorrents:]:AppDelegate.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "info.trId">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__61-[AppDelegate application:performFetchWithCompletionHandler:]_block_invoke:AppDelegate.m">
+         contextName = "__51-[MainViewController autorefreshTimerUpdateHandler]_block_invoke:MainViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[ServerConfigController saveConfig:]:ServerConfigController.m">
@@ -82,21 +68,52 @@
          contextName = "-[RPCConnector returnAllTorrents]:RPCConnector.m">
       </ContextState>
       <ContextState
-         contextName = "-[MainViewController startRefreshingWithConfig:]:MainViewController.m">
+         contextName = "-[ServerConfigController reloadConnection:]:ServerConfigController.m">
          <PersistentStrings>
             <PersistentString
-               value = "config.configURL">
+               value = "self.parentViewController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[TorrentFilesController openFile:]:TorrentFilesController.m">
+         contextName = "-[AppDelegate applicationWillResignActive:]:AppDelegate.m">
       </ContextState>
       <ContextState
          contextName = "-[MainViewController gotSessionWithStats:]:MainViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "(displayFreeSpace == YES)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__61-[AppDelegate application:performFetchWithCompletionHandler:]_block_invoke:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate gotAllTorrents:]:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "info.trId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController gotSessionWithInfo:]:MainViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController startInitialWizard]:MainViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RPCConnector getAllTorrents]:RPCConnector.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController gotAllTorrents:]:MainViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PreferencesUpdateController updater]:PreferencesUpdateController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[SUUpdater updaterForBundle:[NSBundle bundleForClass:[self class]]] automaticallyDownloadsUpdates]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

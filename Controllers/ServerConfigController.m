@@ -89,12 +89,13 @@
 -(IBAction)reloadConnection:(id)sender {
     //stop connecting to actual Server
 
-    [self saveConfig:self];
    if(!_wizardMode)
        [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController stopRefreshing];
     RPCServerConfig *config = [_serverConfigList objectAtIndex:[_serverConfigArrayController selectionIndex]];
-    if(_wizardMode)
+    if(_wizardMode) {
+        [self saveConfig:self];
         [_mainViewController startRefreshingWithConfig:config];
+    }
     else
         [(MainViewController*)((PreferencesController*)self.parentViewController).mainViewController startRefreshingWithConfig:config];
     if(_wizardMode)

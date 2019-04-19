@@ -20,5 +20,14 @@
 <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
 <enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote-v1.5.1.zip" sparkle:version="105" sparkle:shortVersionString="1.5.1" length="14629614" type="application/octet-stream" sparkle:edSignature="SvB86Zm113EPwUt0uXShO+hUfz2Cwt1OzbN62vbNh3m5uHImupCfD5xV4DK4YiG+HcduqP1VLxNeN4oKndShCA=="/>
 </item>
+<item>
+<title>1.5.2</title>
+<pubDate>Fri, 19 Apr 2019 14:53:33 -0500</pubDate>
+<sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote-v1.5.2.dmg" sparkle:version="106" sparkle:shortVersionString="1.5.2" length="16648811" type="application/octet-stream" sparkle:edSignature="m4mqiUU+CaztoD+M8gq5atXz1Cn5RVEOA3rlsoLtYZM86U6VyvpenzmhhigIkiwaI52eiL2rhyIjOSLIily7Aw=="/>
+<sparkle:deltas>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote106-105.delta" sparkle:version="106" sparkle:shortVersionString="1.5.2" sparkle:deltaFrom="105" length="779535" type="application/octet-stream" sparkle:edSignature="Iu6jI2u4jWaim/69IqWOlZsxyoAylNwH9vG77Tl7utM5TRhFyabmvhC2twGU+6v1eatn+fyv4YSmVO1wuelRDg=="/></sparkle:deltas>
+</item>
+
 
 </channel></rss>

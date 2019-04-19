@@ -4384,6 +4384,7 @@ Gw
                         <tabViewItem label="Downloads" identifier="Downloads" image="NSFolder" id="hDa-uE-uiO"/>
                         <tabViewItem label="Network" identifier="Network" image="NSNetwork" id="btS-8H-UAy"/>
                         <tabViewItem label="Bandwith" identifier="Bandwith" image="Bandwidth" id="oxT-gf-Cfg"/>
+                        <tabViewItem label="Update" image="PreferencesUpdateIcon" id="ZWP-H3-re5"/>
                         <tabViewItem label="Integration" image="NSComputer" id="TSP-mf-Bu8"/>
                         <tabViewItem label="Speed Menu Items" image="PreferencesLimitSpeedIcon" id="L0f-iF-Y4w"/>
                     </tabViewItems>
@@ -4402,13 +4403,14 @@ Gw
                         <segue destination="N3q-A6-RaR" kind="relationship" relationship="tabItems" id="XzU-dF-P0Y"/>
                         <segue destination="7fp-EN-88r" kind="relationship" relationship="tabItems" id="hBO-x3-Sif"/>
                         <segue destination="ar3-qM-hMo" kind="relationship" relationship="tabItems" id="h2l-LJ-eA2"/>
+                        <segue destination="8sQ-lg-CwV" kind="relationship" relationship="tabItems" id="lzE-N0-tlL"/>
                         <segue destination="wbS-TX-vrU" kind="relationship" relationship="tabItems" id="ya6-Bw-2gG"/>
                         <segue destination="VWT-0f-Yv5" kind="relationship" relationship="tabItems" id="rtw-tP-7Eo"/>
                     </connections>
                 </tabViewController>
                 <customObject id="0D6-yK-Zsl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1354" y="169"/>
+            <point key="canvasLocation" x="1284" y="244"/>
         </scene>
         <!--Preferences Download Controller-->
         <scene sceneID="1AH-dX-tjK">
@@ -7751,7 +7753,7 @@ Gw
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="zYc-DB-yoG">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="18"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" title="10" placeholderString="Speed Limit Item" id="FCv-KV-SKw">
                                                                         <numberFormatter key="formatter" formatterBehavior="custom10_4" minimumIntegerDigits="0" maximumIntegerDigits="42" id="3Wj-94-981">
                                                                             <integer key="roundingIncrement" value="1"/>
@@ -7775,7 +7777,7 @@ Gw
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="zYc-DB-yoG" firstAttribute="centerY" secondItem="diT-xb-0f7" secondAttribute="centerY" id="OSE-do-PmK"/>
-                                                                <constraint firstItem="zYc-DB-yoG" firstAttribute="centerX" secondItem="diT-xb-0f7" secondAttribute="centerX" id="eQu-FQ-54S"/>
+                                                                <constraint firstItem="zYc-DB-yoG" firstAttribute="centerX" secondItem="diT-xb-0f7" secondAttribute="centerX" constant="-5" id="eQu-FQ-54S"/>
                                                                 <constraint firstItem="zYc-DB-yoG" firstAttribute="leading" secondItem="diT-xb-0f7" secondAttribute="leading" constant="2" id="f1o-vS-Bgs"/>
                                                             </constraints>
                                                             <connections>
@@ -7866,6 +7868,116 @@ Gw
             </objects>
             <point key="canvasLocation" x="2966" y="-100"/>
         </scene>
+        <!--Preferences Update Controller-->
+        <scene sceneID="ArN-Y2-Vmo">
+            <objects>
+                <viewController id="8sQ-lg-CwV" customClass="PreferencesUpdateController" sceneMemberID="viewController">
+                    <view key="view" id="TjR-dX-AqR">
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="400"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="57b-KR-JqT">
+                                <rect key="frame" x="135" y="296" width="230" height="18"/>
+                                <buttonCell key="cell" type="check" title="Automatically check for updates" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="93R-I0-8a3">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system" size="14"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="8sQ-lg-CwV" name="value" keyPath="updater.automaticallyChecksForUpdates" id="Uv0-wa-hDm"/>
+                                </connections>
+                            </button>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rqh-bQ-eeo" userLabel="Check Interval">
+                                <rect key="frame" x="360" y="227" width="94" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="ZhL-OW-lbH"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Hourly" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="3600" imageScaling="proportionallyDown" inset="2" selectedItem="Czl-tr-mOd" id="5Np-IS-2v6">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="L2q-Yh-iZW">
+                                        <items>
+                                            <menuItem title="Hourly" state="on" tag="3600" id="Czl-tr-mOd"/>
+                                            <menuItem title="Daily" tag="86400" id="u8I-qH-QUc"/>
+                                            <menuItem title="Weekly" tag="604800" id="t33-MJ-JiS"/>
+                                            <menuItem title="Monthly" tag="2629800" id="eRH-xV-ful">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <binding destination="8sQ-lg-CwV" name="enabled" keyPath="updater.automaticallyChecksForUpdates" id="TxX-ea-26a"/>
+                                    <binding destination="8sQ-lg-CwV" name="selectedTag" keyPath="updater.updateCheckInterval" id="XRS-mJ-Glh"/>
+                                </connections>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fgU-Oc-n9T">
+                                <rect key="frame" x="223" y="233" width="133" height="18"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Check for Updates: " id="0ub-rQ-lid">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BFn-do-Yfe">
+                                <rect key="frame" x="223" y="167" width="236" height="18"/>
+                                <buttonCell key="cell" type="check" title="Automatically Download Updates" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="fxO-ru-7Y6">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system" size="14"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="8sQ-lg-CwV" name="value" keyPath="updater.automaticallyDownloadsUpdates" id="VqR-u1-P37"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C6z-nA-Krb">
+                                <rect key="frame" x="580" y="23" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qGK-IM-UXx">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="performClose:" target="S1g-gl-9G6" id="2uH-HQ-bnR"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YVB-YN-2Ht">
+                                <rect key="frame" x="476" y="23" width="82" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="CUA-5S-Jei"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="d4R-cN-1XY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="close:" target="8sQ-lg-CwV" id="znI-e3-TtB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="fgU-Oc-n9T" firstAttribute="leading" secondItem="BFn-do-Yfe" secondAttribute="leading" id="CVc-kn-8Fk"/>
+                            <constraint firstItem="BFn-do-Yfe" firstAttribute="top" secondItem="Rqh-bQ-eeo" secondAttribute="bottom" constant="47" id="HYD-gg-zH1"/>
+                            <constraint firstAttribute="trailing" secondItem="C6z-nA-Krb" secondAttribute="trailing" constant="44" id="Ifq-bs-qVf"/>
+                            <constraint firstItem="57b-KR-JqT" firstAttribute="top" secondItem="TjR-dX-AqR" secondAttribute="top" constant="88" id="JNE-Lh-xFG"/>
+                            <constraint firstItem="57b-KR-JqT" firstAttribute="leading" secondItem="TjR-dX-AqR" secondAttribute="leading" constant="137" id="LPP-dV-tT7"/>
+                            <constraint firstItem="Rqh-bQ-eeo" firstAttribute="leading" secondItem="fgU-Oc-n9T" secondAttribute="trailing" constant="8" symbolic="YES" id="LhT-xt-Qju"/>
+                            <constraint firstItem="fgU-Oc-n9T" firstAttribute="leading" secondItem="TjR-dX-AqR" secondAttribute="leading" constant="225" id="S4W-1n-1zr"/>
+                            <constraint firstItem="fgU-Oc-n9T" firstAttribute="top" secondItem="57b-KR-JqT" secondAttribute="bottom" constant="47" id="XOH-73-4SC"/>
+                            <constraint firstItem="YVB-YN-2Ht" firstAttribute="baseline" secondItem="C6z-nA-Krb" secondAttribute="baseline" id="YaG-ot-wI6"/>
+                            <constraint firstItem="fgU-Oc-n9T" firstAttribute="top" secondItem="Rqh-bQ-eeo" secondAttribute="top" id="ey8-aC-oGD"/>
+                            <constraint firstItem="C6z-nA-Krb" firstAttribute="leading" secondItem="YVB-YN-2Ht" secondAttribute="trailing" constant="34" id="xMA-V4-qEI"/>
+                            <constraint firstAttribute="bottom" secondItem="YVB-YN-2Ht" secondAttribute="bottom" constant="30" id="z9r-xr-nFl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="automaticallyDownloadUpdates" destination="BFn-do-Yfe" id="4b4-fR-hip"/>
+                    </connections>
+                </viewController>
+                <customObject id="S1g-gl-9G6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2966" y="-571"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ActivityTemplate" width="16" height="16"/>
@@ -7893,6 +8005,7 @@ Gw
         <image name="PauseTemplate" width="16" height="16"/>
         <image name="PeersTemplate" width="32" height="32"/>
         <image name="PreferencesLimitSpeedIcon" width="225" height="225"/>
+        <image name="PreferencesUpdateIcon" width="64" height="64"/>
         <image name="QueueTemplate" width="32" height="32"/>
         <image name="SideBarIcon" width="20" height="18"/>
         <image name="StartAllTemplate" width="16" height="16"/>
@@ -7905,10 +8018,10 @@ Gw
         <image name="Upload Badget" width="128" height="30"/>
         <image name="VerifyTemplate" width="19" height="19"/>
         <image name="downloadIcon" width="60" height="60"/>
-        <image name="filesIcon" width="32" height="32"/>
+        <image name="filesIcon" width="37" height="37"/>
         <image name="iconAnnounceTower" width="36" height="36"/>
         <image name="iconComputer" width="37" height="37"/>
-        <image name="iconFile" width="32" height="32"/>
+        <image name="iconFile" width="36" height="36"/>
         <image name="iconGlobeTemplate" width="19" height="19"/>
         <image name="iconHalfCloudDownload" width="37" height="37"/>
         <image name="iconHalfCloudDownload20x20" width="21" height="20"/>

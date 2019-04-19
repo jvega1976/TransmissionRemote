@@ -332,6 +332,7 @@
 		B89AD58A2254A61C00AE0DFD /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AD5892254A61C00AE0DFD /* libiconv.tbd */; };
 		B89AD58C2254A63C00AE0DFD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AD58B2254A63C00AE0DFD /* libz.tbd */; };
 		B89AD58E2254A65600AE0DFD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AD58D2254A65600AE0DFD /* libsqlite3.tbd */; };
+		B8A8F991226A5053007EA4FF /* PreferencesUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A8F990226A5053007EA4FF /* PreferencesUpdateController.m */; };
 		B8B11BF72262FA8F00A58B92 /* StatisticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89AD29B225477BE00AE0DFD /* StatisticsController.m */; };
 		B8EE112B2267D65E00ED4FEE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EE11252267D64B00ED4FEE /* Sparkle.framework */; };
 		B8EE112C2267D65E00ED4FEE /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8EE11252267D64B00ED4FEE /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -795,6 +796,8 @@
 		B89AD5892254A61C00AE0DFD /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		B89AD58B2254A63C00AE0DFD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B89AD58D2254A65600AE0DFD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B8A8F98F226A5053007EA4FF /* PreferencesUpdateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferencesUpdateController.h; sourceTree = "<group>"; };
+		B8A8F990226A5053007EA4FF /* PreferencesUpdateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferencesUpdateController.m; sourceTree = "<group>"; };
 		B8B11AA52262ED0B00A58B92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8B11AA62262ED0B00A58B92 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B8B11AB32262ED0D00A58B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1222,8 +1225,6 @@
 		B89AD272225477BE00AE0DFD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B8691B6C2266D58D005B24A7 /* PreferencesMenuItemsController.h */,
-				B8691B6D2266D58D005B24A7 /* PreferencesMenuItemsController.m */,
 				B89AD27A225477BE00AE0DFD /* AddTorrentController.h */,
 				B89AD28E225477BE00AE0DFD /* AddTorrentController.m */,
 				B89AD28B225477BE00AE0DFD /* CreatorWindowController.h */,
@@ -1240,12 +1241,16 @@
 				B89AD281225477BE00AE0DFD /* PreferencesController.m */,
 				B89AD275225477BE00AE0DFD /* PreferencesDownloadController.h */,
 				B89AD28A225477BE00AE0DFD /* PreferencesDownloadController.m */,
+				B8691B6C2266D58D005B24A7 /* PreferencesMenuItemsController.h */,
+				B8691B6D2266D58D005B24A7 /* PreferencesMenuItemsController.m */,
 				B89AD289225477BE00AE0DFD /* PreferencesNetworkController.h */,
 				B89AD274225477BE00AE0DFD /* PreferencesNetworkController.m */,
 				B89AD28C225477BE00AE0DFD /* PreferencesOtherController.h */,
 				B89AD27B225477BE00AE0DFD /* PreferencesOtherController.m */,
 				B89AD298225477BE00AE0DFD /* PreferencesQueueController.h */,
 				B89AD285225477BE00AE0DFD /* PreferencesQueueController.m */,
+				B8A8F98F226A5053007EA4FF /* PreferencesUpdateController.h */,
+				B8A8F990226A5053007EA4FF /* PreferencesUpdateController.m */,
 				B89AD28F225477BE00AE0DFD /* ServerConfigController.h */,
 				B89AD278225477BE00AE0DFD /* ServerConfigController.m */,
 				B89AD282225477BE00AE0DFD /* StatisticsController.h */,
@@ -1791,6 +1796,7 @@
 				B89AD2AD225477BE00AE0DFD /* NSApplicationAdditions.m in Sources */,
 				B89AD3DA225477BE00AE0DFD /* PreferencesQueueController.m in Sources */,
 				B89AD3D1225477BE00AE0DFD /* TorrentPeersController.m in Sources */,
+				B8A8F991226A5053007EA4FF /* PreferencesUpdateController.m in Sources */,
 				B89AD3D9225477BE00AE0DFD /* PredicateViewController.m in Sources */,
 				B89A06122263CEC1007A5AB3 /* main.m in Sources */,
 				B89AD2AA225477BE00AE0DFD /* TransmissionRPCExtensions.m in Sources */,
