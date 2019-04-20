@@ -13,6 +13,7 @@
 #import "TransmissionRPCExtensions.h"
 #import "NSApplicationAdditions.h"
 #import "RPCServerConfig.h"
+#import <Sparkle/Sparkle.h>
 
 
 
@@ -66,6 +67,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic)   NSString *uploadSpeed;
 
 @property (nonatomic)   int trEditing;
+
+@property (strong) IBOutlet SUUpdater *updater;
 
 - (void)stopRefreshing;
 

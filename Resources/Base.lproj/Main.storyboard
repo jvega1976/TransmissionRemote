@@ -334,7 +334,7 @@
                                         <menuItem title="Check for Updates..." id="xT3-3y-O0y">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="checkForUpdates:" target="DSc-2a-JCh" id="opD-io-HaT"/>
+                                                <action selector="checkForUpdates:" target="Ady-hI-5gd" id="76d-Eg-6mF"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -352,7 +352,6 @@
                 </application>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="DSc-2a-JCh" customClass="SUUpdater"/>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
                     <connections>
                         <outlet property="manuBarToggleAlt" destination="ElY-wR-GTf" id="XmP-oF-hNt"/>
@@ -2673,6 +2672,7 @@
                         <outlet property="torrentArrayController" destination="ymg-WM-enm" id="mp5-9g-7zX"/>
                         <outlet property="torrentListView" destination="PRH-Ed-YHn" id="qDK-Mz-orZ"/>
                         <outlet property="torrentView" destination="y0U-wH-eEn" id="eIv-gC-HYc"/>
+                        <outlet property="updater" destination="DSc-2a-JCh" id="U0k-rp-4oW"/>
                         <outlet property="uploadRate" destination="ejD-hh-H5w" id="bjJ-X4-7Ib"/>
                         <outlet property="uploadRateIcon" destination="tNN-P7-gzy" id="KJe-1C-84W"/>
                     </connections>
@@ -2707,6 +2707,7 @@
                         <binding destination="X0f-b0-vw8" name="contentArray" keyPath="torrents.items" id="TWR-Q8-cXt"/>
                     </connections>
                 </arrayController>
+                <customObject id="DSc-2a-JCh" customClass="SUUpdater"/>
                 <customView wantsLayer="YES" canDrawConcurrently="YES" id="AON-mD-1yj">
                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -8018,10 +8019,10 @@ Gw
         <image name="Upload Badget" width="128" height="30"/>
         <image name="VerifyTemplate" width="19" height="19"/>
         <image name="downloadIcon" width="60" height="60"/>
-        <image name="filesIcon" width="32" height="32"/>
+        <image name="filesIcon" width="37" height="37"/>
         <image name="iconAnnounceTower" width="36" height="36"/>
         <image name="iconComputer" width="37" height="37"/>
-        <image name="iconFile" width="32" height="32"/>
+        <image name="iconFile" width="36" height="36"/>
         <image name="iconGlobeTemplate" width="19" height="19"/>
         <image name="iconHalfCloudDownload" width="37" height="37"/>
         <image name="iconHalfCloudDownload20x20" width="21" height="20"/>

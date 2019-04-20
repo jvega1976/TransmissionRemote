@@ -257,6 +257,13 @@ BOOL isEditable = NO;
 
 #pragma mark - Interface Actions
 
+-(IBAction)checkForUpdates:(id)sender {
+    [self stopRefreshing];
+    [_updater checkForUpdates:self];
+    [self startRefreshingWithConfig:_config];
+}
+
+
 -(IBAction)toggleCategorySideBar:(id)sender {
     
     
