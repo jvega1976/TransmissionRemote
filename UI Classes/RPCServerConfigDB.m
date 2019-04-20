@@ -57,6 +57,11 @@
     return _configData;
 }
 
+
+-(void)setDb:(NSMutableArray *)db {
+    _configData = db;
+}
+
 - (NSString*)dbFileName
 {
     NSArray *arr = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -68,9 +73,9 @@
     NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
     NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
     NSArray *configData = [NSMutableArray arrayWithArray:[store arrayForKey:TR_URL_CONFIG_KEY]];
-    if(!configData)
+    if(configData.count == 0)
         configData = [NSMutableArray arrayWithArray:[defaults arrayForKey:TR_URL_CONFIG_KEY]];
-    if(configData)
+    if(configData.count > 0)
         [configData enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [self->_configData addObject:[RPCServerConfig initFromPList:obj]];
         }];

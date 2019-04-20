@@ -37,13 +37,13 @@
          contextName = "-[TorrentFilesController openFile:]:TorrentFilesController.m">
       </ContextState>
       <ContextState
+         contextName = "-[AppDelegate applicationWillResignActive:]:AppDelegate.m">
+      </ContextState>
+      <ContextState
          contextName = "__33-[RPCConnector returnAllTorrents]_block_invoke_2:RPCConnector.m">
       </ContextState>
       <ContextState
          contextName = "-[FSItem(FileEditing) isNameEditable]:TorrentFilesController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[ServerConfigController viewWillAppear]:ServerConfigController.m">
       </ContextState>
       <ContextState
          contextName = "-[TRInfo initFromJSON:]:TRInfo.m">
@@ -57,15 +57,15 @@
          contextName = "__51-[MainViewController autorefreshTimerUpdateHandler]_block_invoke:MainViewController.m">
       </ContextState>
       <ContextState
-         contextName = "-[ServerConfigController saveConfig:]:ServerConfigController.m">
+         contextName = "__37-[MainViewController gotAllTorrents:]_block_invoke:MainViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.parentViewController">
+               value = "torrentArrayController.arrangedObjects">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[RPCConnector returnAllTorrents]:RPCConnector.m">
+         contextName = "-[ServerConfigController viewWillAppear]:ServerConfigController.m">
       </ContextState>
       <ContextState
          contextName = "-[ServerConfigController reloadConnection:]:ServerConfigController.m">
@@ -76,7 +76,15 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[AppDelegate applicationWillResignActive:]:AppDelegate.m">
+         contextName = "-[ServerConfigController saveConfig:]:ServerConfigController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.parentViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[RPCConnector returnAllTorrents]:RPCConnector.m">
       </ContextState>
       <ContextState
          contextName = "-[MainViewController gotSessionWithStats:]:MainViewController.m">
@@ -93,6 +101,9 @@
          contextName = "-[AppDelegate gotAllTorrents:]:AppDelegate.m">
          <PersistentStrings>
             <PersistentString
+               value = "trInfos.waitCount">
+            </PersistentString>
+            <PersistentString
                value = "info.trId">
             </PersistentString>
          </PersistentStrings>
@@ -104,16 +115,49 @@
          contextName = "-[MainViewController startInitialWizard]:MainViewController.m">
       </ContextState>
       <ContextState
+         contextName = "-[StatusListController showFinishedTorrentsWithInfo:]:StatusListController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "torrents.allTorrents">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[RPCConnector getAllTorrents]:RPCConnector.m">
       </ContextState>
       <ContextState
          contextName = "-[MainViewController gotAllTorrents:]:MainViewController.m">
       </ContextState>
       <ContextState
+         contextName = "__destroy_helper_block_e8_32s:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "request">
+            </PersistentString>
+            <PersistentString
+               value = "error">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[PreferencesUpdateController updater]:PreferencesUpdateController.m">
          <PersistentStrings>
             <PersistentString
                value = "[[SUUpdater updaterForBundle:[NSBundle bundleForClass:[self class]]] automaticallyDownloadsUpdates]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:]:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.actionIdentifier">
+            </PersistentString>
+            <PersistentString
+               value = "UNNotificationDefaultActionIdentifier">
+            </PersistentString>
+            <PersistentString
+               value = "[response.actionIdentifier isEqualToString:UNNotificationDefaultActionIdentifier]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

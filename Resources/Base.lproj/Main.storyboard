@@ -2105,7 +2105,7 @@
                                         <rect key="frame" x="271" y="0.0" width="999" height="783"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <scrollView alphaValue="0.80000000000000004" borderType="none" autohidesScrollers="YES" horizontalLineScroll="130" horizontalPageScroll="10" verticalLineScroll="130" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chj-WX-frf">
+                                            <scrollView alphaValue="0.80000000000000004" borderType="none" autohidesScrollers="YES" horizontalLineScroll="130" horizontalPageScroll="10" verticalLineScroll="130" verticalPageScroll="10" translatesAutoresizingMaskIntoConstraints="NO" id="Chj-WX-frf">
                                                 <rect key="frame" x="0.0" y="0.0" width="999" height="783"/>
                                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="8dh-wU-o1B">
                                                     <rect key="frame" x="0.0" y="0.0" width="999" height="783"/>
@@ -2455,11 +2455,11 @@
                                                     <nil key="backgroundColor"/>
                                                 </clipView>
                                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Zhn-S8-8J8">
-                                                    <rect key="frame" x="0.0" y="584" width="1000" height="16"/>
+                                                    <rect key="frame" x="-100" y="-100" width="1000" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="kgP-ch-asY">
-                                                    <rect key="frame" x="984" y="0.0" width="16" height="600"/>
+                                                    <rect key="frame" x="-100" y="-100" width="16" height="600"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
@@ -8018,10 +8018,10 @@ Gw
         <image name="Upload Badget" width="128" height="30"/>
         <image name="VerifyTemplate" width="19" height="19"/>
         <image name="downloadIcon" width="60" height="60"/>
-        <image name="filesIcon" width="37" height="37"/>
+        <image name="filesIcon" width="32" height="32"/>
         <image name="iconAnnounceTower" width="36" height="36"/>
         <image name="iconComputer" width="37" height="37"/>
-        <image name="iconFile" width="36" height="36"/>
+        <image name="iconFile" width="32" height="32"/>
         <image name="iconGlobeTemplate" width="19" height="19"/>
         <image name="iconHalfCloudDownload" width="37" height="37"/>
         <image name="iconHalfCloudDownload20x20" width="21" height="20"/>
