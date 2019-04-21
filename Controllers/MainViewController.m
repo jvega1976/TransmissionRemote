@@ -75,6 +75,7 @@ BOOL isEditable = NO;
 @property (strong) IBOutlet NSImageView *downloadRateIcon;
 @property (strong) IBOutlet NSImageView *uploadRateIcon;
 
+
 @property (weak) IBOutlet NSButton *sideBarButton;
 
 @end
@@ -104,6 +105,7 @@ BOOL isEditable = NO;
     BOOL stopRefresh;
     
     BOOL _displayFreeSpace;
+    NSUserDefaults *defaults;
 }
 
 
@@ -141,12 +143,31 @@ BOOL isEditable = NO;
     _search.searchMenuTemplate.itemArray[0].tag = NSSearchFieldRecentsTitleMenuItemTag;
     _search.searchMenuTemplate.itemArray[1].tag = NSSearchFieldRecentsMenuItemTag;
     _search.searchMenuTemplate.itemArray[2].tag = NSSearchFieldClearRecentsMenuItemTag;
+    
+    defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
+    
+    [self loadSpeedLimitMenuItems];
     [RPCServerConfigDB.sharedDB loadDB];
     [self startRefreshingWithConfig:[RPCServerConfigDB.sharedDB defaultConfig]];
     [self addChildViewController:_statisticsController];
     [Categorization.shared setCategories:[Categories torrentCategories]];
     [self setTorrents:Categorization.shared];
     [_labelsArrayController setSelectionIndex:0];
+}
+
+
+-(void)loadSpeedLimitMenuItems {
+    NSArray *speedItems = [defaults arrayForKey:@"SpeedMenuItems"];
+    [_maximumDownloadSpeedSubmenu removeAllItems];
+    [_maximumUploadSpeedSubmenu removeAllItems];
+    for (NSDictionary *i in speedItems) {
+        NSMenuItem *menuItemDownload = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"%@ Kb/s", i[@"rate"]]  action:@selector(limitDownloadRateWithSpeed:) keyEquivalent:@""];
+        menuItemDownload.tag = [i[@"rate"] integerValue];
+        [_maximumDownloadSpeedSubmenu addItem:menuItemDownload];
+        NSMenuItem *menuItemUpload = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"%@ Kb/s", i[@"rate"]] action:@selector(limitUploadRateWithSpeed:) keyEquivalent:@""];
+        menuItemUpload.tag = [i[@"rate"] integerValue];
+        [_maximumUploadSpeedSubmenu addItem:menuItemUpload];
+    }
 }
 
 
@@ -168,7 +189,6 @@ BOOL isEditable = NO;
         [self startInitialWizard];
     else {
         _config = config;
-        NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:TR_URL_DEFAULTS];
         [RPCConnector.sharedConnector initWithURL:_config.configURL requestTimeout:_config.requestTimeout andDelegate:self];
         _connector = RPCConnector.sharedConnector;
         [self setSessionURL:config.urlString];
@@ -904,15 +924,18 @@ BOOL isEditable = NO;
     [_connector getAllTorrents];
 }
 
+
 - (void)gotTorrentsDeleted
 {   _connector.delegate = self;
     [_connector getAllTorrents];
 }
 
+
 -(void)gotTorrentRenamed:(int)torrentId withName:(NSString *)name andPath:(NSString *)path {
     _connector.delegate = self;
     [_connector getAllTorrents];
 }
+
 
 - (void)gotTorrentsMoved
 {   _connector.delegate = self;
@@ -988,11 +1011,12 @@ BOOL isEditable = NO;
 -(void)gotSessionWithStats:(TRSessionStats *)stats {
     [self setErrorExists:NO];
     [self setTrSessionStats:stats];
-    [self setUploadedBytes:[NSString stringWithFormat:@"↑UL: %@",formatByteCount(stats.currentUploadedBytes)]];
-    [self setDownloadedBytes:[NSString stringWithFormat:@"↓DL: %@",formatByteCount(stats.currentdownloadedBytes)]];
-    [self setSecondsActive:[NSString stringWithFormat:@"Duration: %@",formatHoursMinutes(stats.currentSecondsActive)]];
+    [self setUploadedBytes:formatByteCount(stats.currentUploadedBytes)];
+    [self setDownloadedBytes:formatByteCount(stats.currentdownloadedBytes)];
+    [self setSecondsActive:formatHoursMinutes(stats.currentSecondsActive)];
     if(!_displayFreeSpace) {
         [self setFilesAdded:[NSString stringWithFormat:@"Files Added: %ld",stats.currentFilesAdded]];
+        [self setDisplayImage:[NSImage imageNamed:@"filesIcon"]];
     }
     [self setTorrentsCount:[NSString stringWithFormat:@"Session: %ld",stats.torrentCount]];
     [self setActiveTorrentsCount:[NSString stringWithFormat:@"Active: %d",stats.activeTorrentCount]];
@@ -1061,6 +1085,7 @@ BOOL isEditable = NO;
 -(void)gotFreeSpaceString:(NSString *)freeSpace
 {
     [self setFilesAdded:[NSString stringWithFormat:@"Free Space: %@",freeSpace]];
+    [self setDisplayImage:[NSImage imageNamed:@"iconTotalSize"]];
 }
 
 
@@ -1162,7 +1187,6 @@ BOOL isEditable = NO;
 }
 
 
-
 - (BOOL)tableView:(NSTableView *)tableView acceptDrop:(id<NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)dropOperation {
 
     return YES;
@@ -1170,7 +1194,6 @@ BOOL isEditable = NO;
 
 
 #pragma mark - TableViewDelegate
-
 
 - (void)tableViewSelectionIsChanging:(NSNotification *)notification {
      if (notification.object == _torrentListView) {
@@ -1194,7 +1217,6 @@ BOOL isEditable = NO;
      }
         
 }
-
 
 
 - (NSArray<NSTableViewRowAction *> *)tableView:(NSTableView *)tableView rowActionsForRow:(NSInteger)row edge:(NSTableRowActionEdge)edge {

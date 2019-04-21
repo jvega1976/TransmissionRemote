@@ -40,6 +40,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong) IBOutlet NSTableView *statusCategoriesView;
 @property (strong) IBOutlet NSTableView *torrentListView;
 
+@property (nonatomic) IBOutlet NSMenu *maximumDownloadSpeedSubmenu;
+@property (nonatomic) IBOutlet NSMenu *maximumUploadSpeedSubmenu;
+
 @property (strong) IBOutlet __block NSArrayController *torrentArrayController;
 @property (nonatomic) IBOutlet __block NSArrayController *labelsArrayController;
 
@@ -65,6 +68,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic)   NSString *pausedTorrentsCount;
 @property (nonatomic)   NSString *downloadSpeed;
 @property (nonatomic)   NSString *uploadSpeed;
+
+@property (nonatomic)   NSImage *displayImage;
 
 @property (nonatomic)   int trEditing;
 

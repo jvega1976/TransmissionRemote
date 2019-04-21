@@ -10,11 +10,12 @@ Transmission Remote is a Transmission client built exclusively for Mac, develope
 * Utility to create Torrent Files.
 * Selection of Files to download
 * Use of drag and drop to reorder download queue
-*  Swipe right/left gestures to access functions as Start/Stop/Delete/Reannounce,etc.
+* Swipe right/left gestures to access functions as Start/Stop/Delete/Reannounce,etc.
 * Allow the addition of new Torrents using files or MagnetURL.
 * Graphical information of Peers and Files Pieces activity
 * Status Menu Bar
 * Integration with the OS to open downloaded files.
+* Notification Center Today Extension
   
 ![Screenshot1](README/screenshot1.png) ![Screenshot2](README/screenshot2.png)
 ![Screenshot3](README/screenshot3.png) ![Screenshot4](README/screenshot4.png)
