@@ -2176,11 +2176,8 @@
                                                                                         <binding destination="TMJ-gE-RzF" name="value" keyPath="objectValue.progressPercent" id="VWW-k9-vJg"/>
                                                                                     </connections>
                                                                                 </progressIndicator>
-                                                                                <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="7hZ-sL-UMV" userLabel="PeersInfo">
-                                                                                    <rect key="frame" x="71" y="48" width="225" height="15"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" constant="221" id="o62-vG-ee6"/>
-                                                                                    </constraints>
+                                                                                <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7hZ-sL-UMV" userLabel="PeersInfo">
+                                                                                    <rect key="frame" x="71" y="48" width="250" height="15"/>
                                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="Downloading from 5 of 10 peers ETA: 1:25" allowsEditingTextAttributes="YES" id="FvY-9p-JHT">
                                                                                         <font key="font" size="12" name=".AppleSystemUIFontLight"/>
                                                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -2428,6 +2425,7 @@
                                                                                 <constraint firstItem="aR5-WI-e8n" firstAttribute="firstBaseline" secondItem="ebx-0Z-aff" secondAttribute="firstBaseline" constant="3" id="coP-MD-wzf"/>
                                                                                 <constraint firstItem="Wrw-e2-khq" firstAttribute="trailing" secondItem="wfS-Y4-foq" secondAttribute="trailing" id="eKF-Pi-gbF"/>
                                                                                 <constraint firstItem="ebx-0Z-aff" firstAttribute="leading" secondItem="Lqd-7S-3Yk" secondAttribute="leading" id="f2G-ux-ytW"/>
+                                                                                <constraint firstItem="aR5-WI-e8n" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7hZ-sL-UMV" secondAttribute="trailing" constant="30" id="f2T-TN-0Uy"/>
                                                                                 <constraint firstItem="ebx-0Z-aff" firstAttribute="firstBaseline" secondItem="2Yr-lZ-1yQ" secondAttribute="firstBaseline" id="gPi-Pu-Yzn"/>
                                                                                 <constraint firstItem="7hZ-sL-UMV" firstAttribute="top" secondItem="o3m-Xl-bto" secondAttribute="bottom" constant="27" id="gor-Ld-I3m"/>
                                                                                 <constraint firstItem="Wrw-e2-khq" firstAttribute="leading" secondItem="wfS-Y4-foq" secondAttribute="leading" id="hUL-B1-8Fz"/>
@@ -8094,11 +8092,11 @@ Gw
         <image name="Upload Badget" width="128" height="30"/>
         <image name="VerifyTemplate" width="19" height="19"/>
         <image name="downloadIcon" width="60" height="60"/>
-        <image name="filesIcon" width="37" height="37"/>
+        <image name="filesIcon" width="32" height="32"/>
         <image name="iconAnnounceTower" width="36" height="36"/>
         <image name="iconClock" width="37" height="37"/>
         <image name="iconComputer" width="37" height="37"/>
-        <image name="iconFile" width="36" height="36"/>
+        <image name="iconFile" width="32" height="32"/>
         <image name="iconGlobeTemplate" width="19" height="19"/>
         <image name="iconHalfCloudDownload" width="37" height="37"/>
         <image name="iconHalfCloudDownload20x20" width="21" height="20"/>
