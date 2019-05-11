@@ -13,7 +13,7 @@
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)johnnyvega.TransmissionRemote.Today-Widget</string>
+		<string>$(AppIdentifierPrefix)johnnyvega.TransmissionRemote</string>
 	</array>
 </dict>
 </plist>

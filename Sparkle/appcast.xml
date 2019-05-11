@@ -96,6 +96,20 @@
 <enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote114-107.delta" sparkle:version="114" sparkle:shortVersionString="1.5.5" sparkle:deltaFrom="107" length="1229409" type="application/octet-stream" sparkle:edSignature="qk6iASn4o9e7lYennEKSnNUCKTedMprXG1zkEEDZtHjIPd3LP4ZDbxhmhvtrR6unnQshLLGbVry0PdgbHrKFDA=="/>
 <enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote114-106.delta" sparkle:version="114" sparkle:shortVersionString="1.5.5" sparkle:deltaFrom="106" length="1212986" type="application/octet-stream" sparkle:edSignature="fp/4IuXdTs1ZiZklUyj2Esy9rpZwzxIO8vompDXY7KqsGs8wIVwkig+aNFqV80zpJQrneLa18fjjZcApMDFECw=="/></sparkle:deltas>
 </item>
+<item>
+<title>1.5.5.1</title>
+<pubDate>Sat, 11 May 2019 10:50:53 -0500</pubDate>
+<sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote-v1.5.5.1.zip" sparkle:version="115" sparkle:shortVersionString="1.5.5.1" length="14625106" type="application/octet-stream" sparkle:edSignature="p8N5i7pXvnpKzd4WB1/aDkbS0Ci/7XSLy0No9b9gkUcZIFm08YjfGImxnBbvuMmcyzXMXWoxcKEgrcFima8nAg=="/>
+<sparkle:deltas>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote115-114.delta" sparkle:version="115" sparkle:shortVersionString="1.5.5.1" sparkle:deltaFrom="114" length="679089" type="application/octet-stream" sparkle:edSignature="RbSVsTYu71FkUnzmPW1rkk3KvJYBbmXHJ5klruH3J9Xls40d7JRMzuW/Kh8Z4E25yHIVCjVp1Y1u3WoCFiFNDA=="/>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote115-113.delta" sparkle:version="115" sparkle:shortVersionString="1.5.5.1" sparkle:deltaFrom="113" length="652782" type="application/octet-stream" sparkle:edSignature="PdWGBsIC/CCMG+QYcCukRBRr5xYnuxQ+DCPSz63r1NwaZxu4TWRnCqr+a7I/3RpX4jE8l3PmO4zj7C0bCXt1Cw=="/>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote115-111.delta" sparkle:version="115" sparkle:shortVersionString="1.5.5.1" sparkle:deltaFrom="111" length="1047295" type="application/octet-stream" sparkle:edSignature="b0eh/bMgJxEkmfGdJSr1gikeT+LLvpKtGHJb47JdnVTzgwPs9TDe6C3yIEic13MFwcp6qoDqgGslTVMGIy5ADg=="/>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote115-110.delta" sparkle:version="115" sparkle:shortVersionString="1.5.5.1" sparkle:deltaFrom="110" length="1196096" type="application/octet-stream" sparkle:edSignature="gZycNucJSxvR1boSRarfE0MgViDWqcunj/jiS4+yIFvLujL4y7LBo4k8ADxfnN0GcRUDFShazh0oUcUiYUhVAA=="/>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote115-108.delta" sparkle:version="115" sparkle:shortVersionString="1.5.5.1" sparkle:deltaFrom="108" length="1200672" type="application/octet-stream" sparkle:edSignature="v07TG+6EmOoVrQLITTUVmgi49McOTVjPZSP2jL/TX2mMeYdoYOeaPRpZ1xd7cA7Aih36TDq1lYjHcVzzhtilBA=="/>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote115-107.delta" sparkle:version="115" sparkle:shortVersionString="1.5.5.1" sparkle:deltaFrom="107" length="1207597" type="application/octet-stream" sparkle:edSignature="6R9a+KBr9YaclKGWHb/Kn3J9MuS8azAeNtQrMhhdBglADBgjkIKK1QTOxeyUyaa3W/DUvXkg1/5URFsSLSk8BQ=="/></sparkle:deltas>
+</item>
+
 
 
 
