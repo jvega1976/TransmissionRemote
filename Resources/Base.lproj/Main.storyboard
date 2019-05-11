@@ -1909,7 +1909,7 @@
                                                                                             </connections>
                                                                                         </imageView>
                                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ok-Bu-PXE">
-                                                                                            <rect key="frame" x="94" y="20" width="70" height="20"/>
+                                                                                            <rect key="frame" x="94" y="20" width="107" height="20"/>
                                                                                             <contentFilters>
                                                                                                 <ciFilter name="CISharpenLuminance">
                                                                                                     <configuration>
@@ -1929,8 +1929,9 @@
                                                                                             </connections>
                                                                                         </textField>
                                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bbs-z0-Jyo">
-                                                                                            <rect key="frame" x="211" y="20" width="31" height="20"/>
+                                                                                            <rect key="frame" x="209" y="18" width="47" height="20"/>
                                                                                             <constraints>
+                                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="47" id="1HW-MD-5M2"/>
                                                                                                 <constraint firstAttribute="height" constant="20" id="KPH-7M-OXq"/>
                                                                                             </constraints>
                                                                                             <shadow key="shadow" blurRadius="3">
@@ -1945,7 +1946,7 @@
                                                                                                     </configuration>
                                                                                                 </ciFilter>
                                                                                             </contentFilters>
-                                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" userInterfaceLayoutDirection="rightToLeft" alignment="right" title="999" drawsBackground="YES" allowsEditingTextAttributes="YES" usesSingleLineMode="YES" id="084-gh-iLJ">
+                                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" userInterfaceLayoutDirection="rightToLeft" alignment="center" title="999" drawsBackground="YES" allowsEditingTextAttributes="YES" usesSingleLineMode="YES" id="084-gh-iLJ">
                                                                                                 <font key="font" metaFont="systemBold"/>
                                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1956,16 +1957,16 @@
                                                                                         </textField>
                                                                                     </subviews>
                                                                                     <constraints>
-                                                                                        <constraint firstItem="Bbs-z0-Jyo" firstAttribute="leading" secondItem="1Ok-Bu-PXE" secondAttribute="trailing" constant="47" id="2Qb-4M-VkD"/>
+                                                                                        <constraint firstItem="Bbs-z0-Jyo" firstAttribute="leading" secondItem="1Ok-Bu-PXE" secondAttribute="trailing" constant="8" id="2Qb-4M-VkD"/>
                                                                                         <constraint firstItem="6xX-4y-5Ub" firstAttribute="top" secondItem="mpS-QX-IeG" secondAttribute="top" id="57v-tw-TC2"/>
                                                                                         <constraint firstItem="6xX-4y-5Ub" firstAttribute="leading" secondItem="mpS-QX-IeG" secondAttribute="leading" constant="17" id="7a5-Ci-sq3"/>
-                                                                                        <constraint firstItem="1Ok-Bu-PXE" firstAttribute="top" secondItem="Bbs-z0-Jyo" secondAttribute="top" id="7lP-cj-otO"/>
+                                                                                        <constraint firstItem="1Ok-Bu-PXE" firstAttribute="top" secondItem="Bbs-z0-Jyo" secondAttribute="top" constant="-2" id="7lP-cj-otO"/>
                                                                                         <constraint firstItem="1Ok-Bu-PXE" firstAttribute="leading" secondItem="6xX-4y-5Ub" secondAttribute="trailing" constant="13" id="FXK-xf-GJM"/>
                                                                                         <constraint firstItem="6xX-4y-5Ub" firstAttribute="centerY" secondItem="1Ok-Bu-PXE" secondAttribute="centerY" constant="-2" id="OiZ-YE-eGP"/>
                                                                                         <constraint firstItem="1Ok-Bu-PXE" firstAttribute="top" secondItem="mpS-QX-IeG" secondAttribute="top" constant="24" id="Vwo-Oh-iej"/>
-                                                                                        <constraint firstAttribute="trailing" secondItem="Bbs-z0-Jyo" secondAttribute="trailing" constant="26" id="X1v-oC-P0i"/>
-                                                                                        <constraint firstItem="1Ok-Bu-PXE" firstAttribute="bottom" secondItem="Bbs-z0-Jyo" secondAttribute="bottom" id="XuL-Dv-3XC"/>
-                                                                                        <constraint firstItem="Bbs-z0-Jyo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1Ok-Bu-PXE" secondAttribute="trailing" constant="15" id="aTf-lu-FRL"/>
+                                                                                        <constraint firstAttribute="trailing" secondItem="Bbs-z0-Jyo" secondAttribute="trailing" constant="12" id="X1v-oC-P0i"/>
+                                                                                        <constraint firstItem="1Ok-Bu-PXE" firstAttribute="bottom" secondItem="Bbs-z0-Jyo" secondAttribute="bottom" constant="-2" id="XuL-Dv-3XC"/>
+                                                                                        <constraint firstItem="Bbs-z0-Jyo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1Ok-Bu-PXE" secondAttribute="trailing" constant="-6" id="aTf-lu-FRL"/>
                                                                                     </constraints>
                                                                                     <ciFilter key="compositingFilter" name="CIHueBlendMode">
                                                                                         <configuration>
@@ -8096,7 +8097,7 @@ Gw
         <image name="iconAnnounceTower" width="36" height="36"/>
         <image name="iconClock" width="37" height="37"/>
         <image name="iconComputer" width="37" height="37"/>
-        <image name="iconFile" width="32" height="32"/>
+        <image name="iconFile" width="36" height="36"/>
         <image name="iconGlobeTemplate" width="19" height="19"/>
         <image name="iconHalfCloudDownload" width="37" height="37"/>
         <image name="iconHalfCloudDownload20x20" width="21" height="20"/>

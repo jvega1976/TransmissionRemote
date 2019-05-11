@@ -915,7 +915,6 @@
 				B89AD14B225477BD00AE0DFD /* Localizable.strings */,
 				B89AD14D225477BD00AE0DFD /* Defaults.plist */,
 				B89AD14E225477BD00AE0DFD /* CountryFlags */,
-				B89AD248225477BE00AE0DFD /* GeoIP.db */,
 				B89AD256225477BE00AE0DFD /* DocumentTypeIcon.icns */,
 				B89AD257225477BE00AE0DFD /* test.mp4 */,
 				B89AD259225477BE00AE0DFD /* Main.storyboard */,
@@ -1260,10 +1259,10 @@
 				B89AD27C225477BE00AE0DFD /* TorrentInfoController.m */,
 				B89AD290225477BE00AE0DFD /* TorrentPeersController.h */,
 				B89AD277225477BE00AE0DFD /* TorrentPeersController.m */,
-				B89AD279225477BE00AE0DFD /* TorrentSettingsController.h */,
-				B89AD28D225477BE00AE0DFD /* TorrentSettingsController.m */,
 				B89AD27D225477BE00AE0DFD /* TorrentTrackersController.h */,
 				B89AD294225477BE00AE0DFD /* TorrentTrackersController.m */,
+				B89AD28D225477BE00AE0DFD /* TorrentSettingsController.m */,
+				B89AD279225477BE00AE0DFD /* TorrentSettingsController.h */,
 				B89AD283225477BE00AE0DFD /* WindowController.h */,
 				B89AD29A225477BE00AE0DFD /* WindowController.m */,
 			);
@@ -1302,6 +1301,7 @@
 				B804838822632E50005C425D /* TransmissionRemote.entitlements */,
 				B8B11AA52262ED0B00A58B92 /* AppDelegate.h */,
 				B8B11AA62262ED0B00A58B92 /* AppDelegate.m */,
+				B89AD248225477BE00AE0DFD /* GeoIP.db */,
 				B8B11AB32262ED0D00A58B92 /* Info.plist */,
 				B8B11AB42262ED0D00A58B92 /* main.m */,
 			);

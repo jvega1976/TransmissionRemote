@@ -393,6 +393,7 @@ BOOL isEditable = NO;
         [trIdList addObject:[NSNumber numberWithInt:torrent.trId]];
     }];
     [_connector resumeTorrent:trIdList];
+    [_torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
 }
 
 
@@ -404,6 +405,7 @@ BOOL isEditable = NO;
         [trIdList addObject:[NSNumber numberWithInt:torrent.trId]];
     }];
     [_connector resumeNowTorrent:trIdList];
+    [_torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
 }
 
 
@@ -415,6 +417,7 @@ BOOL isEditable = NO;
         [trIdList addObject:[NSNumber numberWithInt:torrent.trId]];
     }];
     [_connector stopTorrents:trIdList];
+    [_torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
 }
 
 
@@ -437,6 +440,7 @@ BOOL isEditable = NO;
         [trIdList addObject:[NSNumber numberWithInt:torrent.trId]];
     }];
     [_connector verifyTorrent:trIdList];
+    [_torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
 }
 
 
@@ -448,6 +452,7 @@ BOOL isEditable = NO;
         [trIdList addObject:[NSNumber numberWithInt:torrent.trId]];
     }];
     [_connector deleteTorrentWithId:trIdList deleteWithData:NO];
+    [_torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
 }
 
 
@@ -459,6 +464,7 @@ BOOL isEditable = NO;
         [trIdList addObject:[NSNumber numberWithInt:torrent.trId]];
     }];
     [_connector deleteTorrentWithId:trIdList deleteWithData:YES];
+    [_torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
 }
 
 -(IBAction)editClickedTorrentName:(id)sender {
@@ -508,12 +514,10 @@ BOOL isEditable = NO;
         if( (torrent.queuePosition-1) <= [(TRInfo*)[self->_torrentArrayController.arrangedObjects objectAtIndex:(idx-1)] queuePosition]){
             [self->_torrentArrayController removeObjectAtArrangedObjectIndex:idx];
             [self->_torrentArrayController insertObject:torrent atArrangedObjectIndex:idx-1];
-            //           [self->_torrentListView beginUpdates];
-            //           [self->_torrentListView moveRowAtIndex:idx toIndex:(idx-1)];
-            //           [self->_torrentListView endUpdates];
         }
     }];
     [_connector moveTorrentUp:trIdList];
+    [_torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
 }
 
 
@@ -524,12 +528,13 @@ BOOL isEditable = NO;
         TRInfo *torrent = [self->_torrentArrayController.arrangedObjects objectAtIndex:idx];
         [trIdList addObject:[NSNumber numberWithInt:torrent.trId]];
         if( (torrent.queuePosition+1) >= [(TRInfo*)[self->_torrentArrayController.arrangedObjects objectAtIndex:(idx+1)] queuePosition]){
-            [self->_torrentListView beginUpdates];
-            [self->_torrentListView moveRowAtIndex:idx toIndex:(idx+1)];
-            [self->_torrentListView endUpdates];
+//            [self->_torrentListView beginUpdates];
+//            [self->_torrentListView moveRowAtIndex:idx toIndex:(idx+1)];
+//            [self->_torrentListView endUpdates];
         }
     }];
     [_connector moveTorrentDown:trIdList];
+     [_torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
 }
 
 
@@ -541,12 +546,13 @@ BOOL isEditable = NO;
         TRInfo *torrent = [self->_torrentArrayController.arrangedObjects objectAtIndex:idx];
         [trIdList addObject:[NSNumber numberWithInt:torrent.trId]];
         
-        [self->_torrentListView beginUpdates];
-        [self->_torrentListView moveRowAtIndex:idx toIndex:(i+1)];
-        [self->_torrentListView endUpdates];
+//        [self->_torrentListView beginUpdates];
+//        [self->_torrentListView moveRowAtIndex:idx toIndex:(i+1)];
+//        [self->_torrentListView endUpdates];
         i++;
     }];
     [_connector moveTorrentTop:trIdList];
+     [_torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
 }
 
 
@@ -559,12 +565,14 @@ BOOL isEditable = NO;
         TRInfo *torrent = [self->_torrentArrayController.arrangedObjects objectAtIndex:idx];
         [trIdList addObject:[NSNumber numberWithInt:torrent.trId]];
         
-        [self->_torrentListView beginUpdates];
-        [self->_torrentListView moveRowAtIndex:idx toIndex:(i-1)];
-        [self->_torrentListView endUpdates];
+//        [self->_torrentListView beginUpdates];
+//        [self->_torrentListView moveRowAtIndex:idx toIndex:(i-1)];
+//        [self->_torrentListView endUpdates];
         i--;
     }];
+    
     [_connector moveTorrentBottom:trIdList];
+    [_torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
 }
 
 -(IBAction)displayTorrentDetailedInfo:(id)sender{
@@ -883,10 +891,13 @@ BOOL isEditable = NO;
         [self setErrorExists:NO];
         [_uploadRate setStringValue:torrents.totalUploadRateString];
         [_downloadRate setStringValue: torrents.totalDownloadRateString];
-        NSIndexSet *indexes = [[_torrentArrayController selectionIndexes] copy];
+        NSMutableIndexSet *indexes = [[_torrentArrayController selectionIndexes] copy];
         [_torrents setItems:torrents.items];
         [indexes enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
-            [[self.torrentArrayController.arrangedObjects objectAtIndex:idx] setIsSelected:YES];
+            if(idx < [self.torrentArrayController.arrangedObjects count])
+                [[self.torrentArrayController.arrangedObjects objectAtIndex:idx] setIsSelected:YES];
+            else
+                [indexes removeIndex:idx];
         }];
         [_torrentArrayController setSelectionIndexes:indexes];
         [self showFinishedTorrentsWithInfo];
@@ -1228,6 +1239,7 @@ BOOL isEditable = NO;
                 //           [self->_torrentListView removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:row] withAnimation:NSTableViewAnimationSlideLeft];
                 [self->_torrentArrayController removeObjectAtArrangedObjectIndex:row];
                 [self->_connector deleteTorrentWithId:[NSArray arrayWithObject:[NSNumber numberWithInt:trInfo.trId]] deleteWithData:NO];
+                [self.torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
             }];
             delete.image = [NSImage imageNamed:@"RemoveTemplate"];
             NSTableViewRowAction *deleteWithData = [NSTableViewRowAction rowActionWithStyle:NSTableViewRowActionStyleDestructive title:@"Remove\rwith Data" handler:^(NSTableViewRowAction * action, NSInteger row) {
@@ -1235,6 +1247,7 @@ BOOL isEditable = NO;
                 //            [self->_torrentListView removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:row] withAnimation:NSTableViewAnimationSlideLeft];
                 [self->_torrentArrayController removeObjectAtArrangedObjectIndex:row];
                 [self->_connector deleteTorrentWithId:[NSArray arrayWithObject:[NSNumber numberWithInt:trInfo.trId]] deleteWithData:YES];
+                [self.torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
                 
             }];
             deleteWithData.image = [NSImage imageNamed:@"CleanupTemplate"];
@@ -1248,12 +1261,14 @@ BOOL isEditable = NO;
                 NSTableViewRowAction *start = [NSTableViewRowAction rowActionWithStyle:NSTableViewRowActionStyleRegular title:@"Start" handler:^(NSTableViewRowAction *action, NSInteger row) {
                     self->_torrentListView.rowActionsVisible=NO;
                     [self->_connector resumeTorrent:[NSArray arrayWithObject:[NSNumber numberWithInt:trInfo.trId]]];
+                    [self.torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
                 }];
                 start.image = [NSImage imageNamed:@"StartTemplate"];
                 start.backgroundColor = [NSColor systemGreenColor];
                 NSTableViewRowAction *forceStart = [NSTableViewRowAction rowActionWithStyle:NSTableViewRowActionStyleRegular title:@"Start\rNow" handler:^(NSTableViewRowAction *action, NSInteger row) {
                     self->_torrentListView.rowActionsVisible=NO;
                     [self->_connector resumeNowTorrent:[NSArray arrayWithObject:[NSNumber numberWithInt:trInfo.trId]]];
+                    [self.torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
                 }];
                 forceStart.image = [NSImage imageNamed:@"iconPlay"];
                 forceStart.backgroundColor = [NSColor colorWithSRGBRed:0.000 green:0.560 blue:0.000 alpha:1];
@@ -1264,12 +1279,14 @@ BOOL isEditable = NO;
                     NSTableViewRowAction *forcestart = [NSTableViewRowAction rowActionWithStyle:NSTableViewRowActionStyleRegular title:@"Start\rNow" handler:^(NSTableViewRowAction *action, NSInteger row) {
                         self->_torrentListView.rowActionsVisible=NO;
                         [self->_connector resumeNowTorrent:[NSArray arrayWithObject:[NSNumber numberWithInt:trInfo.trId]]];
+                        [self.torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
                     }];
                     forcestart.image = [NSImage imageNamed:@"iconPlay"];
                     forcestart.backgroundColor = [NSColor systemGreenColor];
                     NSTableViewRowAction *stop = [NSTableViewRowAction rowActionWithStyle:NSTableViewRowActionStyleRegular title:@"Stop" handler:^(NSTableViewRowAction *action, NSInteger row) {
                         self->_torrentListView.rowActionsVisible=NO;
                         [self->_connector stopTorrents:[NSArray arrayWithObject:[NSNumber numberWithInt:trInfo.trId]]];
+                        [self.torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
                     }];
                     stop.image = [NSImage imageNamed:@"iconStop36x36"];
                     stop.backgroundColor = [NSColor systemBlueColor];
@@ -1279,6 +1296,7 @@ BOOL isEditable = NO;
                     NSTableViewRowAction *stop = [NSTableViewRowAction rowActionWithStyle:NSTableViewRowActionStyleRegular title:@"Stop" handler:^(NSTableViewRowAction *action, NSInteger row) {
                         self->_torrentListView.rowActionsVisible=NO;
                         [self->_connector stopTorrents:[NSArray arrayWithObject:[NSNumber numberWithInt:trInfo.trId]]];
+                        [self.torrentArrayController setSelectionIndexes:[NSIndexSet indexSet]];
                     }];
                     stop.image= [NSImage imageNamed:@"iconStop36x36"];
                     stop.backgroundColor = [NSColor systemBlueColor];

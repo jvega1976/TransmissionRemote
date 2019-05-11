@@ -28,6 +28,7 @@
     BOOL haveFilesToOpen;
     NSUserDefaults *defaults;
 }
+
 - (void) awakeFromNib {
     self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
