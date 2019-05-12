@@ -449,9 +449,9 @@
                                 <toolbarItem implicitItemIdentifier="3B745DBE-A80B-405A-A97B-FE2B4FF17E5D" label="Server Setup" paletteLabel="Server Setup" image="iconGlobeTemplate" sizingBehavior="auto" id="dGa-Wy-nh8">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="XKH-su-Zv6" userLabel="Server Setup Button">
-                                        <rect key="frame" x="25" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="22" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="iconGlobeTemplate" imagePosition="above" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mkL-AY-Osz">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="iconGlobeTemplate" imagePosition="above" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="mkL-AY-Osz">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -463,9 +463,9 @@
                                 <toolbarItem implicitItemIdentifier="6D5F0848-4E7D-4EBA-A17F-82D009CBA83A" label="Alt Speed" paletteLabel="Alt Speed" image="ToolbarIconTurtle" sizingBehavior="auto" id="Kf1-yr-YoQ">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="QWp-9z-EuH" userLabel="Alt Speed Button">
-                                        <rect key="frame" x="17" y="14" width="25" height="24"/>
+                                        <rect key="frame" x="13" y="14" width="32" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ToolbarIconTurtle" imagePosition="only" alignment="center" alternateImage="ToolbarIconTurtleCrossed" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ugr-Kf-nqU">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ToolbarIconTurtle" imagePosition="only" alignment="center" alternateImage="ToolbarIconTurtleCrossed" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="ugr-Kf-nqU">
                                             <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -477,7 +477,7 @@
                                 <toolbarItem implicitItemIdentifier="33FE121F-1657-4B98-A316-CFF12A81B9D4" label="Statistics" paletteLabel="Statistics" image="statistics1" sizingBehavior="auto" id="d0O-4G-Ed3">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="LYx-Lw-dMy" userLabel="Statistics Button">
-                                        <rect key="frame" x="16" y="14" width="25" height="24"/>
+                                        <rect key="frame" x="12" y="14" width="32" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="statistics1" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cyz-Ii-ZoR">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -491,9 +491,9 @@
                                 <toolbarItem implicitItemIdentifier="1DC6D7FA-81B7-4362-B2CD-3E186E961B32" label="Create" paletteLabel="Create" image="ToolbarCreateTemplate" sizingBehavior="auto" id="OwW-Hl-i93">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="M7g-h5-GiR" userLabel="Create Torrent Button">
-                                        <rect key="frame" x="9" y="14" width="25" height="24"/>
+                                        <rect key="frame" x="5" y="14" width="32" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ToolbarCreateTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UzK-wG-dwE">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ToolbarCreateTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="UzK-wG-dwE">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -505,7 +505,7 @@
                                 <toolbarItem implicitItemIdentifier="CE804E71-DABC-4260-AC78-727BE85772B2" label="Add" paletteLabel="Add" image="NSAddTemplate" sizingBehavior="auto" id="n1p-La-Q7K">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="mZ7-8m-rBx" userLabel="Add File Button">
-                                        <rect key="frame" x="2" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="0.0" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSAddTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pA5-JK-PdM">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -519,7 +519,7 @@
                                 <toolbarItem implicitItemIdentifier="88C920C3-F7BD-48AF-A8CD-2261EC9B8835" label="Magnet" paletteLabel="Magnet" image="iconLinkAddTemplate" sizingBehavior="auto" id="TZu-JB-vyP">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="72l-cd-Rz8" userLabel="Add Magnet Button">
-                                        <rect key="frame" x="12" y="14" width="24" height="24"/>
+                                        <rect key="frame" x="8" y="14" width="32" height="24"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="iconLinkAddTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZD2-IX-QsJ">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -532,9 +532,9 @@
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="240F6E26-CFAF-443E-B62D-465A3F4912AA" label="Remove" paletteLabel="Remove" toolTip="Remove Torrent" image="iconRemoveTemplate" sizingBehavior="auto" id="kK5-ma-Aee">
                                     <button key="view" toolTip="Remove Torrent" wantsLayer="YES" verticalHuggingPriority="750" id="yi6-tK-wyh" userLabel="Remove Button">
-                                        <rect key="frame" x="13" y="14" width="24" height="24"/>
+                                        <rect key="frame" x="9" y="14" width="32" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="iconRemoveTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="euk-1F-afF">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="iconRemoveTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="euk-1F-afF">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -545,9 +545,9 @@
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="A652008E-CA14-406B-948A-4FBC5A3A7E2C" label="Cleanup" paletteLabel="Cleanup" toolTip="Remove with Data" image="CleanupTemplate" sizingBehavior="auto" id="qkA-rd-CFk">
                                     <button key="view" toolTip="Remove with Data" verticalHuggingPriority="750" id="m7z-xv-st9" userLabel="Remove with Data Button">
-                                        <rect key="frame" x="13" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="9" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="CleanupTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZRm-PY-08u">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="CleanupTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="ZRm-PY-08u">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -560,9 +560,9 @@
                                 <toolbarItem implicitItemIdentifier="67AF79EC-98B6-451F-B635-530BD1A4C6BB" label="Start All" paletteLabel="Start All" image="StartAllTemplate" sizingBehavior="auto" id="ZE9-hp-A5W">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="gpB-5O-xfw" userLabel="Start All Button">
-                                        <rect key="frame" x="13" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="9" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="StartAllTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3cs-Qs-Lh4">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="StartAllTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="3cs-Qs-Lh4">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -574,9 +574,9 @@
                                 <toolbarItem implicitItemIdentifier="6C8DA6DD-B9D1-40C4-BB86-00FAF3791545" label="Stop All" paletteLabel="Stop All" image="PauseAllTemplate" sizingBehavior="auto" id="GDk-gO-ynS">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="ICb-Fb-kQl" userLabel="Stop All Button">
-                                        <rect key="frame" x="12" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="8" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="PauseAllTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IYX-e8-xHA">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="PauseAllTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="IYX-e8-xHA">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -588,9 +588,9 @@
                                 <toolbarItem implicitItemIdentifier="213699B0-B2D9-4042-84B2-DDEBF7E2A76D" label="Start" paletteLabel="Start" image="StartTemplate" sizingBehavior="auto" id="L6e-lz-Bd9">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="cAB-Yw-und" userLabel="Start Button">
-                                        <rect key="frame" x="4" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="1" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="StartTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ifa-ii-w5v">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="StartTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="Ifa-ii-w5v">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -602,9 +602,9 @@
                                 <toolbarItem implicitItemIdentifier="EC8F9FB3-EFE4-479B-8494-7887A15FCFA4" label="Start Now" paletteLabel="Start Now" image="iconPlay" sizingBehavior="auto" id="lys-YL-7uX">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="AA2-ov-QBT" userLabel="Start Now Button">
-                                        <rect key="frame" x="18" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="14" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="iconPlay" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="whF-ET-4zZ">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="iconPlay" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="whF-ET-4zZ">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -616,9 +616,9 @@
                                 <toolbarItem implicitItemIdentifier="CD29502C-E48B-438B-A001-019D938A5366" label="Stop" paletteLabel="Stop" image="PauseTemplate" sizingBehavior="auto" id="Qhr-6W-40L">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="7NA-Jr-T5y" userLabel="Stop Button">
-                                        <rect key="frame" x="4" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="0.0" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="PauseTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="T5u-yI-zHa">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="PauseTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="T5u-yI-zHa">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -630,9 +630,9 @@
                                 <toolbarItem implicitItemIdentifier="F3E1781B-91DD-47AE-A8A8-705D715B735C" label="Reannounce" paletteLabel="Reannounce" image="iconRefresh16x16" sizingBehavior="auto" id="3Rr-fx-Gqp">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="5bM-JN-nPZ" userLabel="Reannounce Button">
-                                        <rect key="frame" x="24" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="20" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="iconRefresh16x16" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w67-jJ-RMb">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="iconRefresh16x16" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="w67-jJ-RMb">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -643,7 +643,7 @@
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="A98D1E0E-15A8-44C0-8CDD-53B39B1AF150" label="Verify" paletteLabel="Verify" toolTip="Verify Torrent" image="VerifyTemplate" sizingBehavior="auto" id="G1n-eC-2sQ">
                                     <button key="view" verticalHuggingPriority="750" id="VbI-Qc-AoD" userLabel="Verify Button">
-                                        <rect key="frame" x="7" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="3" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="VerifyTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xEs-q6-5zn">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -657,9 +657,9 @@
                                 <toolbarItem implicitItemIdentifier="96EDD78B-A1AF-41E5-896D-5945571942A7" label="Up" paletteLabel="Up" image="ArrowUpTemplate" sizingBehavior="auto" id="f4m-rE-e1A">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="zee-0G-CqQ" userLabel="Move Up Button">
-                                        <rect key="frame" x="0.0" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="0.0" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ArrowUpTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kV2-O1-CAs">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ArrowUpTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="kV2-O1-CAs">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -671,9 +671,9 @@
                                 <toolbarItem implicitItemIdentifier="40517FE7-B15A-4C89-BC9E-A3480A4A8C05" label="Down" paletteLabel="Down" image="ArrowDownTemplate" sizingBehavior="auto" id="8oz-tD-j0E">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="Td7-Iu-IMG" userLabel="Move Down Button">
-                                        <rect key="frame" x="6" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="3" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ArrowDownTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9zh-Pj-6my">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ArrowDownTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="9zh-Pj-6my">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -685,9 +685,9 @@
                                 <toolbarItem implicitItemIdentifier="EBAF1923-2640-435B-B754-30F939F584D0" label="Top" paletteLabel="Top" image="ArrowTopTemplate" sizingBehavior="auto" id="7FL-JG-LVy">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="9gy-Vj-NVL" userLabel="Move Top Button">
-                                        <rect key="frame" x="1" y="14" width="25" height="24"/>
+                                        <rect key="frame" x="0.0" y="14" width="32" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ArrowTopTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E1N-y5-FBH">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ArrowTopTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="E1N-y5-FBH">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -699,9 +699,9 @@
                                 <toolbarItem implicitItemIdentifier="B72032B3-4D99-4AB5-ACD3-34AE6C456F01" label="Bottom" paletteLabel="Bottom" image="ArrowBottomTemplate" sizingBehavior="auto" id="9Bw-bC-Pr8">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="J7J-I3-EaX" userLabel="Move Bottom Button">
-                                        <rect key="frame" x="11" y="14" width="25" height="25"/>
+                                        <rect key="frame" x="7" y="14" width="32" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ArrowBottomTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qcE-x6-Fpj">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ArrowBottomTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="qcE-x6-Fpj">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -712,7 +712,7 @@
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="5FE8DC55-4D1D-4E1E-B24A-4F397FEFB449" label="Sort" paletteLabel="Sort" toolTip="Sort List" image="NSListViewTemplate" sizingBehavior="auto" id="jdz-6r-yyJ" userLabel="Sort">
                                     <popUpButton key="view" verticalHuggingPriority="750" id="fpo-Qk-snc" userLabel="Sort">
-                                        <rect key="frame" x="0.0" y="14" width="100" height="24"/>
+                                        <rect key="frame" x="0.0" y="14" width="40" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" pullsDown="YES" id="fXh-MD-Qzl">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
@@ -2639,6 +2639,9 @@
                                     <constraint firstAttribute="width" constant="22" id="HI8-cq-wdv"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="iconTotalUploaded" id="Q9i-AH-Kf3"/>
+                                <connections>
+                                    <binding destination="X0f-b0-vw8" name="hidden" keyPath="errorExists" id="1ll-to-EfP"/>
+                                </connections>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cae-oc-auh">
                                 <rect key="frame" x="166" y="4" width="22" height="22"/>
@@ -2647,6 +2650,9 @@
                                     <constraint firstAttribute="height" constant="22" id="2cn-4d-WE7"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="iconTotalDownloaded" id="0dw-3k-HcI"/>
+                                <connections>
+                                    <binding destination="X0f-b0-vw8" name="hidden" keyPath="errorExists" id="PHA-Il-jLD"/>
+                                </connections>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Afv-Ov-1aI">
                                 <rect key="frame" x="257" y="4" width="22" height="22"/>
@@ -2655,6 +2661,9 @@
                                     <constraint firstAttribute="height" constant="22" id="sdI-6T-TcG"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="iconClock" id="w3i-Wz-eY2"/>
+                                <connections>
+                                    <binding destination="X0f-b0-vw8" name="hidden" keyPath="errorExists" id="1nQ-wf-q1m"/>
+                                </connections>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2y7-NY-UHr">
                                 <rect key="frame" x="431" y="4" width="22" height="22"/>
@@ -2665,6 +2674,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="iconTotalSize" id="hhj-tv-ucR"/>
                                 <connections>
                                     <binding destination="X0f-b0-vw8" name="value" keyPath="displayImage" id="Xdi-XX-6iU"/>
+                                    <binding destination="X0f-b0-vw8" name="hidden" keyPath="errorExists" id="Hux-fV-cxP"/>
                                 </connections>
                             </imageView>
                         </subviews>
