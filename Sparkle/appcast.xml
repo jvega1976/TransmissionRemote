@@ -12,7 +12,7 @@
 <title>1.0</title>
 <pubDate>Wed, 17 Apr 2019 22:11:36 -0500</pubDate>
 <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
-<enclosure url="Transmission%20Remote-v1.0.zip" sparkle:version="1" sparkle:shortVersionString="1.0" length="12924958" type="application/octet-stream"/>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote-v1.0.zip" sparkle:version="1" sparkle:shortVersionString="1.0" length="12924958" type="application/octet-stream" sparkle:edSignature="ULxWE161Vv3nfxAgH5KkGjQkagkorPoA0y+z7qEtNyz9ERpUMTGfV9Z7N71mxY6CI+49MC9OohNreXcgjlwLAg=="/>
 </item>
 <item>
 <title>1.5.1</title>
@@ -122,6 +122,20 @@
 <enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote116-110.delta" sparkle:version="116" sparkle:shortVersionString="1.5.5.2" sparkle:deltaFrom="110" length="1179668" type="application/octet-stream" sparkle:edSignature="rIm697Sqj9w2gnhSIDd+LR4LrVVhcX5Q7TkX2Bw2S+sAv9a/DvN/90CtGwiuRO6SzMbGOsDq60zqRSsiwyLZBA=="/>
 <enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote116-108.delta" sparkle:version="116" sparkle:shortVersionString="1.5.5.2" sparkle:deltaFrom="108" length="1153887" type="application/octet-stream" sparkle:edSignature="FrcHsnbOPrtItPIsC+7oQ9BLKEO99ufjtArTZmjx//JsFMzpV+ABDm1s120Bj8w5qIZDTOrROif97eqeBPgqDQ=="/></sparkle:deltas>
 </item>
+<item>
+<title>1.5.6</title>
+<pubDate>Sat, 08 Jun 2019 02:30:26 -0500</pubDate>
+<sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote-v1.5.6.zip" sparkle:version="117" sparkle:shortVersionString="1.5.6" length="14638370" type="application/octet-stream" sparkle:edSignature="Nbxck9/SrWj6k4/Ff/5zy+eqjT90pRdp1ptQys3FPbyd4OPkHXIflJaysuf5f15kD8ekS3QH+axdm7ARR2X+Cw=="/>
+<sparkle:deltas>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote117-116.delta" sparkle:version="117" sparkle:shortVersionString="1.5.6" sparkle:deltaFrom="116" length="1057050" type="application/octet-stream" sparkle:edSignature="127bJ7TKQKn0vRZdemPiQ4Yn6XPXHnhu7lhTISnU3MXk66ml10pnrnW5y+kmErpY5p7f7z6sw2vf2Giwa47XCQ=="/>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote117-115.delta" sparkle:version="117" sparkle:shortVersionString="1.5.6" sparkle:deltaFrom="115" length="1021258" type="application/octet-stream" sparkle:edSignature="RZ0T2/0eEiX3/oZw5oL2GpgIpdTW+ZN3LmK+B33UOhXujhtobBA5fUdUvpzeuxX9vydP5PNuMJxZ3kI+yzrICw=="/>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote117-114.delta" sparkle:version="117" sparkle:shortVersionString="1.5.6" sparkle:deltaFrom="114" length="998877" type="application/octet-stream" sparkle:edSignature="KsMdiWRQqiGU/BV8o8/hTLN+lhQrya5Ts2eeth4+oGYSFP1ByuBedGbY58RMbAFjfBRJKKlHeO0qdZU+R2FFBA=="/>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote117-113.delta" sparkle:version="117" sparkle:shortVersionString="1.5.6" sparkle:deltaFrom="113" length="994734" type="application/octet-stream" sparkle:edSignature="BR8oqJVj98/UAYe27Rhj40XWIljEAsTht5RvLTskcgMAuYXIr17SlBXX361M8gbVf74090NhojmLxRFxVhlOBQ=="/>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote117-111.delta" sparkle:version="117" sparkle:shortVersionString="1.5.6" sparkle:deltaFrom="111" length="1374723" type="application/octet-stream" sparkle:edSignature="3QYZZUooZ0WTcXKq16VCETJ9+5qRhfuLVzmVhzmRUC0wfZ2VrLsCATJxnioGZwvtrFBbW1gRc6I0woaci1EBDg=="/>
+<enclosure url="https://raw.githubusercontent.com/jvega1976/TransmissionRemote/master/Sparkle/Transmission%20Remote117-110.delta" sparkle:version="117" sparkle:shortVersionString="1.5.6" sparkle:deltaFrom="110" length="1390097" type="application/octet-stream" sparkle:edSignature="cZUSiJIfuEBLjVvfxMAM8l4oiMyEvIYHEZy+31yNpUZRnYW2/jDsBc8r8yZawv7zQd5Eo81e/8QQDo9aS5G8Dg=="/></sparkle:deltas>
+</item>
+
 
 
 
