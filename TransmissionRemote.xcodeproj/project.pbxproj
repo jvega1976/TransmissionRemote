@@ -333,9 +333,9 @@
 		B89AD58C2254A63C00AE0DFD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AD58B2254A63C00AE0DFD /* libz.tbd */; };
 		B89AD58E2254A65600AE0DFD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AD58D2254A65600AE0DFD /* libsqlite3.tbd */; };
 		B8A8F991226A5053007EA4FF /* PreferencesUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A8F990226A5053007EA4FF /* PreferencesUpdateController.m */; };
+		B8AF1C0B22B30BBB007F9E70 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AF1BF322B30B92007F9E70 /* Sparkle.framework */; };
+		B8AF1C0C22B30BBB007F9E70 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8AF1BF322B30B92007F9E70 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B8B11BF72262FA8F00A58B92 /* StatisticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89AD29B225477BE00AE0DFD /* StatisticsController.m */; };
-		B8DF222B228712240051E26B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DF2218228712060051E26B /* Sparkle.framework */; };
-		B8DF222C228712240051E26B /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8DF2218228712060051E26B /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B8EE11522268898E00ED4FEE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B8EE114E2268898E00ED4FEE /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -410,79 +410,79 @@
 			remoteGlobalIDString = B89AD4BA22547AFA00AE0DFD;
 			remoteInfo = "Today Widget";
 		};
-		B8DF2217228712060051E26B /* PBXContainerItemProxy */ = {
+		B8AF1BF222B30B92007F9E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+			containerPortal = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = Sparkle;
 		};
-		B8DF2219228712060051E26B /* PBXContainerItemProxy */ = {
+		B8AF1BF422B30B92007F9E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+			containerPortal = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 61B5F90209C4CEE200B25A18;
 			remoteInfo = "Sparkle Test App";
 		};
-		B8DF221B228712060051E26B /* PBXContainerItemProxy */ = {
+		B8AF1BF622B30B92007F9E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+			containerPortal = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 612279D90DB5470200AB99EA;
 			remoteInfo = "Sparkle Unit Tests";
 		};
-		B8DF221D228712060051E26B /* PBXContainerItemProxy */ = {
+		B8AF1BF822B30B92007F9E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+			containerPortal = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5D06E8D00FD68C7C005AE3F6;
 			remoteInfo = BinaryDelta;
 		};
-		B8DF221F228712060051E26B /* PBXContainerItemProxy */ = {
+		B8AF1BFA22B30B92007F9E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+			containerPortal = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 55C14BB7136EEF1500649790;
 			remoteInfo = Autoupdate;
 		};
-		B8DF2221228712060051E26B /* PBXContainerItemProxy */ = {
+		B8AF1BFC22B30B92007F9E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+			containerPortal = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 726B2B5D1C645FC900388755;
 			remoteInfo = "UI Tests";
 		};
-		B8DF2223228712060051E26B /* PBXContainerItemProxy */ = {
+		B8AF1BFE22B30B92007F9E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+			containerPortal = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 722954B41D04ADAF00ECF9CA;
 			remoteInfo = fileop;
 		};
-		B8DF2225228712060051E26B /* PBXContainerItemProxy */ = {
+		B8AF1C0022B30B92007F9E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+			containerPortal = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5AE13FB31E0D9E07000D2C2C;
 			remoteInfo = generate_appcast;
 		};
-		B8DF2227228712060051E26B /* PBXContainerItemProxy */ = {
+		B8AF1C0222B30B92007F9E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+			containerPortal = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5AB8F19F214DA72000A1187F;
 			remoteInfo = generate_keys;
 		};
-		B8DF2229228712060051E26B /* PBXContainerItemProxy */ = {
+		B8AF1C0422B30B92007F9E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+			containerPortal = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5A5ADED7214EDE4900DF0099;
 			remoteInfo = sign_update;
 		};
-		B8DF222D228712240051E26B /* PBXContainerItemProxy */ = {
+		B8AF1C0D22B30BC2007F9E70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+			containerPortal = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Sparkle;
@@ -497,7 +497,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B89A06062263C2A6007A5AB3 /* NSCategorization.framework in Embed Frameworks */,
-				B8DF222C228712240051E26B /* Sparkle.framework in Embed Frameworks */,
+				B8AF1C0C22B30BBB007F9E70 /* Sparkle.framework in Embed Frameworks */,
 				B89A060A2263C2A6007A5AB3 /* NSTransmissionRPC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -874,11 +874,11 @@
 		B89AD58D2254A65600AE0DFD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B8A8F98F226A5053007EA4FF /* PreferencesUpdateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferencesUpdateController.h; sourceTree = "<group>"; };
 		B8A8F990226A5053007EA4FF /* PreferencesUpdateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferencesUpdateController.m; sourceTree = "<group>"; };
+		B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sparkle.xcodeproj; path = ../../../../../Downloads/Sparkle/Sparkle.xcodeproj; sourceTree = "<group>"; };
 		B8B11AA52262ED0B00A58B92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8B11AA62262ED0B00A58B92 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B8B11AB32262ED0D00A58B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8B11AB42262ED0D00A58B92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B8DF2207228712050051E26B /* Sparkle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sparkle.xcodeproj; path = ../../Downloads/Sparkle/Sparkle.xcodeproj; sourceTree = "<group>"; };
 		B8EE114E2268898E00ED4FEE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -894,7 +894,7 @@
 				B89AD3C6225477BE00AE0DFD /* libutp.a in Frameworks */,
 				B89AD3C4225477BE00AE0DFD /* libtransmission.a in Frameworks */,
 				B89AD3C5225477BE00AE0DFD /* libnatpmp.a in Frameworks */,
-				B8DF222B228712240051E26B /* Sparkle.framework in Frameworks */,
+				B8AF1C0B22B30BBB007F9E70 /* Sparkle.framework in Frameworks */,
 				B89AD3CB225477BE00AE0DFD /* libminiupnp.a in Frameworks */,
 				B89AD3C7225477BE00AE0DFD /* libevent.a in Frameworks */,
 				B89AD3C8225477BE00AE0DFD /* libdht.a in Frameworks */,
@@ -940,7 +940,7 @@
 		B89AD103225476F800AE0DFD = {
 			isa = PBXGroup;
 			children = (
-				B8DF2207228712050051E26B /* Sparkle.xcodeproj */,
+				B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */,
 				B85A6EAE225831110017C009 /* CategorizationKit.xcodeproj */,
 				B85A6EA1225830CB0017C009 /* TransmissionRPC.xcodeproj */,
 				B89AD3E42254784400AE0DFD /* Others */,
@@ -1371,6 +1371,23 @@
 			path = "Today Widget";
 			sourceTree = "<group>";
 		};
+		B8AF1BE322B30B92007F9E70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8AF1BF322B30B92007F9E70 /* Sparkle.framework */,
+				B8AF1BF522B30B92007F9E70 /* Sparkle Test App.app */,
+				B8AF1BF722B30B92007F9E70 /* Sparkle Unit Tests.xctest */,
+				B8AF1BF922B30B92007F9E70 /* BinaryDelta */,
+				B8AF1BFB22B30B92007F9E70 /* Autoupdate.app */,
+				B8AF1BFD22B30B92007F9E70 /* UI Tests.xctest */,
+				B8AF1BFF22B30B92007F9E70 /* fileop */,
+				B8AF1C0122B30B92007F9E70 /* generate_appcast */,
+				B8AF1C0322B30B92007F9E70 /* generate_keys */,
+				B8AF1C0522B30B92007F9E70 /* sign_update */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B8B11AA42262ED0B00A58B92 /* TransmissionRemote */ = {
 			isa = PBXGroup;
 			children = (
@@ -1383,23 +1400,6 @@
 				B8B11AB42262ED0D00A58B92 /* main.m */,
 			);
 			path = TransmissionRemote;
-			sourceTree = "<group>";
-		};
-		B8DF2208228712050051E26B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B8DF2218228712060051E26B /* Sparkle.framework */,
-				B8DF221A228712060051E26B /* Sparkle Test App.app */,
-				B8DF221C228712060051E26B /* Sparkle Unit Tests.xctest */,
-				B8DF221E228712060051E26B /* BinaryDelta */,
-				B8DF2220228712060051E26B /* Autoupdate.app */,
-				B8DF2222228712060051E26B /* UI Tests.xctest */,
-				B8DF2224228712060051E26B /* fileop */,
-				B8DF2226228712060051E26B /* generate_appcast */,
-				B8DF2228228712060051E26B /* generate_keys */,
-				B8DF222A228712060051E26B /* sign_update */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1418,10 +1418,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				B8AF1C0E22B30BC2007F9E70 /* PBXTargetDependency */,
 				B89AD4D122547AFA00AE0DFD /* PBXTargetDependency */,
 				B89A06082263C2A6007A5AB3 /* PBXTargetDependency */,
 				B89A060C2263C2A6007A5AB3 /* PBXTargetDependency */,
-				B8DF222E228712240051E26B /* PBXTargetDependency */,
 			);
 			name = "Transmission Remote";
 			productName = TransmissionRemote;
@@ -1513,8 +1513,8 @@
 					ProjectRef = B85A6EAE225831110017C009 /* CategorizationKit.xcodeproj */;
 				},
 				{
-					ProductGroup = B8DF2208228712050051E26B /* Products */;
-					ProjectRef = B8DF2207228712050051E26B /* Sparkle.xcodeproj */;
+					ProductGroup = B8AF1BE322B30B92007F9E70 /* Products */;
+					ProjectRef = B8AF1BE222B30B92007F9E70 /* Sparkle.xcodeproj */;
 				},
 				{
 					ProductGroup = B85A6EA2225830CB0017C009 /* Products */;
@@ -1565,74 +1565,74 @@
 			remoteRef = B85A6EB8225831110017C009 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8DF2218228712060051E26B /* Sparkle.framework */ = {
+		B8AF1BF322B30B92007F9E70 /* Sparkle.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Sparkle.framework;
-			remoteRef = B8DF2217228712060051E26B /* PBXContainerItemProxy */;
+			remoteRef = B8AF1BF222B30B92007F9E70 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8DF221A228712060051E26B /* Sparkle Test App.app */ = {
+		B8AF1BF522B30B92007F9E70 /* Sparkle Test App.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = "Sparkle Test App.app";
-			remoteRef = B8DF2219228712060051E26B /* PBXContainerItemProxy */;
+			remoteRef = B8AF1BF422B30B92007F9E70 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8DF221C228712060051E26B /* Sparkle Unit Tests.xctest */ = {
+		B8AF1BF722B30B92007F9E70 /* Sparkle Unit Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Sparkle Unit Tests.xctest";
-			remoteRef = B8DF221B228712060051E26B /* PBXContainerItemProxy */;
+			remoteRef = B8AF1BF622B30B92007F9E70 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8DF221E228712060051E26B /* BinaryDelta */ = {
+		B8AF1BF922B30B92007F9E70 /* BinaryDelta */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = BinaryDelta;
-			remoteRef = B8DF221D228712060051E26B /* PBXContainerItemProxy */;
+			remoteRef = B8AF1BF822B30B92007F9E70 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8DF2220228712060051E26B /* Autoupdate.app */ = {
+		B8AF1BFB22B30B92007F9E70 /* Autoupdate.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = Autoupdate.app;
-			remoteRef = B8DF221F228712060051E26B /* PBXContainerItemProxy */;
+			remoteRef = B8AF1BFA22B30B92007F9E70 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8DF2222228712060051E26B /* UI Tests.xctest */ = {
+		B8AF1BFD22B30B92007F9E70 /* UI Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "UI Tests.xctest";
-			remoteRef = B8DF2221228712060051E26B /* PBXContainerItemProxy */;
+			remoteRef = B8AF1BFC22B30B92007F9E70 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8DF2224228712060051E26B /* fileop */ = {
+		B8AF1BFF22B30B92007F9E70 /* fileop */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = fileop;
-			remoteRef = B8DF2223228712060051E26B /* PBXContainerItemProxy */;
+			remoteRef = B8AF1BFE22B30B92007F9E70 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8DF2226228712060051E26B /* generate_appcast */ = {
+		B8AF1C0122B30B92007F9E70 /* generate_appcast */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = generate_appcast;
-			remoteRef = B8DF2225228712060051E26B /* PBXContainerItemProxy */;
+			remoteRef = B8AF1C0022B30B92007F9E70 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8DF2228228712060051E26B /* generate_keys */ = {
+		B8AF1C0322B30B92007F9E70 /* generate_keys */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = generate_keys;
-			remoteRef = B8DF2227228712060051E26B /* PBXContainerItemProxy */;
+			remoteRef = B8AF1C0222B30B92007F9E70 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8DF222A228712060051E26B /* sign_update */ = {
+		B8AF1C0522B30B92007F9E70 /* sign_update */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = sign_update;
-			remoteRef = B8DF2229228712060051E26B /* PBXContainerItemProxy */;
+			remoteRef = B8AF1C0422B30B92007F9E70 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -2005,10 +2005,10 @@
 			target = B89AD4BA22547AFA00AE0DFD /* Today Widget */;
 			targetProxy = B89AD4D022547AFA00AE0DFD /* PBXContainerItemProxy */;
 		};
-		B8DF222E228712240051E26B /* PBXTargetDependency */ = {
+		B8AF1C0E22B30BC2007F9E70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Sparkle;
-			targetProxy = B8DF222D228712240051E26B /* PBXContainerItemProxy */;
+			targetProxy = B8AF1C0D22B30BC2007F9E70 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2121,7 +2121,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2179,7 +2179,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -2196,7 +2196,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 117;
+				CURRENT_PROJECT_VERSION = 120;
 				DEVELOPMENT_TEAM = 6ZSHLT264F;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2213,8 +2213,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.5.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = johnnyvega.TransmissionRemote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2231,7 +2231,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 117;
+				CURRENT_PROJECT_VERSION = 120;
 				DEVELOPMENT_TEAM = 6ZSHLT264F;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2248,8 +2248,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.5.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = johnnyvega.TransmissionRemote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2263,7 +2263,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 107;
+				CURRENT_PROJECT_VERSION = 110;
 				DEVELOPMENT_TEAM = 6ZSHLT264F;
 				INFOPLIST_FILE = "Today Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2271,8 +2271,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.2.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "johnnyvega.TransmissionRemote.Today-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2286,7 +2286,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 107;
+				CURRENT_PROJECT_VERSION = 110;
 				DEVELOPMENT_TEAM = 6ZSHLT264F;
 				INFOPLIST_FILE = "Today Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2294,8 +2294,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.2.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "johnnyvega.TransmissionRemote.Today-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
