@@ -37,9 +37,6 @@
          contextName = "-[TorrentFilesController openFile:]:TorrentFilesController.m">
       </ContextState>
       <ContextState
-         contextName = "-[AppDelegate applicationWillResignActive:]:AppDelegate.m">
-      </ContextState>
-      <ContextState
          contextName = "__33-[RPCConnector returnAllTorrents]_block_invoke_2:RPCConnector.m">
       </ContextState>
       <ContextState
@@ -54,6 +51,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[ServerConfigController viewWillAppear]:ServerConfigController.m">
+      </ContextState>
+      <ContextState
          contextName = "__51-[MainViewController autorefreshTimerUpdateHandler]_block_invoke:MainViewController.m">
       </ContextState>
       <ContextState
@@ -65,10 +65,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[ServerConfigController viewWillAppear]:ServerConfigController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[ServerConfigController reloadConnection:]:ServerConfigController.m">
+         contextName = "-[ServerConfigController saveConfig:]:ServerConfigController.m">
          <PersistentStrings>
             <PersistentString
                value = "self.parentViewController">
@@ -76,7 +73,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[ServerConfigController saveConfig:]:ServerConfigController.m">
+         contextName = "-[ServerConfigController reloadConnection:]:ServerConfigController.m">
          <PersistentStrings>
             <PersistentString
                value = "self.parentViewController">
@@ -93,6 +90,20 @@
                value = "(displayFreeSpace == YES)">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate applicationWillResignActive:]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AddTorrentController addTorrent:]:AddTorrentController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_torrentFile.trackerList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ServerListController tableView:cellForRowAtIndexPath:]:ServerListController.m">
       </ContextState>
       <ContextState
          contextName = "__61-[AppDelegate application:performFetchWithCompletionHandler:]_block_invoke:AppDelegate.m">
@@ -119,6 +130,17 @@
          <PersistentStrings>
             <PersistentString
                value = "torrents.allTorrents">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ServerListController tableView:didSelectRowAtIndexPath:]:ServerListController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController.viewControllers ">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -158,6 +180,42 @@
             </PersistentString>
             <PersistentString
                value = "[response.actionIdentifier isEqualToString:UNNotificationDefaultActionIdentifier]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__41-[RPCConnector getRecentlyActiveTorrents]_block_invoke:RPCConnector.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "TRInfos.sharedTRInfos">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ServerListController viewDidAppear:]:ServerListController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = " nav.viewControllers">
+            </PersistentString>
+            <PersistentString
+               value = "self.splitViewController">
+            </PersistentString>
+            <PersistentString
+               value = "self.splitViewController.viewControllers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[StatusListController viewDidLoad]:StatusListController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.splitViewController">
+            </PersistentString>
+            <PersistentString
+               value = "self.splitViewController.viewControllers">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

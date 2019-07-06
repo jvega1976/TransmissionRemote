@@ -9,6 +9,9 @@
 #import "TorrentTrackersController.h"
 
 @interface TorrentTrackersController () <RPCConnectorDelegate>
+@property (strong) IBOutlet NSArrayController *trackerArrayController;
+@property (strong) IBOutlet NSMenu *trackerContextMenu;
+@property (weak) IBOutlet NSTableView *trackerTableView;
 
 @end
 
@@ -38,9 +41,38 @@
     _viewAppeared = NO;
 }
 
+- (void)rightMouseDown:(NSEvent *)theEvent {
+    [NSMenu popUpContextMenu:_trackerContextMenu withEvent:theEvent forView:_trackerTableView];
+}
+
+-(IBAction)removeTracker:(id)sender {
+    NSMenuItem *menuItem;
+    menuItem = sender;
+    NSUInteger index;
+    index = [_trackerArrayController selectionIndex];
+    int trackerId = [[_trTrackers objectAtIndex:index] trackerId];
+    switch (menuItem.tag) {
+        case 0:
+            _connector.delegate = self;
+            [_connector removeTracker:trackerId forTorrent: _trId];
+            [_trackerArrayController removeObjectAtArrangedObjectIndex:index];
+            break;
+        case 2:
+            _connector.delegate = self;
+            [_connector addTrackers:@[@(trackerId)] forTorrent: _trId];
+        default:
+            break;
+    }
+}
+
+#pragma mark - RPCConnector delegate
 
 -(void)gotAllTrackers:(NSArray *)trackerStats forTorrentWithId:(int)torrentId {
     [self setTrTrackers:trackerStats];
+}
+
+-(void)gotTrackerRemoved:(int)trackerId forTorrentWithId:(int)torrentId {
+    
 }
 
 @end

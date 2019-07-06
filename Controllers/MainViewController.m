@@ -88,7 +88,7 @@ BOOL isEditable = NO;
     BOOL                    _showErrorItems;              // allows to see "error" status
     TRSessionInfo           *_sessionInfo;
     NSArray                 *_prevDownTorrents;                // holds the previous torrents info
-    
+    TorrentFile             *_torrentFile;
     TorrentInfoController *_torrentInfoController;
     TorrentFilesController *_torrentFilesController;
     TorrentActivityController *_torrentActivityController;
@@ -106,6 +106,8 @@ BOOL isEditable = NO;
     
     BOOL _displayFreeSpace;
     NSUserDefaults *defaults;
+    
+    BOOL  _alternate;
 }
 
 
@@ -263,14 +265,19 @@ BOOL isEditable = NO;
 }
 
 
--(void)autorefreshTimerUpdateHandler{
+-(void)autorefreshTimerUpdateHandler {
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0),^{
         self.connector.delegate = self;
-        [self.connector getAllTorrents];
-        [self.connector getSessionInfo];
-        [self.connector getSessionStats];
-        if(self->_displayFreeSpace)
-            [self.connector getFreeSpaceWithDownloadDir:self.trSessionInfo.downloadDir];
+        [self.connector getRecentlyActiveTorrents];
+        if (self->_alternate) {
+            [self.connector getSessionInfo];
+            [self.connector getSessionStats];
+            if(self->_displayFreeSpace)
+                [self.connector getFreeSpaceWithDownloadDir:self.trSessionInfo.downloadDir];
+            self->_alternate = !self->_alternate;
+        }
+        else
+            self->_alternate = !self->_alternate;
     });
 }
 
@@ -329,8 +336,8 @@ BOOL isEditable = NO;
         if (result == NSModalResponseOK) {
             for (NSURL *i in [panel URLs]){
                 AddTorrentController  *addTorrentController = instantiateController(@"AddTorrentController");
-                TorrentFile *file = [TorrentFile torrentFileWithURL:i];
-                addTorrentController.torrentFile = file;
+                self->_torrentFile = [TorrentFile torrentFileWithURL:i];
+                addTorrentController.torrentFile = self->_torrentFile;
                 [self presentViewControllerAsSheet:addTorrentController];
             }
         }
@@ -1042,11 +1049,17 @@ BOOL isEditable = NO;
 
 -(void)gotTorrentAddedWithResult:(NSDictionary*)jsonResponse {
     if ([[jsonResponse descriptionInStringsFileFormat] containsString:@"torrent-duplicate"]) {
-        NSDictionary *userError = @{NSLocalizedDescriptionKey: @"Torrent Duplicated",
+        NSDictionary *userError = @{NSLocalizedDescriptionKey: @"Torrent already exists.  Do you want to add the tracker to the existing Torrent?",
                                     NSHelpAnchorErrorKey: @"Torrent already exists."};
         NSError *error = [NSError errorWithDomain:NSMachErrorDomain code:20400 userInfo:userError];
         NSAlert *alert = [NSAlert alertWithError:error];
-        [alert runModal];
+        [alert addButtonWithTitle:@"Yes"];
+        [alert addButtonWithTitle:@"No"];
+        NSModalResponse alertResponse = [alert runModal];
+        
+        if(alertResponse == NSAlertFirstButtonReturn) {
+            [[RPCConnector sharedConnector] addTrackers:_torrentFile.trackerList forTorrent:[jsonResponse[@"id"] intValue]];
+        }
     };
     [self dismissController:self];
 }

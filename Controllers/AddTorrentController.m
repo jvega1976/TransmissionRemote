@@ -28,10 +28,14 @@
 
 
 - (IBAction)addTorrent:(id)sender {
-    if (_torrentFile.fileList)
-        [[RPCConnector sharedConnector] addTorrentWithFile:_torrentFile priority:1 startImmidiately:YES];
-    else
-        [[RPCConnector sharedConnector] addTorrentWithData:_torrentFile.torrentData priority:1 startImmidiately:YES];
+    if (_torrentFile.fileList) {
+        _connector.delegate = self;
+        [_connector addTorrentWithFile:_torrentFile priority:1 startImmidiately:YES];
+    }
+    else {
+        _connector.delegate = self;
+        [_connector addTorrentWithData:_torrentFile.torrentData priority:1 startImmidiately:YES];
+    }
     [self dismissController:self];
 }
 
@@ -40,11 +44,17 @@
 
 -(void)gotTorrentAddedWithResult:(NSDictionary*)jsonResponse {
     if ([[jsonResponse descriptionInStringsFileFormat] containsString:@"torrent-duplicate"]) {
-        NSDictionary *userError = @{NSLocalizedDescriptionKey: @"Torrent Duplicated",
-                                    NSHelpAnchorErrorKey: @"Torrent already exists."};
+        NSDictionary *userError = @{NSLocalizedDescriptionKey: @"Torrent already exists.  Do you want to add the tracker to the existing Torrent?",
+                                    NSHelpAnchorErrorKey: @"Torrent already exists.  Do you want to add the tracker to the existing Torrent?"};
         NSError *error = [NSError errorWithDomain:NSMachErrorDomain code:20400 userInfo:userError];
         NSAlert *alert = [NSAlert alertWithError:error];
-        [alert runModal];
+        [alert addButtonWithTitle:@"Yes"];
+        [alert addButtonWithTitle:@"No"];
+        NSModalResponse alertResponse = [alert runModal];
+        
+        if(alertResponse == NSAlertFirstButtonReturn) {
+            [[RPCConnector sharedConnector] addTrackers:_torrentFile.trackerList forTorrent:[jsonResponse[@"id"] intValue]];
+        }
     };
     [self dismissController:self];
 }

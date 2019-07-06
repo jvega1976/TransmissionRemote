@@ -5,6 +5,6 @@
       location = "group:TransmissionRPCClient/TransmissionRPCClient.xcodeproj">
    </FileRef>
    <FileRef
-      location = "absolute:/Users/jvega/Documents/TransmissionRemote/TransmissionRemote.xcodeproj">
+      location = "group:TransmissionRemote.xcodeproj">
    </FileRef>
 </Workspace>
